@@ -1,0 +1,2514 @@
+[Uploading index (28).html…]()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1e3a5f">
+<title>Consultors LB</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{height:100%;font-size:16px}
+body{height:100%;font-family:"DM Sans",system-ui,sans-serif;background:#f5f4f0;color:#1a1612;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font-family:inherit;font-size:inherit}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+:root{
+  --brand:#1e3a5f;--brand-mid:#2d5282;--brand-acc:#4a90d9;--brand-pale:#e8f0fb;--brand-light:#b8d0f0;
+  --teal:#0d7377;--teal-lt:#e0f5f5;--gold:#c9a227;--gold-lt:#fdf6dc;--red:#c0392b;--red-lt:#fdf0ee;
+  --green:#1a7a4e;--green-lt:#e8f5ee;--purple:#6c3fc5;--purple-lt:#f0ebff;--amber:#c45c1a;--amber-lt:#fef3e8;
+  --bg:#f5f4f0;--surface:#fff;--surface2:#faf9f7;--border:#e4e0d8;--text:#1a1612;--text2:#48413a;--text3:#8a7f74;
+  --dark:#1a1a2e;
+  --sh-sm:0 1px 4px rgba(26,22,18,.07),0 2px 8px rgba(26,22,18,.04);
+  --sh-md:0 4px 12px rgba(26,22,18,.09),0 2px 4px rgba(26,22,18,.05);
+  --sh-lg:0 8px 24px rgba(26,22,18,.11);--sh-xl:0 16px 48px rgba(26,22,18,.15);
+  --r-sm:8px;--r-md:12px;--r-lg:16px;--r-xl:24px;--r-2xl:32px;--r-full:9999px;
+  --t-base:180ms ease;--font-display:"Playfair Display",Georgia,serif;--font-body:"DM Sans",system-ui,sans-serif;
+  --sb-w:260px;--topbar-h:56px;--safe-top:env(safe-area-inset-top,0px);--safe-bot:env(safe-area-inset-bottom,0px);
+}
+.t-display{font-family:var(--font-display);font-weight:400}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:9px 18px;border-radius:var(--r-md);font-size:13.5px;font-weight:500;cursor:pointer;border:none;transition:all var(--t-base);white-space:nowrap;line-height:1;user-select:none}
+.btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.btn-primary{background:var(--brand);color:#fff}.btn-primary:hover{background:var(--brand-mid)}
+.btn-teal{background:var(--teal-lt);color:var(--teal);border:1px solid rgba(13,115,119,.2)}.btn-teal:hover{background:var(--teal);color:#fff}
+.btn-gold{background:var(--gold-lt);color:var(--gold);border:1px solid rgba(201,162,39,.2)}.btn-gold:hover{background:var(--gold);color:#fff}
+.btn-red{background:var(--red-lt);color:var(--red);border:1px solid rgba(192,57,43,.2)}.btn-red:hover{background:var(--red);color:#fff}
+.btn-green{background:var(--green-lt);color:var(--green);border:1px solid rgba(26,122,78,.2)}.btn-green:hover{background:var(--green);color:#fff}
+.btn-purple{background:var(--purple-lt);color:var(--purple);border:1px solid rgba(108,63,197,.2)}.btn-purple:hover{background:var(--purple);color:#fff}
+.btn-ghost{background:var(--surface);color:var(--text2);border:1.5px solid var(--border)}.btn-ghost:hover{background:var(--surface2)}
+.btn-dark{background:var(--dark);color:#fff}
+.btn-lg{padding:12px 24px;font-size:15px;border-radius:var(--r-lg)}
+.btn-sm{padding:6px 12px;font-size:12px;border-radius:var(--r-sm)}
+.btn-ic{width:32px;height:32px;padding:0;border-radius:var(--r-sm)}
+.chip{display:inline-flex;align-items:center;padding:3px 10px;border-radius:var(--r-full);font-size:11px;font-weight:600;white-space:nowrap;line-height:1.4}
+.chip-brand{background:var(--brand-pale);color:var(--brand)}.chip-teal{background:var(--teal-lt);color:var(--teal)}
+.chip-gold{background:var(--gold-lt);color:var(--gold)}.chip-red{background:var(--red-lt);color:var(--red)}
+.chip-green{background:var(--green-lt);color:var(--green)}.chip-purple{background:var(--purple-lt);color:var(--purple)}
+.chip-amber{background:var(--amber-lt);color:var(--amber)}.chip-gray{background:var(--surface2);color:var(--text3);border:1px solid var(--border)}
+.chip-dark{background:var(--dark);color:#fff}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--sh-sm);overflow:hidden}
+.card-head{padding:14px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.card-title{font-size:14px;font-weight:500;color:var(--brand)}
+.card-body{padding:18px 20px}
+.card-foot{padding:12px 20px;border-top:1px solid var(--border);background:var(--surface2)}
+.form-label{display:block;font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:5px}
+.form-input,.form-select,.form-textarea{width:100%;background:var(--surface2);border:1.5px solid var(--border);border-radius:var(--r-md);padding:10px 13px;font-size:14px;color:var(--text);outline:none;transition:border-color var(--t-base)}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--brand-acc);background:var(--surface)}
+.form-textarea{resize:vertical;min-height:80px;line-height:1.55}
+.form-select{cursor:pointer}
+.form-group{margin-bottom:14px}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:13px}
+.form-full{grid-column:1/-1}
+.form-row{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.table{width:100%;border-collapse:collapse;font-size:13.5px}
+.table th{padding:10px 16px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);background:var(--surface2);border-bottom:1px solid var(--border);white-space:nowrap}
+.table td{padding:12px 16px;color:var(--text2);border-bottom:1px solid var(--bg);vertical-align:middle}
+.table tr:last-child td{border-bottom:none}
+.table tbody tr:hover td{background:var(--surface2)}
+.table-empty{text-align:center;padding:48px 20px;color:var(--text3);font-size:13px}
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(26,22,18,.5);z-index:500;backdrop-filter:blur(4px)}
+.modal-bg.open{display:flex;align-items:flex-end;justify-content:center}
+@media(min-width:640px){.modal-bg.open{align-items:center}}
+.modal{background:var(--surface);border-radius:var(--r-2xl) var(--r-2xl) 0 0;padding:24px;width:100%;max-width:540px;max-height:92vh;overflow-y:auto;box-shadow:var(--sh-xl);position:relative}
+@media(min-width:640px){.modal{border-radius:var(--r-2xl);padding:28px;max-height:88vh}}
+.modal-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 20px}
+@media(min-width:640px){.modal-handle{display:none}}
+.modal-title{font-family:var(--font-display);font-size:18px;color:var(--brand);margin-bottom:18px}
+.modal-close{position:absolute;top:14px;right:14px;width:28px;height:28px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-sm);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text2)}
+.modal-close svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.5}
+#toast{position:fixed;bottom:calc(var(--safe-bot) + 20px);right:20px;padding:11px 18px;border-radius:var(--r-md);font-size:13px;font-weight:500;z-index:9999;transform:translateY(80px);opacity:0;transition:all .28s cubic-bezier(.34,1.56,.64,1);max-width:320px;pointer-events:none}
+#toast.show{transform:translateY(0);opacity:1}
+#toast.success{background:var(--green-lt);color:var(--green);border:1px solid rgba(26,122,78,.2)}
+#toast.error{background:var(--red-lt);color:var(--red);border:1px solid rgba(192,57,43,.2)}
+#toast.info{background:var(--brand-pale);color:var(--brand);border:1px solid var(--brand-light)}
+#toast.warning{background:var(--gold-lt);color:var(--gold);border:1px solid rgba(201,162,39,.2)}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin-bottom:20px}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px;position:relative;overflow:hidden;box-shadow:var(--sh-sm)}
+.stat-accent{position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--r-lg) var(--r-lg) 0 0}
+.stat-icon{width:38px;height:38px;border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.stat-icon svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.stat-value{font-family:var(--font-display);font-size:28px;color:var(--brand);line-height:1;margin-bottom:4px}
+.stat-label{font-size:12px;color:var(--text2)}
+.page-header{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px}
+.page-h1{font-family:var(--font-display);font-size:clamp(20px,3vw,26px);color:var(--brand)}
+.page-sub{font-size:12.5px;color:var(--text3);margin-top:3px}
+.page-acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.progress-bar{height:6px;background:var(--border);border-radius:var(--r-full);overflow:hidden}
+.progress-fill{height:100%;border-radius:var(--r-full);transition:width .4s ease}
+.toggle{width:42px;height:24px;border-radius:var(--r-full);background:var(--border);position:relative;cursor:pointer;transition:background var(--t-base);flex-shrink:0}
+.toggle.on{background:var(--brand-acc)}
+.toggle-dot{width:20px;height:20px;background:#fff;border-radius:50%;position:absolute;top:2px;left:2px;transition:transform var(--t-base);box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.toggle.on .toggle-dot{transform:translateX(18px)}
+.view{display:none}.view.on{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blobFloat{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(25px,18px) scale(1.06)}66%{transform:translate(-15px,12px) scale(.96)}}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.anim-in{animation:fadeIn .2s ease both}
+.app-layout{display:flex;height:100dvh;overflow:hidden}
+.sidebar{width:var(--sb-w);background:var(--dark);display:flex;flex-direction:column;height:100%;flex-shrink:0;z-index:200;transition:transform var(--t-base)}
+.sb-head{padding:calc(var(--safe-top) + 18px) 18px 14px;border-bottom:1px solid rgba(255,255,255,.07);position:relative}
+.sb-head::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--sb-accent,var(--brand-acc))}
+.sb-head img{height:26px;margin-bottom:14px}
+.sb-user{background:rgba(255,255,255,.07);border-radius:var(--r-md);padding:10px 12px;display:flex;align-items:center;gap:10px}
+.sb-av{width:34px;height:34px;border-radius:50%;background:var(--brand-acc);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0;overflow:hidden}
+.sb-name{font-size:13px;font-weight:500;color:#fff;line-height:1.3}
+.sb-role{font-size:10.5px;color:rgba(255,255,255,.4);margin-top:1px}
+.sb-nav{flex:1;padding:8px 0;overflow-y:auto;scrollbar-width:none}
+.sb-nav::-webkit-scrollbar{display:none}
+.nav-sec{padding:16px 18px 4px}
+.nav-sec-lbl{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.2)}
+.nav-item{display:flex;align-items:center;gap:10px;padding:9px 18px;cursor:pointer;color:rgba(255,255,255,.45);font-size:13px;border-left:2px solid transparent;margin:1px 8px 1px 0;border-radius:0 var(--r-sm) var(--r-sm) 0;transition:all .12s ease}
+.nav-item:hover{background:rgba(255,255,255,.06);color:rgba(255,255,255,.8)}
+.nav-item.on{background:rgba(255,255,255,.11);color:#fff;border-left-color:var(--sb-accent,var(--brand-acc));font-weight:500}
+.nav-item svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.sb-foot{padding:12px 18px calc(var(--safe-bot) + 12px);border-top:1px solid rgba(255,255,255,.07)}
+.logout-btn{width:100%;padding:9px;background:transparent;color:rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-sm);font-size:12.5px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;transition:all var(--t-base)}
+.logout-btn:hover{background:rgba(192,57,43,.15);color:var(--red);border-color:rgba(192,57,43,.3)}
+.logout-btn svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2}
+.main-area{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0}
+.topbar{background:var(--surface);border-bottom:1px solid var(--border);height:var(--topbar-h);padding:0 22px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;box-shadow:0 1px 3px rgba(26,22,18,.05);z-index:50}
+.topbar-left{display:flex;align-items:center;gap:10px}
+.topbar-right{display:flex;align-items:center;gap:10px}
+.topbar-title{font-size:15px;font-weight:500;color:var(--brand)}
+.topbar-date{font-size:11.5px;color:var(--text3)}
+.mob-tog{display:none;background:none;border:none;cursor:pointer;color:var(--text2);padding:4px;border-radius:var(--r-sm)}
+.mob-tog svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2}
+.page-body{flex:1;overflow-y:auto;padding:22px;-webkit-overflow-scrolling:touch}
+.task-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:16px;margin-bottom:10px;box-shadow:0 1px 2px rgba(26,22,18,.05);display:flex;align-items:flex-start;gap:12px;transition:all var(--t-base);cursor:pointer}
+.task-card.done{background:var(--green-lt);border-color:rgba(26,122,78,.2)}
+.task-check{width:26px;height:26px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .12s ease;background:var(--surface)}
+.task-check.done{background:var(--green);border-color:var(--green)}
+.task-check svg{width:12px;height:12px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;display:none}
+.task-check.done svg{display:block}
+.task-title{font-size:14px;font-weight:500;color:var(--text);line-height:1.4}
+.task-card.done .task-title{text-decoration:line-through;color:var(--text3)}
+.task-sub{font-size:12px;color:var(--text3);margin-top:3px}
+.greeting-card{background:linear-gradient(135deg,var(--dark) 0%,#0f3460 100%);border-radius:var(--r-xl);padding:20px;margin-bottom:16px;position:relative;overflow:hidden}
+.greeting-card::before{content:'';position:absolute;top:-40px;right:-40px;width:140px;height:140px;background:rgba(255,255,255,.04);border-radius:50%}
+.greeting-hi{font-size:13px;color:rgba(255,255,255,.55);margin-bottom:2px}
+.greeting-name{font-family:var(--font-display);font-size:22px;color:#fff;margin-bottom:4px}
+.greeting-info{font-size:12px;color:rgba(255,255,255,.45)}
+.greeting-score{position:absolute;top:18px;right:18px;text-align:center}
+.greeting-score-n{font-family:var(--font-display);font-size:28px;color:#fff;line-height:1}
+.greeting-score-l{font-size:9px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+.temp-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:14px 16px;margin-bottom:8px}
+.temp-label{font-size:12px;font-weight:600;color:var(--text2);margin-bottom:8px}
+.temp-input-row{display:flex;align-items:center;gap:10px}
+.temp-input{flex:1;border:1.5px solid var(--border);border-radius:var(--r-md);padding:10px 13px;font-size:22px;font-family:var(--font-display);color:var(--brand);outline:none;text-align:center;background:var(--surface2);transition:border-color var(--t-base)}
+.temp-input:focus{border-color:var(--brand-acc)}
+.temp-input.ok{border-color:var(--green);background:var(--green-lt);color:var(--green)}
+.temp-input.bad{border-color:var(--red);background:var(--red-lt);color:var(--red)}
+.temp-unit{font-size:14px;color:var(--text3);font-weight:500}
+.temp-status{font-size:11px;color:var(--text3);margin-top:6px}
+.sop-step{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:14px 16px;margin-bottom:8px;display:flex;align-items:flex-start;gap:12px;transition:all var(--t-base)}
+.sop-step.done{background:var(--green-lt);border-color:rgba(26,122,78,.25)}
+.sop-check{width:24px;height:24px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer;transition:all .12s ease;margin-top:1px}
+.sop-check.done{background:var(--green);border-color:var(--green)}
+.sop-check svg{width:12px;height:12px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;display:none}
+.sop-check.done svg{display:block}
+.sop-task{font-size:13.5px;font-weight:500;color:var(--text);margin-bottom:2px}
+.sop-step.done .sop-task{text-decoration:line-through;color:var(--text3)}
+.sop-std{font-size:12px;color:var(--text3);line-height:1.5}
+.sop-resp{font-size:11px;font-weight:600;color:var(--brand-acc);margin-top:4px}
+.cl-dot{width:42px;height:42px;border-radius:50%;border:2px solid var(--border);background:var(--surface);display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;cursor:pointer;transition:all .12s ease;color:var(--text3);user-select:none}
+.cl-dot:hover{border-color:var(--brand-acc);color:var(--brand-acc);transform:scale(1.08)}
+.cl-dot.s1{background:var(--red-lt);border-color:var(--red);color:var(--red)}
+.cl-dot.s2{background:#fde8d8;border-color:#c45c1a;color:#c45c1a}
+.cl-dot.s3{background:var(--gold-lt);border-color:var(--gold);color:var(--gold)}
+.cl-dot.s4{background:var(--green-lt);border-color:var(--green);color:var(--green)}
+.cl-dot.s5{background:var(--teal-lt);border-color:var(--teal);color:var(--teal)}
+.yn-btn{padding:9px 22px;border-radius:var(--r-md);border:1.5px solid var(--border);background:var(--surface);font-size:13px;font-weight:600;cursor:pointer;transition:all .12s ease}
+.yn-btn.yes{background:var(--green-lt);border-color:var(--green);color:var(--green)}
+.yn-btn.no{background:var(--red-lt);border-color:var(--red);color:var(--red)}
+.na-btn{padding:6px 12px;border-radius:var(--r-sm);border:1.5px solid var(--border);font-size:11px;font-weight:700;color:var(--text3);cursor:pointer;background:var(--surface);transition:all .12s ease}
+.na-btn.on{background:var(--surface2);border-color:var(--text3)}
+.pay-btn{padding:5px 12px;border-radius:var(--r-full);font-size:11.5px;font-weight:600;cursor:pointer;border:none;font-family:inherit;transition:all .12s ease}
+.pay-btn.paid{background:var(--green-lt);color:var(--green)}.pay-btn.paid:hover{background:var(--green);color:#fff}
+.pay-btn.unpaid{background:var(--red-lt);color:var(--red)}.pay-btn.unpaid:hover{background:var(--red);color:#fff}
+.pay-btn.partial{background:var(--amber-lt);color:var(--amber)}
+.pay-btn.invoiced{background:var(--gold-lt);color:var(--gold)}
+#pub{min-height:100dvh;background:var(--bg);overflow-y:auto}
+.pub-tab{padding:9px 22px;border-radius:var(--r-md);border:1.5px solid var(--border);font-size:13.5px;font-weight:500;cursor:pointer;white-space:nowrap;background:var(--surface);color:var(--text2);transition:all var(--t-base)}
+.pub-tab.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.pub-plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:32px}
+.plan-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm);position:relative;transition:box-shadow var(--t-base)}
+.plan-card:hover{box-shadow:var(--sh-md)}
+.plan-card.featured{border-color:var(--brand-acc);box-shadow:var(--sh-md)}
+.plan-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--brand);color:#fff;font-size:10.5px;font-weight:700;padding:4px 16px;border-radius:20px;white-space:nowrap}
+.plan-name{font-family:var(--font-display);font-size:20px;color:var(--brand);margin-bottom:4px}
+.plan-desc{font-size:12px;color:var(--text3);margin-bottom:16px}
+.plan-price-row{display:flex;align-items:flex-start;gap:2px;line-height:1;margin-bottom:4px}
+.plan-cur{font-size:18px;font-weight:600;color:var(--brand);margin-top:5px}
+.plan-amount{font-family:var(--font-display);font-size:46px;color:var(--brand)}
+.plan-period{font-size:12px;color:var(--text3);margin-bottom:4px}
+.plan-saving{font-size:12px;font-weight:600;color:var(--green);margin-bottom:14px;display:none}
+.plan-divider{height:1px;background:var(--border);margin:14px 0}
+.plan-features{display:flex;flex-direction:column;gap:9px;margin-bottom:20px}
+.plan-feat{display:flex;gap:9px;font-size:13px;color:var(--text2)}
+.plan-feat-icon{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0;margin-top:1px}
+.plan-feat-icon.brand{background:var(--brand-pale);color:var(--brand-acc)}
+.plan-feat-icon.filled{background:var(--brand);color:#fff}
+.plan-cta{display:block;width:100%;padding:13px;border:none;border-radius:var(--r-lg);font-size:14px;font-weight:600;cursor:pointer;text-align:center;text-decoration:none;transition:all var(--t-base)}
+.plan-cta.primary{background:var(--brand);color:#fff}.plan-cta.primary:hover{background:var(--brand-mid)}
+.plan-cta.secondary{background:var(--brand-pale);color:var(--brand)}.plan-cta.secondary:hover{background:var(--brand-light)}
+.tr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-bottom:32px}
+.tr-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-xl);padding:22px;text-align:center;box-shadow:var(--sh-sm);position:relative;transition:box-shadow var(--t-base)}
+.tr-card.featured{border-color:var(--teal);box-shadow:var(--sh-md)}
+#login{display:none;position:fixed;inset:0;z-index:100}
+.login-bg{position:absolute;inset:0;background:linear-gradient(150deg,#1a2a40 0%,var(--brand) 50%,#2d5282 100%)}
+.login-blob{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;animation:blobFloat 12s ease-in-out infinite}
+.lb1{width:400px;height:400px;background:radial-gradient(circle,rgba(74,144,217,.2),transparent);top:-100px;left:-80px}
+.lb2{width:300px;height:300px;background:radial-gradient(circle,rgba(13,115,119,.15),transparent);bottom:-60px;right:-60px;animation-delay:-5s}
+.lb3{width:200px;height:200px;background:radial-gradient(circle,rgba(201,162,39,.1),transparent);top:45%;left:55%;animation-delay:-9s}
+.login-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.login-wrap{position:relative;z-index:1;height:100%;display:flex;align-items:center;justify-content:center;padding:20px;overflow-y:auto}
+.login-inner{width:100%;max-width:900px;display:flex;gap:56px;align-items:center;justify-content:center;flex-wrap:wrap;padding:20px 0}
+.login-left{flex:1;min-width:260px;max-width:400px}
+.login-left img{height:32px;margin-bottom:20px}
+.login-headline{font-family:var(--font-display);font-size:clamp(22px,4vw,34px);color:#fff;line-height:1.3;margin-bottom:10px}
+.login-tagline{font-size:13.5px;color:rgba(255,255,255,.6);line-height:1.75;margin-bottom:32px}
+.login-feats{display:flex;flex-direction:column;gap:18px}
+.login-feat{display:flex;align-items:flex-start;gap:14px}
+.login-feat-icon{width:40px;height:40px;border-radius:var(--r-md);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.login-feat-icon svg{width:18px;height:18px;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.login-feat-title{font-size:13.5px;font-weight:600;color:#fff;margin-bottom:2px}
+.login-feat-desc{font-size:12px;color:rgba(255,255,255,.5);line-height:1.55}
+.login-stats{display:flex;border-top:1px solid rgba(255,255,255,.08);padding-top:20px;margin-top:28px}
+.login-stat{flex:1;padding-right:20px;border-right:1px solid rgba(255,255,255,.08);margin-right:20px}
+.login-stat:last-child{border-right:none;margin-right:0;padding-right:0}
+.login-stat-n{font-family:var(--font-display);font-size:20px;color:#fff;line-height:1}
+.login-stat-l{font-size:10.5px;color:rgba(255,255,255,.38);margin-top:3px}
+.login-box{width:100%;max-width:340px;background:rgba(255,255,255,.97);backdrop-filter:blur(20px);border-radius:var(--r-2xl);padding:36px 32px;box-shadow:var(--sh-xl)}
+.login-box img{height:30px;margin-bottom:10px}
+.login-box-sub{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+.login-box-div{height:1px;background:var(--border);margin-bottom:18px}
+.login-err{background:var(--red-lt);color:var(--red);border:1px solid rgba(192,57,43,.2);border-radius:var(--r-md);padding:10px 13px;font-size:12.5px;margin-bottom:14px;display:none}
+.login-btn{width:100%;padding:13px;background:var(--brand);color:#fff;border:none;border-radius:var(--r-md);font-size:14.5px;font-weight:600;cursor:pointer;margin-top:4px;transition:background var(--t-base)}
+.login-btn:hover{background:var(--brand-mid)}
+.login-divider{display:flex;align-items:center;gap:12px;margin:16px 0}
+.login-divider-line{flex:1;height:1px;background:var(--border)}
+.login-divider-text{font-size:12px;color:var(--text3)}
+.login-footer-link{text-align:center;margin-top:14px;font-size:12px;color:var(--text3)}
+.login-footer-link a{color:var(--brand-acc);cursor:pointer;font-weight:500}
+.step-dots{display:flex;gap:6px;margin-bottom:20px}
+.step-dot{flex:1;height:3px;border-radius:2px;background:var(--border);transition:background var(--t-base)}
+.step-dot.done{background:var(--green)}
+.step-dot.active{background:var(--brand-acc)}
+.signup-step{display:none}
+.signup-step.active{display:block;animation:fadeIn .2s ease}
+#app{display:none;height:100dvh;overflow:hidden}
+@media(max-width:768px){
+  .sidebar{position:fixed;top:0;left:0;bottom:0;transform:translateX(-100%);box-shadow:var(--sh-xl)}
+  .sidebar.open{transform:translateX(0)}
+  .mob-tog{display:flex}
+  .topbar{padding:0 14px 0 50px}
+  .page-body{padding:14px}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .form-grid{grid-template-columns:1fr}
+  .pub-plans{grid-template-columns:1fr}
+  .tr-grid{grid-template-columns:1fr 1fr}
+  .login-left{display:none}
+  .login-stats{display:none}
+}
+
+/* ── WAITER PAGE ─────────────────────────────── */
+.w-task{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:14px 16px;margin-bottom:8px;display:flex;align-items:flex-start;gap:12px;cursor:pointer;transition:all .15s ease}
+.w-task:active{transform:scale(.99)}
+.w-task-done{background:var(--teal-lt);border-color:rgba(13,115,119,.25)}
+.w-task-done .w-task *{color:var(--text3)}
+.w-task-done > div:last-child > div:first-child{text-decoration:line-through;color:var(--text3)}
+.w-chk{width:26px;height:26px;border-radius:50%;border:2px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .15s ease;margin-top:1px}
+.w-chk svg{display:none}
+.w-done{background:var(--teal);border-color:var(--teal)}
+.w-done svg{display:block}
+.w-sop-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);margin-bottom:10px;overflow:hidden;transition:border-color .2s,background .2s}
+.w-sop-step{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--bg);cursor:pointer;transition:opacity .15s}
+.w-sop-step:last-of-type{border-bottom:none}
+.w-sop-done{opacity:.5}
+.w-sop-done .w-chk{background:var(--teal);border-color:var(--teal)}
+.w-sop-done .w-chk svg{display:block}
+</style>
+</head>
+<body><div id="pub">
+  <nav style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(30,58,95,.08);height:64px;display:flex;align-items:center;padding:0 32px;justify-content:space-between">
+    <img src="data:image/png;base64,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" style="height:28px">
+    <div style="display:flex;align-items:center;gap:28px">
+      <a onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})" style="font-size:13.5px;font-weight:500;color:var(--text2);cursor:pointer">Features</a>
+      <a onclick="document.getElementById('modules').scrollIntoView({behavior:'smooth'})" style="font-size:13.5px;font-weight:500;color:var(--text2);cursor:pointer">Modules</a>
+      <a onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})" style="font-size:13.5px;font-weight:500;color:var(--text2);cursor:pointer">Pricing</a>
+      <a onclick="document.getElementById('faq-section').scrollIntoView({behavior:'smooth'})" style="font-size:13.5px;font-weight:500;color:var(--text2);cursor:pointer">FAQ</a>
+    </div>
+    <div style="display:flex;gap:10px">
+      <button onclick="window.showLogin()" style="padding:9px 20px;border:1.5px solid var(--brand);border-radius:var(--r-md);font-size:13.5px;font-weight:600;color:var(--brand);background:transparent;cursor:pointer">Sign In</button>
+      <button onclick="window.goSignup()" style="padding:9px 20px;background:var(--brand);border:none;border-radius:var(--r-md);font-size:13.5px;font-weight:600;color:#fff;cursor:pointer">Get Started &rarr;</button>
+    </div>
+  </nav>
+  <div style="min-height:100dvh;background:linear-gradient(160deg,#0f1f35 0%,#1e3a5f 50%,#2d5282 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 24px 64px;position:relative;overflow:hidden;text-align:center">
+    <div style="position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(74,144,217,.2),transparent);top:-200px;left:-150px;border-radius:50%;filter:blur(70px);pointer-events:none;animation:blobFloat 12s ease-in-out infinite"></div>
+    <div style="position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(13,115,119,.15),transparent);bottom:-100px;right:-100px;border-radius:50%;filter:blur(70px);pointer-events:none"></div>
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:52px 52px;pointer-events:none"></div>
+    <div style="position:relative;z-index:1;max-width:820px">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:50px;padding:6px 18px;margin-bottom:28px"><span style="width:8px;height:8px;background:#4ade80;border-radius:50%;display:inline-block"></span><span style="font-size:12.5px;color:rgba(255,255,255,.85);font-weight:500">Built for Lebanon &amp; MENA F&amp;B market</span></div>
+      <h1 style="font-family:var(--font-display);font-size:clamp(30px,6vw,60px);font-weight:400;color:#fff;line-height:1.2;margin-bottom:18px">Run every restaurant shift<br>with <span style="color:#7dd3fc">confidence</span></h1>
+      <p style="font-size:clamp(14px,2vw,18px);color:rgba(255,255,255,.65);line-height:1.75;max-width:580px;margin:0 auto 40px">The complete F&amp;B operations platform &mdash; checklists, SOPs, temperature logs, mystery shopping, training and management tools. One app for your entire team.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:56px">
+        <button onclick="window.goSignup()" style="padding:15px 36px;background:#fff;border:none;border-radius:var(--r-lg);font-size:15px;font-weight:700;color:var(--brand);cursor:pointer;box-shadow:0 6px 24px rgba(0,0,0,.25)">Start Free Trial &rarr;</button>
+        <a href="https://wa.me/96181408165?text=Hello%20Consultors%20LB%2C%20I%27d%20like%20a%20demo." target="_blank" style="padding:15px 28px;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);border-radius:var(--r-lg);font-size:15px;font-weight:600;color:#fff;text-decoration:none;display:inline-block">Book a Demo</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.1);padding-top:40px">
+        <div style="text-align:center;padding:0 20px;border-right:1px solid rgba(255,255,255,.1)"><div style="font-family:var(--font-display);font-size:36px;color:#fff;line-height:1">150+</div><div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:6px">Restaurants Served</div></div>
+        <div style="text-align:center;padding:0 20px;border-right:1px solid rgba(255,255,255,.1)"><div style="font-family:var(--font-display);font-size:36px;color:#fff;line-height:1">108</div><div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:6px">Evaluation Points</div></div>
+        <div style="text-align:center;padding:0 20px;border-right:1px solid rgba(255,255,255,.1)"><div style="font-family:var(--font-display);font-size:36px;color:#fff;line-height:1">72%</div><div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:6px">Fewer Missed Tasks</div></div>
+        <div style="text-align:center;padding:0 20px"><div style="font-family:var(--font-display);font-size:36px;color:#fff;line-height:1">24h</div><div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:6px">Report Delivery</div></div>
+      </div>
+    </div>
+  </div>
+  <div id="features" style="background:var(--bg);padding:88px 24px"><div style="max-width:1060px;margin:0 auto"><div style="text-align:center;margin-bottom:56px"><div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--brand-acc);margin-bottom:10px">Why Consultors</div><h2 style="font-family:var(--font-display);font-size:clamp(22px,4vw,36px);color:var(--brand);margin-bottom:12px">Everything your team needs to run a great shift</h2></div>  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px"><div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm)"><div style="width:48px;height:48px;border-radius:var(--r-md);background:var(--teal-lt);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px">✅</div><div style="font-size:16px;font-weight:600;color:var(--brand);margin-bottom:8px">Daily Checklists</div><div style="font-size:13.5px;color:var(--text3);line-height:1.7">Opening, closing, cleaning — every role has their own checklist. Tracked in real time with photo sign-off.</div></div><div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm)"><div style="width:48px;height:48px;border-radius:var(--r-md);background:var(--purple-lt);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px">📄</div><div style="font-size:16px;font-weight:600;color:var(--brand);margin-bottom:8px">SOPs as Checklists</div><div style="font-size:13.5px;color:var(--text3);line-height:1.7">Standard procedures your team actually follows — step by step, signed off, with responsible parties and KPIs.</div></div><div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm)"><div style="width:48px;height:48px;border-radius:var(--r-md);background:var(--brand-pale);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px">🌡️</div><div style="font-size:16px;font-weight:600;color:var(--brand);margin-bottom:8px">Temperature Logs</div><div style="font-size:13.5px;color:var(--text3);line-height:1.7">HACCP-compliant tracking for fridge, freezer and hot holding. Instant alerts when out of range.</div></div><div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm)"><div style="width:48px;height:48px;border-radius:var(--r-md);background:var(--gold-lt);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px">🔍</div><div style="font-size:16px;font-weight:600;color:var(--brand);margin-bottom:8px">Mystery Shopping</div><div style="font-size:13.5px;color:var(--text3);line-height:1.7">108-point anonymous evaluation across 4 phases. Graded report delivered in 24 hours.</div></div><div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm)"><div style="width:48px;height:48px;border-radius:var(--r-md);background:var(--green-lt);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px">📚</div><div style="font-size:16px;font-weight:600;color:var(--brand);margin-bottom:8px">F&amp;B Training</div><div style="font-size:13.5px;color:var(--text3);line-height:1.7">Log every session, track topics and attendance. Training tied directly to evaluation findings.</div></div><div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm)"><div style="width:48px;height:48px;border-radius:var(--r-md);background:var(--red-lt);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px">🚨</div><div style="font-size:16px;font-weight:600;color:var(--brand);margin-bottom:8px">Incident Reporting</div><div style="font-size:13.5px;color:var(--text3);line-height:1.7">Report, track and resolve incidents in real time. Every report timestamped and signed off by management.</div></div></div></div></div>
+  <div style="background:var(--brand);padding:88px 24px"><div style="max-width:920px;margin:0 auto;text-align:center"><div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--brand-acc);margin-bottom:10px">How It Works</div><h2 style="font-family:var(--font-display);font-size:clamp(22px,4vw,36px);color:#fff;margin-bottom:56px">Up and running in minutes</h2>  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:36px"><div><div style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:20px;color:#fff;margin:0 auto 16px">1</div><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:8px">Sign Up</div><div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.65">Create your restaurant account in 2 minutes. Instant access, no credit card required.</div></div><div><div style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:20px;color:#fff;margin:0 auto 16px">2</div><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:8px">Set Up Your Team</div><div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.65">Add your staff, assign roles and activate the modules you need.</div></div><div><div style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:20px;color:#fff;margin:0 auto 16px">3</div><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:8px">Run Your Shift</div><div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.65">Staff open the app, see their tasks, check off items and submit logs.</div></div><div><div style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:20px;color:#fff;margin:0 auto 16px">4</div><div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:8px">Track &amp; Improve</div><div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.65">See real-time completion, get alerts on issues and receive mystery shopper reports.</div></div></div></div></div>
+  <div id="modules" style="background:var(--bg);padding:88px 24px"><div style="max-width:1060px;margin:0 auto"><div style="text-align:center;margin-bottom:56px"><div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--brand-acc);margin-bottom:10px">Platform Modules</div><h2 style="font-family:var(--font-display);font-size:clamp(22px,4vw,36px);color:var(--brand);margin-bottom:12px">One platform, every role covered</h2></div>  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px"><div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:22px;box-shadow:var(--sh-sm)"><div style="font-size:26px;margin-bottom:10px">🍽️</div><div style="font-size:14px;font-weight:600;color:var(--brand);margin-bottom:6px">Waiter Module</div><div style="font-size:12.5px;color:var(--text3);line-height:1.6">Opening checklist, section assignment, specials board and closing tasks.</div><div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:4px"><span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Daily Checklist</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Section View</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Specials</span></div></div><div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:22px;box-shadow:var(--sh-sm)"><div style="font-size:26px;margin-bottom:10px">👨‍🍳</div><div style="font-size:14px;font-weight:600;color:var(--brand);margin-bottom:6px">Kitchen Module</div><div style="font-size:12.5px;color:var(--text3);line-height:1.6">Temperature logs, prep checklist, 86 board and HACCP compliance.</div><div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:4px"><span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Temp Logs</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Prep List</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">HACCP</span></div></div><div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:22px;box-shadow:var(--sh-sm)"><div style="font-size:26px;margin-bottom:10px">🧹</div><div style="font-size:14px;font-weight:600;color:var(--brand);margin-bottom:6px">Cleaner Module</div><div style="font-size:12.5px;color:var(--text3);line-height:1.6">Zone-by-zone cleaning schedule with photo evidence and sign-off.</div><div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:4px"><span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Zones</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Photos</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Sign-off</span></div></div><div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:22px;box-shadow:var(--sh-sm)"><div style="font-size:26px;margin-bottom:10px">👔</div><div style="font-size:14px;font-weight:600;color:var(--brand);margin-bottom:6px">Manager Module</div><div style="font-size:12.5px;color:var(--text3);line-height:1.6">Staff status, shift briefing, incident reports and handover notes.</div><div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:4px"><span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Staff View</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Incidents</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Handover</span></div></div><div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:22px;box-shadow:var(--sh-sm)"><div style="font-size:26px;margin-bottom:10px">🔍</div><div style="font-size:14px;font-weight:600;color:var(--brand);margin-bottom:6px">Mystery Shopper</div><div style="font-size:12.5px;color:var(--text3);line-height:1.6">108-point anonymous evaluation with photo evidence and graded report.</div><div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:4px"><span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">108 Points</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">4 Phases</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Reports</span></div></div><div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:22px;box-shadow:var(--sh-sm)"><div style="font-size:26px;margin-bottom:10px">📚</div><div style="font-size:14px;font-weight:600;color:var(--brand);margin-bottom:6px">Trainer Module</div><div style="font-size:12.5px;color:var(--text3);line-height:1.6">Log training sessions, track topics, staff count and outcomes.</div><div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:4px"><span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Sessions</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Topics</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Tracking</span></div></div><div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:22px;box-shadow:var(--sh-sm)"><div style="font-size:26px;margin-bottom:10px">💰</div><div style="font-size:14px;font-weight:600;color:var(--brand);margin-bottom:6px">Finance Module</div><div style="font-size:12.5px;color:var(--text3);line-height:1.6">Invoices, revenue tracking, expense management and print invoices.</div><div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:4px"><span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Invoices</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Revenue</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Print</span></div></div><div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:22px;box-shadow:var(--sh-sm)"><div style="font-size:26px;margin-bottom:10px">🍕</div><div style="font-size:14px;font-weight:600;color:var(--brand);margin-bottom:6px">Menu Development</div><div style="font-size:12.5px;color:var(--text3);line-height:1.6">Item database, recipe costing, engineering matrix and allergen tracker.</div><div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:4px"><span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Costing</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Matrix</span> <span style="font-size:10px;font-weight:600;background:var(--brand-pale);color:var(--brand);padding:2px 8px;border-radius:10px">Allergens</span></div></div></div></div></div>
+  <div style="background:linear-gradient(135deg,#f5f4f0 0%,#eef2f8 100%);padding:88px 24px"><div style="max-width:1000px;margin:0 auto"><div style="text-align:center;margin-bottom:56px"><div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--brand-acc);margin-bottom:10px">Proven Results</div><h2 style="font-family:var(--font-display);font-size:clamp(22px,4vw,36px);color:var(--brand)">Impact across Lebanon</h2></div>  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px"><div style="background:#fff;border:1px solid var(--border);border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm)"><div style="font-family:var(--font-display);font-size:44px;color:var(--brand);line-height:1;margin-bottom:8px">72%</div><div style="font-size:13.5px;font-weight:600;color:var(--text);margin-bottom:6px">Fewer Missed Tasks</div><div style="font-size:12.5px;color:var(--text3);line-height:1.6">Restaurants using Consultors complete 72% more of their daily operational tasks within the first month.</div></div><div style="background:#fff;border:1px solid var(--border);border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm)"><div style="font-family:var(--font-display);font-size:44px;color:var(--brand);line-height:1;margin-bottom:8px">98%</div><div style="font-size:13.5px;font-weight:600;color:var(--text);margin-bottom:6px">Client Satisfaction</div><div style="font-size:12.5px;color:var(--text3);line-height:1.6">Of our restaurant clients renew their subscription after the first evaluation cycle.</div></div><div style="background:#fff;border:1px solid var(--border);border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm)"><div style="font-family:var(--font-display);font-size:44px;color:var(--brand);line-height:1;margin-bottom:8px">3x</div><div style="font-size:13.5px;font-weight:600;color:var(--text);margin-bottom:6px">Faster Issue Resolution</div><div style="font-size:12.5px;color:var(--text3);line-height:1.6">Incidents reported and resolved 3x faster with real-time alerts and direct manager notifications.</div></div><div style="background:#fff;border:1px solid var(--border);border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-sm)"><div style="font-family:var(--font-display);font-size:44px;color:var(--brand);line-height:1;margin-bottom:8px">24h</div><div style="font-size:13.5px;font-weight:600;color:var(--text);margin-bottom:6px">Report Delivery</div><div style="font-size:12.5px;color:var(--text3);line-height:1.6">Every mystery shopper evaluation delivered within 24 hours, graded and ready to act on.</div></div></div></div></div>
+  <div id="pricing" style="background:var(--bg);padding:88px 24px"><div style="max-width:1060px;margin:0 auto">  <div style="text-align:center;margin-bottom:16px"><div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--brand-acc);margin-bottom:10px">Pricing</div><h2 style="font-family:var(--font-display);font-size:clamp(22px,4vw,36px);color:var(--brand);margin-bottom:12px">Transparent, simple pricing</h2>  <div style="display:inline-flex;align-items:center;gap:12px;background:var(--surface);border:1.5px solid var(--border);border-radius:50px;padding:8px 20px;margin-bottom:36px"><span style="font-size:13px;font-weight:600;color:var(--text2)" id="lbl-mo">Monthly</span><div class="toggle" id="pub-toggle" onclick="window.pubToggle()"><div class="toggle-dot"></div></div><span style="font-size:13px;color:var(--text3)">Annual <span id="lbl-disc" style="background:var(--green-lt);color:var(--green);font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:4px">Save 20%</span></span></div></div>  <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:28px"><button class="pub-tab on" id="tab-ms" onclick="window.pubTab('ms',this)">&#128269; Mystery Shopper</button><button class="pub-tab" id="tab-tr" onclick="window.pubTab('tr',this)">&#127891; F&amp;B Training</button><button class="pub-tab" id="tab-bd" onclick="window.pubTab('bd',this)">&#9889; Bundle Plans</button></div>  <div id="pub-ms" class="pub-plans">    <div class="plan-card"><div class="plan-name" id="p-ms1-lbl">Starter</div><div class="plan-desc">1 Report / month</div><div class="plan-price-row"><span class="plan-cur">$</span><span class="plan-amount" id="p-ms1-price">180</span></div><div class="plan-period" id="p-ms1-per">per month</div><div class="plan-saving" id="p-ms1-save"></div><div class="plan-divider"></div><div class="plan-features"><div class="plan-feat"><div class="plan-feat-icon brand">&#10003;</div><span>1 anonymous mystery visit / month</span></div><div class="plan-feat"><div class="plan-feat-icon brand">&#10003;</div><span>108-checkpoint evaluation</span></div><div class="plan-feat"><div class="plan-feat-icon brand">&#10003;</div><span>Graded report &middot; 24h delivery</span></div></div><a href="https://wa.me/96181408165?text=Hello%20Consultors%20LB%2C%20I%27m%20interested." target="_blank" class="plan-cta secondary">Get Started</a></div>    <div class="plan-card featured"><div class="plan-badge">Most Popular</div><div class="plan-name" id="p-ms2-lbl">Professional</div><div class="plan-desc">2 Reports / month</div><div class="plan-price-row"><span class="plan-cur">$</span><span class="plan-amount" id="p-ms2-price">320</span></div><div class="plan-period" id="p-ms2-per">per month</div><div class="plan-saving" id="p-ms2-save"></div><div class="plan-divider"></div><div class="plan-features"><div class="plan-feat"><div class="plan-feat-icon filled">&#10003;</div><span>2 anonymous mystery visits / month</span></div><div class="plan-feat"><div class="plan-feat-icon filled">&#10003;</div><span>Comparative monthly analysis</span></div><div class="plan-feat"><div class="plan-feat-icon filled">&#10003;</div><span>Dedicated consultant assigned</span></div></div><a href="https://wa.me/96181408165?text=Hello%20Consultors%20LB%2C%20I%27m%20interested." target="_blank" class="plan-cta primary">Get Started</a></div>  </div>  <div id="pub-tr" style="display:none"><div class="tr-grid"><div class="tr-card"><div style="font-size:12px;color:var(--text3);margin-bottom:8px">1st Session</div><div style="font-family:var(--font-display);font-size:34px;color:var(--brand);margin-bottom:4px" id="p-tr1">$150</div><div style="font-size:11px;color:var(--text3);margin-bottom:16px">one-time</div><a href="https://wa.me/96181408165?text=Hello." target="_blank" class="plan-cta secondary">Book</a></div><div class="tr-card"><div style="font-size:12px;color:var(--text3);margin-bottom:8px">2nd Session</div><div style="font-family:var(--font-display);font-size:34px;color:var(--brand);margin-bottom:4px" id="p-tr2">$250</div><div style="font-size:11px;color:var(--text3);margin-bottom:16px">one-time</div><a href="https://wa.me/96181408165?text=Hello." target="_blank" class="plan-cta secondary">Book</a></div><div class="tr-card featured"><div class="plan-badge">Best Value</div><div style="font-size:12px;color:var(--text3);margin-bottom:8px">3rd Session</div><div style="font-family:var(--font-display);font-size:34px;color:var(--brand);margin-bottom:4px" id="p-tr3">$400</div><div style="font-size:11px;color:var(--text3);margin-bottom:16px">one-time</div><a href="https://wa.me/96181408165?text=Hello." target="_blank" class="plan-cta primary">Book</a></div><div class="tr-card"><div style="font-size:12px;color:var(--text3);margin-bottom:8px">4th Session</div><div style="font-family:var(--font-display);font-size:34px;color:var(--brand);margin-bottom:4px" id="p-tr4">$520</div><div style="font-size:11px;color:var(--text3);margin-bottom:16px">one-time</div><a href="https://wa.me/96181408165?text=Hello." target="_blank" class="plan-cta secondary">Book</a></div></div></div>  <div id="pub-bd" style="display:none" class="pub-plans"><div class="plan-card"><div class="plan-name" id="p-bd1-lbl">Essentials Bundle</div><div class="plan-desc">Mystery Shopper + Training</div><div class="plan-price-row"><span class="plan-cur">$</span><span class="plan-amount" id="p-bd1-price">450</span></div><div class="plan-period" id="p-bd1-per">per month</div><div class="plan-saving" id="p-bd1-save"></div><div class="plan-divider"></div><div class="plan-features"><div class="plan-feat"><div class="plan-feat-icon brand">&#10003;</div><span>1 mystery visit + 1 training</span></div></div><a href="https://wa.me/96181408165?text=Hello." target="_blank" class="plan-cta secondary">Get Bundle</a></div><div class="plan-card featured"><div class="plan-badge">Recommended</div><div class="plan-name" id="p-bd2-lbl">Growth Bundle</div><div class="plan-desc">2x Shopper + 2x Training</div><div class="plan-price-row"><span class="plan-cur">$</span><span class="plan-amount" id="p-bd2-price">750</span></div><div class="plan-period" id="p-bd2-per">per month</div><div class="plan-saving" id="p-bd2-save"></div><div class="plan-divider"></div><div class="plan-features"><div class="plan-feat"><div class="plan-feat-icon filled">&#10003;</div><span>2 visits + 2 sessions / month</span></div><div class="plan-feat"><div class="plan-feat-icon filled">&#10003;</div><span>Priority dedicated consultant</span></div></div><a href="https://wa.me/96181408165?text=Hello." target="_blank" class="plan-cta primary">Get Bundle</a></div></div>  </div></div>
+  <div id="faq-section" style="background:var(--surface);padding:88px 24px"><div style="max-width:720px;margin:0 auto"><div style="text-align:center;margin-bottom:52px"><div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--brand-acc);margin-bottom:10px">FAQ</div><h2 style="font-family:var(--font-display);font-size:clamp(22px,4vw,36px);color:var(--brand)">Frequently asked questions</h2></div><div style="border-bottom:1px solid var(--border)"><button onclick="window.toggleFaq(0)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 0;background:none;border:none;cursor:pointer;text-align:left"><span style="font-size:15px;font-weight:500;color:var(--brand)">What is Consultors and who is it for?</span><span id="faq-icon-0" style="font-size:20px;color:var(--brand-acc);flex-shrink:0;margin-left:12px">+</span></button><div id="faq-ans-0" style="display:none;padding:0 0 18px;font-size:14px;color:var(--text3);line-height:1.75">Consultors is an F&amp;B operations platform built for restaurants, cafes, hotels and multi-location businesses in Lebanon and the MENA region.</div></div><div style="border-bottom:1px solid var(--border)"><button onclick="window.toggleFaq(1)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 0;background:none;border:none;cursor:pointer;text-align:left"><span style="font-size:15px;font-weight:500;color:var(--brand)">Do I need technical knowledge to use it?</span><span id="faq-icon-1" style="font-size:20px;color:var(--brand-acc);flex-shrink:0;margin-left:12px">+</span></button><div id="faq-ans-1" style="display:none;padding:0 0 18px;font-size:14px;color:var(--text3);line-height:1.75">No. The platform is designed to be simple enough for a waiter on their first day and powerful enough for a GM managing multiple locations.</div></div><div style="border-bottom:1px solid var(--border)"><button onclick="window.toggleFaq(2)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 0;background:none;border:none;cursor:pointer;text-align:left"><span style="font-size:15px;font-weight:500;color:var(--brand)">How does the mystery shopper service work?</span><span id="faq-icon-2" style="font-size:20px;color:var(--brand-acc);flex-shrink:0;margin-left:12px">+</span></button><div id="faq-ans-2" style="display:none;padding:0 0 18px;font-size:14px;color:var(--text3);line-height:1.75">A trained Consultors evaluator visits your restaurant anonymously and evaluates 108 checkpoints across 4 phases. A graded report is delivered within 24 hours.</div></div><div style="border-bottom:1px solid var(--border)"><button onclick="window.toggleFaq(3)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 0;background:none;border:none;cursor:pointer;text-align:left"><span style="font-size:15px;font-weight:500;color:var(--brand)">Can I customize the checklists and SOPs?</span><span id="faq-icon-3" style="font-size:20px;color:var(--brand-acc);flex-shrink:0;margin-left:12px">+</span></button><div id="faq-ans-3" style="display:none;padding:0 0 18px;font-size:14px;color:var(--text3);line-height:1.75">Yes. Consultors provides master templates. You can customize every item, add your own steps and adjust standards to match your restaurant.</div></div><div style="border-bottom:1px solid var(--border)"><button onclick="window.toggleFaq(4)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 0;background:none;border:none;cursor:pointer;text-align:left"><span style="font-size:15px;font-weight:500;color:var(--brand)">How many staff accounts can I add?</span><span id="faq-icon-4" style="font-size:20px;color:var(--brand-acc);flex-shrink:0;margin-left:12px">+</span></button><div id="faq-ans-4" style="display:none;padding:0 0 18px;font-size:14px;color:var(--text3);line-height:1.75">There is no limit on staff accounts. Add as many roles as you need.</div></div><div style="border-bottom:1px solid var(--border)"><button onclick="window.toggleFaq(5)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 0;background:none;border:none;cursor:pointer;text-align:left"><span style="font-size:15px;font-weight:500;color:var(--brand)">Is my data secure?</span><span id="faq-icon-5" style="font-size:20px;color:var(--brand-acc);flex-shrink:0;margin-left:12px">+</span></button><div id="faq-ans-5" style="display:none;padding:0 0 18px;font-size:14px;color:var(--text3);line-height:1.75">All data is stored on Google Firebase infrastructure with enterprise-grade encryption. Your data is never shared with third parties.</div></div><div style="border-bottom:1px solid var(--border)"><button onclick="window.toggleFaq(6)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 0;background:none;border:none;cursor:pointer;text-align:left"><span style="font-size:15px;font-weight:500;color:var(--brand)">What happens after I sign up?</span><span id="faq-icon-6" style="font-size:20px;color:var(--brand-acc);flex-shrink:0;margin-left:12px">+</span></button><div id="faq-ans-6" style="display:none;padding:0 0 18px;font-size:14px;color:var(--text3);line-height:1.75">You get instant access. The Consultors team will contact you within 24 hours to help with setup.</div></div></div></div>
+  <div style="background:linear-gradient(135deg,var(--brand) 0%,#2d5282 100%);padding:80px 24px;text-align:center"><div style="max-width:600px;margin:0 auto"><h2 style="font-family:var(--font-display);font-size:clamp(24px,4vw,38px);color:#fff;margin-bottom:14px">Ready to run better shifts?</h2><p style="font-size:15px;color:rgba(255,255,255,.7);margin-bottom:36px;line-height:1.7">Join 150+ restaurants already using Consultors.</p><div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><button onclick="window.goSignup()" style="padding:15px 36px;background:#fff;border:none;border-radius:var(--r-lg);font-size:15px;font-weight:700;color:var(--brand);cursor:pointer">Start Free Trial &rarr;</button><a href="https://wa.me/96181408165" target="_blank" style="padding:15px 28px;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.25);border-radius:var(--r-lg);font-size:15px;font-weight:600;color:#fff;text-decoration:none;display:inline-block">WhatsApp Us</a></div></div></div>
+  <div style="background:var(--dark);padding:36px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px"><div><img src="data:image/png;base64,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" style="height:24px;margin-bottom:8px"><div style="font-size:12px;color:rgba(255,255,255,.35);margin-top:4px">&copy; 2026 Consultors LB &middot; Beirut, Lebanon</div></div><div style="display:flex;gap:24px;flex-wrap:wrap"><a href="mailto:info.consultors@gmail.com" style="font-size:13px;color:rgba(255,255,255,.5);text-decoration:none">info.consultors@gmail.com</a><a href="tel:+96181408165" style="font-size:13px;color:rgba(255,255,255,.5);text-decoration:none">+961 81 408 165</a></div></div>
+</div>
+<!-- LOGIN PAGE -->
+<div id="login" style="display:none">
+  <div class="login-bg"></div>
+  <div class="login-blob lb1"></div>
+  <div class="login-blob lb2"></div>
+  <div class="login-blob lb3"></div>
+  <div class="login-grid"></div>
+  <div class="login-wrap">
+    <div class="login-inner">
+      <div class="login-left">
+        <img src="data:image/png;base64,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" alt="Consultors">
+        <div class="login-headline">Run every shift<br>with confidence</div>
+        <div class="login-tagline">The complete operations platform for restaurants &mdash; checklists, SOPs, temperature logs, training and mystery shopping in one place.</div>
+        <div class="login-feats">
+          <div class="login-feat"><div class="login-feat-icon"><svg viewBox="0 0 24 24" stroke="var(--brand-acc)"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><div><div class="login-feat-title">Daily Checklists</div><div class="login-feat-desc">Opening, closing, cleaning &mdash; every role has their own checklist.</div></div></div>
+          <div class="login-feat"><div class="login-feat-icon"><svg viewBox="0 0 24 24" stroke="#6dd4c8"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></div><div><div class="login-feat-title">Temperature Logs</div><div class="login-feat-desc">HACCP-compliant tracking &mdash; alerts when out of safe range.</div></div></div>
+          <div class="login-feat"><div class="login-feat-icon"><svg viewBox="0 0 24 24" stroke="#f0c060"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><div class="login-feat-title">SOPs &amp; Standards</div><div class="login-feat-desc">Step-by-step procedures your team actually follows.</div></div></div>
+          <div class="login-feat"><div class="login-feat-icon"><svg viewBox="0 0 24 24" stroke="#a0d4a0"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg></div><div><div class="login-feat-title">Mystery Shopping</div><div class="login-feat-desc">108-point evaluation &mdash; graded reports in 24 hours.</div></div></div>
+        </div>
+        <div class="login-stats">
+          <div class="login-stat"><div class="login-stat-n">150+</div><div class="login-stat-l">Restaurants</div></div>
+          <div class="login-stat"><div class="login-stat-n">108</div><div class="login-stat-l">Checkpoints</div></div>
+          <div class="login-stat"><div class="login-stat-n">24h</div><div class="login-stat-l">Delivery</div></div>
+        </div>
+      </div>
+      <div class="login-box">
+        <img src="data:image/png;base64,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" alt="Consultors">
+        <div class="login-box-sub">Back Office &amp; Operations</div>
+        <div class="login-box-div"></div>
+        <div class="login-err" id="login-err"></div>
+        <div id="form-signin">
+          <div class="form-group"><label class="form-label">Username</label><input type="text" class="form-input" id="inp-user" placeholder="Enter username" autocomplete="username"></div>
+          <div class="form-group"><label class="form-label">Password</label><input type="password" class="form-input" id="inp-pass" placeholder="Enter password" autocomplete="current-password"></div>
+          <button class="login-btn" id="login-btn" onclick="window.doLogin()">Sign In &rarr;</button>
+          <div class="login-divider"><div class="login-divider-line"></div><div class="login-divider-text">or</div><div class="login-divider-line"></div></div>
+          <div class="login-footer-link">New restaurant? <a onclick="window.goSignup()">&nbsp;Create account</a></div>
+          <div class="login-footer-link" style="margin-top:8px"><a onclick="window.showPub()">&larr; View pricing</a></div>
+        </div>
+        <div id="form-signup" style="display:none">
+          <div style="font-family:var(--font-display);font-size:18px;color:var(--brand);margin-bottom:4px">Create your account</div>
+          <div style="font-size:12px;color:var(--text3);margin-bottom:18px">Set up your restaurant in minutes</div>
+          <div class="step-dots"><div class="step-dot active" id="dot-1"></div><div class="step-dot" id="dot-2"></div><div class="step-dot" id="dot-3"></div></div>
+          <div class="signup-step active" id="step-1">
+            <div class="form-group"><label class="form-label">Restaurant Name *</label><input type="text" class="form-input" id="su-rname" placeholder="e.g. Le Bosphore"></div>
+            <div class="form-group"><label class="form-label">Cuisine Type</label><select class="form-select" id="su-cuisine"><option>Fine Dining</option><option>Casual Dining</option><option>Cafe / Bistro</option><option>Fast Casual</option><option>Lounge / Bar</option><option>Hotel Restaurant</option><option>Other</option></select></div>
+            <div class="form-group"><label class="form-label">Location</label><input type="text" class="form-input" id="su-loc" placeholder="e.g. Beirut, Achrafieh"></div>
+            <button class="btn btn-primary" style="width:100%;margin-top:4px" onclick="window.suNext(1)">Continue &rarr;</button>
+          </div>
+          <div class="signup-step" id="step-2">
+            <div class="form-group"><label class="form-label">Contact Name *</label><input type="text" class="form-input" id="su-name" placeholder="Your full name"></div>
+            <div class="form-group"><label class="form-label">Phone / WhatsApp *</label><input type="tel" class="form-input" id="su-phone" placeholder="+961 xx xxx xxx"></div>
+            <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" id="su-email" placeholder="you@restaurant.com"></div>
+            <div style="display:flex;gap:8px;margin-top:4px"><button class="btn btn-ghost" style="flex:1" onclick="window.suBack(2)">&larr;</button><button class="btn btn-primary" style="flex:2" onclick="window.suNext(2)">Continue &rarr;</button></div>
+          </div>
+          <div class="signup-step" id="step-3">
+            <div class="form-group"><label class="form-label">Username *</label><input type="text" class="form-input" id="su-user" placeholder="Choose a username" autocomplete="off"></div>
+            <div class="form-group"><label class="form-label">Password *</label><input type="password" class="form-input" id="su-pw" placeholder="At least 6 characters"></div>
+            <div class="form-group"><label class="form-label">Confirm Password *</label><input type="password" class="form-input" id="su-pw2" placeholder="Repeat password"></div>
+            <div style="background:var(--brand-pale);border-radius:var(--r-md);padding:10px 12px;font-size:12px;color:var(--brand);margin-bottom:12px">&#x2139;&#xfe0f; Instant access &mdash; we notify Consultors of your signup.</div>
+            <div style="display:flex;gap:8px"><button class="btn btn-ghost" style="flex:1" onclick="window.suBack(3)">&larr;</button><button class="btn btn-primary" style="flex:2" id="su-submit-btn" onclick="window.doSignup()">Create Account</button></div>
+          </div>
+          <div class="login-footer-link" style="margin-top:14px">Already have an account? <a onclick="window.showSignin()">Sign in</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- APP -->
+<div id="app" style="display:none">
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sb-head">
+        <img src="data:image/png;base64,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" alt="Consultors">
+        <div class="sb-user">
+          <div class="sb-av" id="sb-av">A</div>
+          <div>
+            <div class="sb-name" id="sb-name">Loading...</div>
+            <div class="sb-role" id="sb-role">...</div>
+          </div>
+        </div>
+      </div>
+      <nav class="sb-nav" id="sb-nav"></nav>
+      <div class="sb-foot">
+        <button class="logout-btn" onclick="window.doLogout()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          Sign Out
+        </button>
+      </div>
+    </aside>
+    <main class="main-area">
+      <div class="topbar">
+        <div class="topbar-left">
+          <button class="mob-tog" onclick="document.getElementById('sidebar').classList.toggle('open')">
+            <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <span class="topbar-title" id="page-title">Dashboard</span>
+        </div>
+        <div class="topbar-right">
+          <span class="topbar-date" id="topbar-date"></span>
+          <span class="chip chip-brand" id="topbar-role"></span>
+        </div>
+      </div>
+      <div class="page-body" id="page-body"></div>
+    </main>
+  </div>
+</div>
+
+<div id="toast"></div>
+<datalist id="cl-list"></datalist>
+<script type="module">
+import {initializeApp} from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+import {getFirestore,collection,doc,addDoc,updateDoc,deleteDoc,getDocs,where,query}
+  from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+
+const db = getFirestore(initializeApp({
+  apiKey:"AIzaSyBdov71P2V_JfnhJeB1n0YxrhF_oI8HMws",
+  authDomain:"consultorslb-fc7c3.firebaseapp.com",
+  projectId:"consultorslb-fc7c3",
+  storageBucket:"consultorslb-fc7c3.firebasestorage.app",
+  messagingSenderId:"352625434259",
+  appId:"1:352625434259:web:daae49ffe449f1367b7766"
+}));
+
+// ── HELPERS ──────────────────────────────────
+const $ = id => document.getElementById(id);
+const toast = (msg, type='info') => {
+  const e=$('toast'); if(!e) return;
+  e.textContent=msg; e.className='show '+type;
+  clearTimeout(e._t); e._t=setTimeout(()=>e.className='',3200);
+};
+window.openM  = id => { const e=$(id); if(e) e.classList.add('open'); };
+window.closeM = id => { const e=$(id); if(e) e.classList.remove('open'); };
+
+// ── STATE ────────────────────────────────────
+let CU = null;
+let DATA = {users:[],clients:[],reports:[],training:[],finance:[],sops:[],checklists:[],assignments:[]};
+let PRICE = {ms1:180,ms1l:'Starter',ms2:320,ms2l:'Professional',note:'',tr1:150,tr2:250,tr3:400,tr4:520,bd1:450,bd1l:'Essentials Bundle',bd2:750,bd2l:'Growth Bundle',disc:20};
+
+// ── ROLES ────────────────────────────────────
+const ROLE_LABEL = {
+  super_admin:'Super Admin', restaurant_admin:'Restaurant Admin',
+  manager:'Manager', head_chef:'Head Chef', trainer:'Trainer',
+  shopper:'Mystery Shopper', waiter:'Waiter', kitchen:'Kitchen Staff',
+  cleaner:'Cleaner', host:'Host / Hostess', cashier:'Cashier',
+};
+const ROLE_CHIP = {
+  super_admin:'chip-dark', restaurant_admin:'chip-brand',
+  manager:'chip-teal', head_chef:'chip-gold', trainer:'chip-purple',
+  shopper:'chip-red', waiter:'chip-brand', kitchen:'chip-amber',
+  cleaner:'chip-gray', host:'chip-teal', cashier:'chip-green',
+};
+const rl = r => ROLE_LABEL[r]||r;
+const rc = r => ROLE_CHIP[r]||'chip-gray';
+
+// ── NAV ──────────────────────────────────────
+const NAV = [
+  {sec:'Consultors HQ',roles:['super_admin'],items:[
+    {id:'dashboard',  l:'Dashboard',        r:['super_admin'],ic:'<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>'},
+    {id:'restaurants',l:'Restaurants',      r:['super_admin'],ic:'<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>'},
+    {id:'clients',    l:'Clients',          r:['super_admin'],ic:'<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>'},
+    {id:'team',       l:'Team & Roles',     r:['super_admin'],ic:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/>'},
+    {id:'finance',    l:'Finance',          r:['super_admin'],ic:'<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>'},
+    {id:'evaluations',l:'Evaluations',      r:['super_admin'],ic:'<circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/>'},
+    {id:'training',   l:'Training',         r:['super_admin'],ic:'<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>'},
+    {id:'incidents',  l:'Incidents',        r:['super_admin'],ic:'<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>'},
+    {id:'checklists', l:'Checklists',       r:['super_admin'],ic:'<path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>'},
+    {id:'sops',       l:'SOPs',             r:['super_admin'],ic:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>'},
+    {id:'templogs',   l:'Temperature Logs', r:['super_admin'],ic:'<path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>'},
+    {id:'menudev',    l:'Menu Development', r:['super_admin'],ic:'<line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/>'},
+    {id:'pricing',    l:'Pricing Manager',  r:['super_admin'],ic:'<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/>'},
+    {id:'platform',   l:'Platform Settings',r:['super_admin'],ic:'<circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42"/>'},
+  ]},
+  {sec:'My Restaurant',roles:['restaurant_admin'],items:[
+    {id:'dashboard',  l:'Dashboard',        r:['restaurant_admin'],ic:'<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>'},
+    {id:'team',       l:'My Team',          r:['restaurant_admin'],ic:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>'},
+    {id:'mywork',     l:'Operations',       r:['restaurant_admin'],ic:'<path d="M9 11l3 3L22 4"/>'},
+    {id:'checklists', l:'Checklists',       r:['restaurant_admin'],ic:'<path d="M9 11l3 3L22 4"/>'},
+    {id:'sops',       l:'SOPs',             r:['restaurant_admin'],ic:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>'},
+    {id:'templogs',   l:'Temperature Logs', r:['restaurant_admin'],ic:'<path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>'},
+    {id:'incidents',  l:'Incidents',        r:['restaurant_admin'],ic:'<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>'},
+    {id:'evaluations',l:'Evaluations',      r:['restaurant_admin'],ic:'<circle cx="11" cy="11" r="7"/>'},
+    {id:'training',   l:'Training',         r:['restaurant_admin'],ic:'<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>'},
+    {id:'menudev',    l:'Menu Development', r:['restaurant_admin'],ic:'<line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>'},
+    {id:'finance',    l:'Finance',          r:['restaurant_admin'],ic:'<line x1="12" y1="1" x2="12" y2="23"/>'},
+  ]},
+  {sec:'My Shift',roles:['manager'],items:[
+    {id:'dashboard',  l:'Dashboard',        r:['manager'],ic:'<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>'},
+    {id:'mywork',     l:'Shift Control',    r:['manager'],ic:'<path d="M9 11l3 3L22 4"/>'},
+    {id:'team',       l:'My Staff',         r:['manager'],ic:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>'},
+    {id:'incidents',  l:'Incidents',        r:['manager'],ic:'<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>'},
+    {id:'templogs',   l:'Temperature Logs', r:['manager'],ic:'<path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>'},
+    {id:'checklists', l:'Checklists',       r:['manager'],ic:'<path d="M9 11l3 3L22 4"/>'},
+    {id:'sops',       l:'SOPs',             r:['manager'],ic:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>'},
+    {id:'evaluations',l:'Evaluations',      r:['manager'],ic:'<circle cx="11" cy="11" r="7"/>'},
+    {id:'training',   l:'Training',         r:['manager'],ic:'<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>'},
+  ]},
+  {sec:'Kitchen',roles:['head_chef'],items:[
+    {id:'mywork',     l:'Kitchen Dashboard',r:['head_chef'],ic:'<path d="M9 11l3 3L22 4"/>'},
+    {id:'templogs',   l:'Temperature Logs', r:['head_chef'],ic:'<path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>'},
+    {id:'checklists', l:'Checklists',       r:['head_chef'],ic:'<path d="M9 11l3 3L22 4"/>'},
+    {id:'sops',       l:'SOPs',             r:['head_chef'],ic:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>'},
+    {id:'menudev',    l:'Menu & Recipes',   r:['head_chef'],ic:'<line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>'},
+  ]},
+  {sec:'My Shift',roles:['waiter','host','cashier','cleaner','kitchen'],items:[
+    {id:'myshift',    l:'My Shift',         r:['waiter','host','cashier','cleaner','kitchen'],ic:'<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>'},
+  ]},
+  {sec:'My Work',roles:['trainer'],items:[
+    {id:'mywork',     l:'My Sessions',      r:['trainer'],ic:'<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>'},
+    {id:'training',   l:'All Sessions',     r:['trainer'],ic:'<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>'},
+  ]},
+  {sec:'My Work',roles:['shopper'],items:[
+    {id:'mywork',     l:'My Reports',       r:['shopper'],ic:'<circle cx="11" cy="11" r="7"/>'},
+    {id:'evaluations',l:'Evaluations',      r:['shopper'],ic:'<circle cx="11" cy="11" r="7"/>'},
+  ]},
+];
+
+const PAGE_TITLES = {
+  dashboard:'Dashboard',myshift:'My Shift',mywork:'My Work',
+  checklists:'Checklists',sops:'SOPs',templogs:'Temperature Logs',
+  training:'Training',evaluations:'Evaluations',incidents:'Incidents',
+  clients:'Clients',finance:'Finance',menudev:'Menu Development',
+  team:'Team & Roles',restaurants:'Restaurants',pricing:'Pricing Manager',platform:'Platform Settings',
+};
+
+const DEFAULT_VIEW = {
+  super_admin:'dashboard',restaurant_admin:'dashboard',manager:'dashboard',
+  head_chef:'mywork',trainer:'mywork',shopper:'mywork',
+  waiter:'myshift',kitchen:'myshift',cleaner:'myshift',host:'myshift',cashier:'myshift',
+};
+
+const ACCESS = {
+  dashboard:  ['super_admin','restaurant_admin','manager'],
+  myshift:    ['waiter','kitchen','cleaner','host','cashier'],
+  mywork:     ['head_chef','trainer','shopper','manager','restaurant_admin'],
+  checklists: ['super_admin','restaurant_admin','manager','head_chef'],
+  sops:       ['super_admin','restaurant_admin','manager','head_chef','trainer','waiter','kitchen','cleaner','host','cashier'],
+  templogs:   ['super_admin','restaurant_admin','manager','head_chef','kitchen'],
+  training:   ['super_admin','restaurant_admin','manager','trainer'],
+  evaluations:['super_admin','restaurant_admin','manager','shopper'],
+  incidents:  ['super_admin','restaurant_admin','manager'],
+  clients:    ['super_admin'],
+  finance:    ['super_admin','restaurant_admin'],
+  menudev:    ['super_admin','restaurant_admin','manager','head_chef'],
+  team:       ['super_admin','restaurant_admin','manager'],
+  restaurants:['super_admin'],
+  pricing:    ['super_admin'],
+  platform:   ['super_admin'],
+};
+
+// ── BUILD NAV ─────────────────────────────────
+function buildNav() {
+  let h = '';
+  NAV.forEach(sec => {
+    if(!sec.roles.includes(CU.role)) return;
+    const vis = sec.items.filter(i => i.r.includes(CU.role));
+    if(!vis.length) return;
+    h += '<div class="nav-sec"><div class="nav-sec-lbl">'+sec.sec+'</div></div>';
+    vis.forEach(item => {
+      h += '<div class="nav-item" id="nav-'+item.id+'" onclick="window.navTo(\''+item.id+'\')">'
+         + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;flex-shrink:0">'+item.ic+'</svg>'
+         + item.l+'</div>';
+    });
+  });
+  const nav=$('sb-nav'); if(nav) nav.innerHTML=h;
+}
+
+// ── ROUTING ───────────────────────────────────
+window.navTo = id => {
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('on'));
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('on'));
+  const v=$('view-'+id); if(v) v.classList.add('on');
+  const n=$('nav-'+id);  if(n) n.classList.add('on');
+  const pt=$('page-title'); if(pt) pt.textContent=PAGE_TITLES[id]||id;
+  $('sidebar')?.classList.remove('open');
+  const pb=$('page-body'); if(pb) pb.scrollTop=0;
+  render(id);
+};
+
+function render(id) {
+  const el=$('view-'+id); if(!el) return;
+  const allowed=ACCESS[id];
+  if(allowed&&!allowed.includes(CU.role)){
+    el.innerHTML='<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:60vh;text-align:center;color:var(--text3)"><div style="font-size:48px;margin-bottom:16px">🔒</div><div style="font-size:16px;font-weight:500;color:var(--text2);margin-bottom:8px">Access Restricted</div><div style="font-size:13px">You do not have permission to view this section.</div></div>';
+    return;
+  }
+  const fn=RENDERS[id];
+  if(fn){fn(el);return;}
+  el.innerHTML='<div class="page-header"><div><div class="page-h1">'+(PAGE_TITLES[id]||id)+'</div></div></div><div class="card"><div class="card-body" style="text-align:center;padding:48px;color:var(--text3)"><div style="font-size:32px;margin-bottom:12px">🚧</div><div style="font-size:15px;font-weight:500;color:var(--text2)">Coming soon</div></div></div>';
+}
+
+function buildViews() {
+  const pb=$('page-body'); if(!pb) return;
+  pb.innerHTML=Object.keys(PAGE_TITLES).map(id=>'<div class="view" id="view-'+id+'"></div>').join('');
+}
+
+// ── STAT CARD ─────────────────────────────────
+function mkStat(color,icon,value,label) {
+  return '<div class="stat-card"><div class="stat-accent" style="background:'+color+'"></div>'
+       + '<div class="stat-icon" style="background:'+color+'18;color:'+color+'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px">'+icon+'</svg></div>'
+       + '<div class="stat-value">'+value+'</div><div class="stat-label">'+label+'</div></div>';
+}
+
+// ── LOAD DATA ─────────────────────────────────
+async function loadAll() {
+  try {
+    const [uS,cS,rS,tS,fS,sS,clS,aS] = await Promise.all([
+      getDocs(collection(db,'users')),
+      getDocs(collection(db,'clients')),
+      getDocs(collection(db,'reports')),
+      getDocs(collection(db,'training')),
+      getDocs(collection(db,'finance')),
+      getDocs(collection(db,'sops')),
+      getDocs(collection(db,'checklists')),
+      getDocs(collection(db,'assignments')),
+    ]);
+    DATA.users       = uS.docs.map(d=>({id:d.id,...d.data()}));
+    DATA.clients     = cS.docs.map(d=>({id:d.id,...d.data()}));
+    DATA.reports     = rS.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+    DATA.training    = tS.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+    DATA.finance     = fS.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+    DATA.sops        = sS.docs.map(d=>({id:d.id,...d.data()}));
+    DATA.checklists  = clS.docs.map(d=>({id:d.id,...d.data()}));
+    DATA.assignments = aS.docs.map(d=>({id:d.id,...d.data()}));
+    const pS = await getDocs(collection(db,'pricing'));
+    if(!pS.empty) Object.assign(PRICE,pS.docs[0].data(),{_id:pS.docs[0].id});
+    syncClientList();
+  } catch(e){console.warn('loadAll:',e);}
+}
+
+function syncClientList() {
+  const dl=$('cl-list'); if(!dl) return;
+  dl.innerHTML=DATA.clients.filter(c=>!c.status||c.status==='active').sort((a,b)=>(a.name||'').localeCompare(b.name||'')).map(c=>'<option value="'+(c.name||'')+'"></option>').join('');
+}
+
+// ── LAUNCH APP ────────────────────────────────
+function launchApp(user) {
+  CU=user;
+  const pub=$('pub'); if(pub) pub.style.display='none';
+  const login=$('login'); if(login) login.style.display='none';
+  $('app').style.display='block';
+  // Sidebar avatar
+  const sbAv=$('sb-av');
+  if(sbAv){
+    if(user.photo){sbAv.innerHTML='<img src="'+user.photo+'" style="width:34px;height:34px;border-radius:50%;object-fit:cover">';sbAv.style.background='transparent';}
+    else{sbAv.textContent=user.name.charAt(0).toUpperCase();sbAv.style.background='';}
+  }
+  $('sb-name').textContent  = user.name;
+  $('sb-role').textContent  = rl(user.role);
+  const tr=$('topbar-role'); if(tr){tr.textContent=rl(user.role);tr.className='chip '+rc(user.role);}
+  $('topbar-date').textContent=new Date().toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'});
+  const accents={super_admin:'#4a90d9',restaurant_admin:'#4a90d9',manager:'#0d7377',head_chef:'#c9a227',trainer:'#6c3fc5',shopper:'#c0392b',waiter:'#4a90d9',kitchen:'#c45c1a',cleaner:'#0d7377',host:'#6c3fc5',cashier:'#1a7a4e'};
+  $('sidebar')?.style.setProperty('--sb-accent',accents[user.role]||'#4a90d9');
+  buildNav();
+  buildViews();
+  loadAll().catch(e=>console.warn('loadAll:',e));
+  window.navTo(DEFAULT_VIEW[user.role]||'dashboard');
+}
+
+// ── AUTH ──────────────────────────────────────
+window.showPub   = ()=>{
+  const pub=$('pub'); if(pub){pub.style.display='block';loadPubPrices();}
+  const login=$('login'); if(login) login.style.display='none';
+  $('app').style.display='none';
+};
+window.showLogin = ()=>{
+  const pub=$('pub'); if(pub) pub.style.display='none';
+  $('app').style.display='none';
+  const login=$('login'); if(login) login.style.display='flex';
+  setTimeout(()=>$('inp-user')?.focus(),80);
+};
+window.showSignin= ()=>{
+  const fs=$('form-signup'); if(fs) fs.style.display='none';
+  const si=$('form-signin'); if(si) si.style.display='block';
+  const e=$('login-err'); if(e){e.style.display='none';e.textContent='';}
+};
+window.goSignup  = ()=>{ window.showLogin(); setTimeout(()=>{const fs=$('form-signup');const si=$('form-signin');if(fs&&si){si.style.display='none';fs.style.display='block';}},150); };
+window.suNext    = step=>{
+  if(step===1&&!$('su-rname')?.value.trim()){toast('Restaurant name required','error');return;}
+  if(step===2){if(!$('su-name')?.value.trim()){toast('Name required','error');return;}if(!$('su-phone')?.value.trim()){toast('Phone required','error');return;}}
+  $('step-'+step).classList.remove('active');$('step-'+(step+1)).classList.add('active');
+  $('dot-'+step).classList.replace('active','done');$('dot-'+(step+1)).classList.add('active');
+};
+window.suBack    = step=>{
+  $('step-'+step).classList.remove('active');$('step-'+(step-1)).classList.add('active');
+  $('dot-'+step).classList.remove('active');$('dot-'+(step-1)).classList.remove('done');$('dot-'+(step-1)).classList.add('active');
+};
+
+window.doLogin = async()=>{
+  const u=$('inp-user')?.value.trim(), p=$('inp-pass')?.value.trim();
+  const err=$('login-err'); if(err){err.style.display='none';err.textContent='';}
+  if(!u||!p){if(err){err.textContent='Please enter username and password.';err.style.display='block';}return;}
+  const btn=$('login-btn'); if(btn){btn.textContent='Signing in...';btn.disabled=true;}
+  try{
+    if(u==='admin'&&p==='consultors2026'){
+      const user={id:'super-admin',name:'Administrator',username:'admin',role:'super_admin',type:'consultors'};
+      localStorage.setItem('clb',JSON.stringify(user)); launchApp(user); return;
+    }
+    const snap=await getDocs(query(collection(db,'users'),where('username','==',u)));
+    if(snap.empty||snap.docs[0].data().password!==p){
+      if(err){err.textContent='Incorrect username or password.';err.style.display='block';}
+      if(btn){btn.textContent='Sign In \u2192';btn.disabled=false;} return;
+    }
+    const user={id:snap.docs[0].id,...snap.docs[0].data()};
+    localStorage.setItem('clb',JSON.stringify(user)); launchApp(user);
+  }catch(e){if(err){err.textContent='Connection error. Try again.';err.style.display='block';}if(btn){btn.textContent='Sign In \u2192';btn.disabled=false;}}
+};
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='Enter'&&$('login')?.style.display!=='none') window.doLogin();
+});
+
+window.doSignup = async()=>{
+  const rname=$('su-rname')?.value.trim(),name=$('su-name')?.value.trim(),phone=$('su-phone')?.value.trim();
+  const email=$('su-email')?.value.trim(),uname=$('su-user')?.value.trim(),pw=$('su-pw')?.value.trim(),pw2=$('su-pw2')?.value.trim();
+  if(!uname){toast('Username required','error');return;}
+  if(pw.length<6){toast('Password must be at least 6 characters','error');return;}
+  if(pw!==pw2){toast('Passwords do not match','error');return;}
+  const btn=$('su-submit-btn'); if(btn){btn.textContent='Creating...';btn.disabled=true;}
+  try{
+    const ex=await getDocs(query(collection(db,'users'),where('username','==',uname)));
+    if(!ex.empty){toast('Username already taken','error');if(btn){btn.textContent='Create Account';btn.disabled=false;}return;}
+    const rRef=await addDoc(collection(db,'restaurants'),{name:rname,cuisine:$('su-cuisine')?.value,location:$('su-loc')?.value.trim(),status:'active',plan:'trial',createdAt:new Date().toISOString(),setupDone:false});
+    const uRef=await addDoc(collection(db,'users'),{name,phone,email,username:uname,password:pw,role:'restaurant_admin',type:'restaurant',restaurantId:rRef.id,restaurantName:rname,createdAt:new Date().toISOString()});
+    await addDoc(collection(db,'notifications'),{type:'new_signup',restaurantName:rname,contactName:name,phone,restaurantId:rRef.id,userId:uRef.id,read:false,createdAt:new Date().toISOString()});
+    const user={id:uRef.id,name,username:uname,role:'restaurant_admin',type:'restaurant',restaurantId:rRef.id,restaurantName:rname};
+    localStorage.setItem('clb',JSON.stringify(user)); launchApp(user);
+  }catch(e){toast('Error creating account. Try again.','error');if(btn){btn.textContent='Create Account';btn.disabled=false;}}
+};
+
+window.doLogout=()=>{
+  localStorage.removeItem('clb'); CU=null;
+  $('app').style.display='none';
+  const iu=$('inp-user');if(iu)iu.value='';
+  const ip=$('inp-pass');if(ip)ip.value='';
+  const btn=$('login-btn');if(btn){btn.textContent='Sign In \u2192';btn.disabled=false;}
+  window.showPub();
+};
+
+// ── PUBLIC PRICING ────────────────────────────
+let pubAnnual=false;
+window.pubToggle=()=>{pubAnnual=!pubAnnual;$('pub-toggle')?.classList.toggle('on',pubAnnual);renderPubPrices();};
+window.pubTab=(tab,btn)=>{
+  ['ms','tr','bd'].forEach(t=>{const el=$('pub-'+t);if(el)el.style.display=t===tab?'':'none';});
+  document.querySelectorAll('.pub-tab').forEach(b=>b.classList.remove('on'));
+  if(btn)btn.classList.add('on');
+};
+async function loadPubPrices(){
+  try{const snap=await getDocs(collection(db,'pricing'));if(!snap.empty)Object.assign(PRICE,snap.docs[0].data());}catch(e){}
+  renderPubPrices();
+}
+function renderPubPrices(){
+  const disc=parseFloat(PRICE.disc||20)/100;
+  const badge=$('lbl-disc');if(badge)badge.textContent='Save '+Math.round(disc*100)+'%';
+  const plans=[
+    {mo:PRICE.ms1||180,lbl:PRICE.ms1l||'Starter',  pP:'p-ms1-price',pL:'p-ms1-lbl',pPer:'p-ms1-per',pS:'p-ms1-save'},
+    {mo:PRICE.ms2||320,lbl:PRICE.ms2l||'Professional',pP:'p-ms2-price',pL:'p-ms2-lbl',pPer:'p-ms2-per',pS:'p-ms2-save'},
+    {mo:PRICE.bd1||450,lbl:PRICE.bd1l||'Essentials', pP:'p-bd1-price',pL:'p-bd1-lbl',pPer:'p-bd1-per',pS:'p-bd1-save'},
+    {mo:PRICE.bd2||750,lbl:PRICE.bd2l||'Growth',     pP:'p-bd2-price',pL:'p-bd2-lbl',pPer:'p-bd2-per',pS:'p-bd2-save'},
+  ];
+  plans.forEach(p=>{
+    const ann=Math.round(p.mo*12*(1-disc)),price=pubAnnual?ann:p.mo,saving=pubAnnual?Math.round(p.mo*12-ann):0;
+    const pe=$(p.pP);if(pe)pe.textContent=price;
+    const le=$(p.pL);if(le)le.textContent=p.lbl;
+    const pr=$(p.pPer);if(pr)pr.textContent=pubAnnual?'per year':'per month';
+    const se=$(p.pS);if(se){se.style.display=pubAnnual&&saving>0?'block':'none';se.textContent='Save $'+saving+'/yr';}
+  });
+  [{id:'p-tr1',v:PRICE.tr1||150},{id:'p-tr2',v:PRICE.tr2||250},{id:'p-tr3',v:PRICE.tr3||400},{id:'p-tr4',v:PRICE.tr4||520}]
+    .forEach(t=>{const e=$(t.id);if(e)e.textContent='$'+t.v;});
+}
+
+// ── FAQ ───────────────────────────────────────
+window.toggleFaq=i=>{
+  const ans=$('faq-ans-'+i),icon=$('faq-icon-'+i); if(!ans)return;
+  const open=ans.style.display!=='none';
+  ans.style.display=open?'none':'block';
+  if(icon)icon.textContent=open?'+':'\u2212';
+};
+
+// ══════════════════════════════════════════════
+// RENDERS
+// ══════════════════════════════════════════════
+
+const RENDERS = {
+
+// ── DASHBOARD ─────────────────────────────────
+dashboard: el => {
+  const isSuper=CU.role==='super_admin';
+  const rev=DATA.finance.filter(f=>f.type==='revenue').reduce((s,f)=>s+parseFloat(f.amount||0),0);
+  const unpaid=DATA.finance.filter(f=>f.paymentStatus==='unpaid').reduce((s,f)=>s+parseFloat(f.amount||0),0);
+  const avg=DATA.reports.length?Math.round(DATA.reports.reduce((s,r)=>s+parseFloat(r.total||0),0)/DATA.reports.length):0;
+  const hour=new Date().getHours();
+  const greet=hour<12?'morning':hour<17?'afternoon':'evening';
+  el.innerHTML='<div class="page-header"><div><div class="page-h1">Good '+greet+', '+CU.name.split(' ')[0]+' \uD83D\uDC4B</div><div class="page-sub">'+new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'})+'</div></div><span class="chip '+rc(CU.role)+'">'+rl(CU.role)+'</span></div>'
+    +'<div class="stats-grid">'+(isSuper
+      ? mkStat('var(--brand-acc)','<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>',DATA.clients.length,'Clients')
+        +mkStat('var(--teal)','<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>',DATA.training.length,'Training Sessions')
+        +mkStat('var(--green)','<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>','$'+rev.toLocaleString(),'Revenue')
+        +mkStat('var(--red)','<circle cx="12" cy="12" r="10"/>','$'+unpaid.toLocaleString(),'Outstanding')
+        +mkStat('var(--purple)','<circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/>',DATA.reports.length,'Evaluations')
+        +mkStat('var(--gold)','<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',avg+'%','Avg Score')
+      : mkStat('var(--teal)','<path d="M9 11l3 3L22 4"/>',DATA.checklists.length,'Checklists')
+        +mkStat('var(--brand-acc)','<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>',DATA.sops.length,'SOPs')
+        +mkStat('var(--gold)','<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',avg+'%','Avg Score')
+        +mkStat('var(--purple)','<circle cx="11" cy="11" r="7"/>',DATA.reports.length,'Evaluations'))
+    +'</div>'
+    +'<div class="card"><div class="card-head"><span class="card-title">Recent Activity</span></div><div style="padding:0 20px">'
+    +([...DATA.reports.slice(0,3).map(r=>({c:'var(--brand-acc)',t:'Evaluation &mdash; <strong>'+(r.restaurant||'?')+'</strong> &mdash; '+(r.total||'?')+'%',d:r.date||''})),...DATA.training.slice(0,2).map(t=>({c:'var(--teal)',t:'Training &mdash; <strong>'+(t.restaurant||'?')+'</strong> &mdash; '+(t.topic||'?'),d:t.date||''})),...DATA.finance.filter(f=>f.paymentStatus==='unpaid').slice(0,2).map(f=>({c:'var(--red)',t:'Unpaid &mdash; <strong>'+(f.client||'?')+'</strong> &mdash; $'+parseFloat(f.amount||0).toFixed(2),d:f.date||''}))].slice(0,6).map(a=>'<div style="display:flex;gap:11px;padding:12px 0;border-bottom:1px solid var(--bg)"><div style="width:7px;height:7px;border-radius:50%;background:'+a.c+';flex-shrink:0;margin-top:5px"></div><div><div style="font-size:13px;color:var(--text2);line-height:1.5">'+a.t+'</div><div style="font-size:11px;color:var(--text3);margin-top:2px">'+(a.d||'&mdash;')+'</div></div></div>').join('')||'<div style="text-align:center;padding:32px;color:var(--text3);font-size:13px">No activity yet.</div>')
+    +'</div></div>';
+},
+
+// ── MY SHIFT (WAITER SINGLE PAGE) ─────────────
+myshift: el => {
+  const role=CU.role;
+  if(role==='waiter'||role==='host'||role==='cashier'){
+    buildWaiterPage(el,role);
+  } else if(role==='kitchen'){
+    buildKitchenPage(el);
+  } else if(role==='cleaner'){
+    buildCleanerPage(el);
+  }
+},
+
+// ── MY WORK ───────────────────────────────────
+mywork: el => {
+  const role=CU.role;
+  const cfg={manager:{title:'Shift Control',sub:'Staff overview, briefing, assignments and incidents'},head_chef:{title:'Kitchen Dashboard',sub:'Temperature approvals and 86 board'},trainer:{title:'My Training Sessions',sub:'Assigned restaurants and sessions'},shopper:{title:'My Evaluations',sub:'Assigned restaurants and mystery shop visits'},restaurant_admin:{title:'Operations',sub:'Restaurant overview'}};
+  const c=cfg[role]||cfg.manager;
+  el.innerHTML='<div class="page-header"><div><div class="page-h1">'+c.title+'</div><div class="page-sub">'+c.sub+'</div></div><span class="chip '+rc(role)+'">'+rl(role)+'</span></div><div class="stats-grid" id="work-stats"></div><div id="work-content"></div>';
+  loadMyWork(role);
+},
+
+team: el => {
+  const users = getAllUsers();
+  el.innerHTML = '<div class="page-header"><div><div class="page-h1">Team & Roles</div><div class="page-sub" id="team-count">'+users.length+' members</div></div>'
+    +'<div class="page-acts">'
+    +(CU.role==='super_admin'?'<select class="form-select" style="width:auto;font-size:13px;padding:7px 12px" id="team-role-filter" onchange="window.filterRole()"><option value="">All Roles</option><option>restaurant_admin</option><option>manager</option><option>head_chef</option><option>waiter</option><option>host</option><option>cashier</option><option>kitchen</option><option>cleaner</option><option>trainer</option><option>shopper</option></select>':'')
+    +'<input type="text" class="form-input" style="width:180px;font-size:13px;padding:7px 12px" placeholder="Search..." id="team-search" oninput="window.searchTeam()">'
+    +'<button class="btn btn-primary btn-sm" onclick="window.openUserForm()">+ Add Member</button></div></div>'
+    +'<div class="stats-grid" id="team-stats"></div>'
+    +'<div class="card"><div class="table-wrap"><table class="table" id="team-table">'
+    +'<thead><tr><th>Member</th><th>Username</th><th>Role</th>'+(CU.role==='super_admin'?'<th>Restaurant</th>':'')+'<th>Phone</th><th></th></tr></thead>'
+    +'<tbody id="team-tbody"></tbody></table></div></div>'
+    + teamModal();
+  const all = getAllUsers();
+  const el2 = document.getElementById('team-stats');
+  if(el2) el2.innerHTML = mkStat('var(--brand-acc)','<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',all.length,'Total Staff')
+    +mkStat('var(--teal)','<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>',all.filter(u=>u.role==='manager').length,'Managers')
+    +mkStat('var(--gold)','<path d="M9 11l3 3L22 4"/>',all.filter(u=>['waiter','host','cashier'].includes(u.role)).length,'FOH Staff')
+    +mkStat('var(--amber)','<path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>',all.filter(u=>u.role==='kitchen').length,'Kitchen');
+  renderTeam(users);
+},
+
+finance: el => {
+  const items = CU.role==='restaurant_admin' ? DATA.finance.filter(f=>f.restaurantId===CU.restaurantId) : DATA.finance;
+  const rev   = items.filter(f=>f.type==='revenue').reduce((s,f)=>s+parseFloat(f.amount||0),0);
+  const exp   = items.filter(f=>f.type==='expense').reduce((s,f)=>s+parseFloat(f.amount||0),0);
+  const unpaid= items.filter(f=>f.paymentStatus==='unpaid').reduce((s,f)=>s+parseFloat(f.amount||0),0);
+  el.innerHTML='<div class="page-header"><div><div class="page-h1">Finance</div></div>'
+    +'<div class="page-acts"><select class="form-select" style="width:auto;font-size:13px;padding:7px 12px" id="fin-type-filter" onchange="window.finFilter()"><option value="">All Types</option><option value="revenue">Revenue</option><option value="expense">Expense</option><option value="invoice">Invoice</option></select>'
+    +'<button class="btn btn-primary btn-sm" onclick="window.openFinForm()">+ Add Entry</button></div></div>'
+    +'<div class="stats-grid">'
+    +mkStat('var(--green)','<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>','$'+rev.toLocaleString(),'Total Revenue')
+    +mkStat('var(--amber)','<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>','$'+exp.toLocaleString(),'Total Expenses')
+    +mkStat('var(--red)','<circle cx="12" cy="12" r="10"/>','$'+unpaid.toLocaleString(),'Outstanding')
+    +mkStat('var(--teal)','<path d="M9 11l3 3L22 4"/>','$'+(rev-exp).toLocaleString(),'Net')
+    +'</div>'
+    +'<div class="card"><div class="table-wrap"><table class="table"><thead><tr><th>Date</th><th>Client</th><th>Type</th><th>Amount</th><th>Payment</th><th>Invoice</th><th></th></tr></thead><tbody id="fin-tbody"></tbody></table></div></div>'
+    + finModal();
+  renderFinTable(items);
+},
+
+clients: el => {
+  el.innerHTML='<div class="page-header"><div><div class="page-h1">Clients</div><div class="page-sub">'+DATA.clients.length+' clients</div></div>'
+    +'<div class="page-acts"><button class="btn btn-primary btn-sm" onclick="window.openClientForm()">+ Add Client</button></div></div>'
+    +'<div class="stats-grid">'
+    +mkStat('var(--brand-acc)','<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>',DATA.clients.length,'Total')
+    +mkStat('var(--teal)','<path d="M9 11l3 3L22 4"/>',DATA.clients.filter(c=>c.status==='active').length,'Active')
+    +mkStat('var(--gold)','<rect x="3" y="4" width="18" height="18" rx="2"/>',DATA.assignments.length,'Assigned')
+    +'</div>'
+    +'<div class="card"><div class="table-wrap"><table class="table"><thead><tr><th>Name</th><th>Cuisine</th><th>Location</th><th>Plan</th><th>Status</th><th></th></tr></thead><tbody id="cl-tbody"></tbody></table></div></div>'
+    +'<div class="modal-bg" id="m-client"><div class="modal"><div class="modal-handle"></div><button class="modal-close" onclick="window.closeM(\'m-client\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="modal-title" id="m-cl-title">Add Client</div>'
+    +'<div class="form-grid"><div class="form-group form-full"><label class="form-label">Restaurant Name *</label><input type="text" class="form-input" id="cl-name" placeholder="Name"></div><div class="form-group"><label class="form-label">Cuisine</label><select class="form-select" id="cl-cuisine"><option>Fine Dining</option><option>Casual Dining</option><option>Cafe / Bistro</option><option>Fast Casual</option><option>Lounge / Bar</option><option>Hotel Restaurant</option><option>Other</option></select></div><div class="form-group"><label class="form-label">Location</label><input type="text" class="form-input" id="cl-loc" placeholder="City, area"></div><div class="form-group"><label class="form-label">Phone</label><input type="tel" class="form-input" id="cl-phone"></div><div class="form-group"><label class="form-label">Plan</label><select class="form-select" id="cl-plan"><option value="trial">Trial</option><option value="starter">Starter MS</option><option value="professional">Professional MS</option><option value="essentials">Essentials Bundle</option><option value="growth">Growth Bundle</option></select></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="cl-status"><option value="active">Active</option><option value="inactive">Inactive</option></select></div></div><input type="hidden" id="cl-id"><div class="form-row"><button class="btn btn-primary" onclick="window.saveClient()">Save</button><button class="btn btn-ghost" onclick="window.closeM(\'m-client\')">Cancel</button></div></div></div>';
+  renderClients(DATA.clients);
+},
+
+restaurants: el => {
+  el.innerHTML='<div class="page-header"><div><div class="page-h1">Restaurants</div></div></div>'
+    +'<div id="rest-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px"></div>';
+  loadRestaurants();
+},
+
+checklists: el => {
+  el.innerHTML='<div class="page-header"><div><div class="page-h1">Checklists</div></div><div class="page-acts"><button class="btn btn-primary btn-sm" onclick="window.openClForm()">+ New</button></div></div>'
+    +'<div id="cl-cards"></div>'
+    +'<div class="modal-bg" id="m-cl"><div class="modal"><div class="modal-handle"></div><button class="modal-close" onclick="window.closeM(\'m-cl\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="modal-title" id="cl-form-title">New Checklist</div>'
+    +'<div class="form-group"><label class="form-label">Title *</label><input type="text" class="form-input" id="clf-title" placeholder="e.g. Opening Checklist"></div>'
+    +'<div class="form-grid"><div class="form-group"><label class="form-label">Role</label><select class="form-select" id="clf-role"><option value="all">All Roles</option><option value="waiter">Waiter</option><option value="kitchen">Kitchen</option><option value="cleaner">Cleaner</option><option value="manager">Manager</option><option value="host">Host</option><option value="cashier">Cashier</option></select></div><div class="form-group"><label class="form-label">Type</label><select class="form-select" id="clf-type"><option value="opening">Opening</option><option value="closing">Closing</option><option value="cleaning">Cleaning</option><option value="other">Other</option></select></div></div>'
+    +'<div id="clf-items"></div>'
+    +'<button class="btn btn-ghost btn-sm" style="width:100%;margin-bottom:12px" onclick="window.addClItem()">+ Add Item</button>'
+    +'<input type="hidden" id="clf-id"><div class="form-row"><button class="btn btn-primary" onclick="window.saveCL()">Save</button><button class="btn btn-ghost" onclick="window.closeM(\'m-cl\')">Cancel</button></div></div></div>';
+  renderCLCards(DATA.checklists);
+},
+
+sops: el => {
+  el.innerHTML='<div class="page-header"><div><div class="page-h1">SOPs</div></div><div class="page-acts"><button class="btn btn-primary btn-sm" onclick="window.openSOPForm()">+ New SOP</button></div></div>'
+    +'<div id="sop-cards"></div>'
+    +'<div class="modal-bg" id="m-sop"><div class="modal"><div class="modal-handle"></div><button class="modal-close" onclick="window.closeM(\'m-sop\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="modal-title" id="sop-form-title">New SOP</div>'
+    +'<div class="form-grid"><div class="form-group form-full"><label class="form-label">Title *</label><input type="text" class="form-input" id="sopf-title" placeholder="e.g. Table Setting SOP"></div><div class="form-group"><label class="form-label">Department</label><select class="form-select" id="sopf-dept"><option>Front of House</option><option>Kitchen</option><option>Cleaning</option><option>General</option><option>Finance</option></select></div><div class="form-group"><label class="form-label">Category</label><input type="text" class="form-input" id="sopf-cat" placeholder="e.g. Service Standards"></div></div>'
+    +'<div style="font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text3);margin:12px 0 8px">Steps</div>'
+    +'<div id="sopf-steps"></div>'
+    +'<button class="btn btn-ghost btn-sm" style="width:100%;margin-bottom:12px" onclick="window.addSOPStep()">+ Add Step</button>'
+    +'<input type="hidden" id="sopf-id"><div class="form-row"><button class="btn btn-primary" onclick="window.saveSOP()">Save SOP</button><button class="btn btn-ghost" onclick="window.closeM(\'m-sop\')">Cancel</button></div></div></div>';
+  renderSOPCards(DATA.sops);
+},
+
+incidents: el => {
+  el.innerHTML='<div class="page-header"><div><div class="page-h1">Incidents</div></div><div class="page-acts">'
+    +'<select class="form-select" style="width:auto;font-size:13px;padding:7px 12px" id="inc-status-filter" onchange="window.filterIncidents()"><option value="">All</option><option value="open">Open</option><option value="resolved">Resolved</option></select>'
+    +'<button class="btn btn-red btn-sm" onclick="window.openM(\'m-inc-new\')">+ Report</button></div></div>'
+    +'<div class="stats-grid" id="inc-stats"></div>'
+    +'<div class="card"><div class="table-wrap"><table class="table"><thead><tr><th>Date</th><th>Type</th><th>Description</th><th>Reported By</th><th>Status</th><th></th></tr></thead><tbody id="inc-tbody"></tbody></table></div></div>'
+    // NEW INCIDENT MODAL
+    +'<div class="modal-bg" id="m-inc-new"><div class="modal"><div class="modal-handle"></div><button class="modal-close" onclick="window.closeM(\'m-inc-new\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="modal-title">Report Incident</div>'
+    +'<div class="form-group"><label class="form-label">Type</label><select class="form-select" id="ni-type"><option>Guest Complaint</option><option>Food Safety Issue</option><option>Staff Issue</option><option>Equipment Failure</option><option>Accident / Injury</option><option>Theft</option><option>Other</option></select></div>'
+    +'<div class="form-group"><label class="form-label">Description *</label><textarea class="form-textarea" id="ni-desc" placeholder="Describe what happened..."></textarea></div>'
+    +'<div class="form-group"><label class="form-label">Action Taken</label><textarea class="form-textarea" id="ni-action" placeholder="What was done?" style="min-height:60px"></textarea></div>'
+    +'<div class="form-group"><label class="form-label">Photo Evidence <span style="color:var(--red);font-weight:700">* Required</span></label>'
+    +'<div id="ni-photo-prev" style="display:none;margin-bottom:8px"><img id="ni-photo-img" style="width:100%;max-height:200px;border-radius:var(--r-md);object-fit:cover;border:2px solid var(--teal)"></div>'
+    +'<label for="ni-photo-inp" id="ni-photo-lbl" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:16px;border:2px dashed var(--red);border-radius:var(--r-md);cursor:pointer;background:var(--red-lt);color:var(--red);font-size:13px;font-weight:600"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;flex-shrink:0"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Take Photo (Required)</label>'
+    +'<input type="file" id="ni-photo-inp" accept="image/*" capture="environment" style="display:none" onchange="window.incidentPhotoPreview(this)"><input type="hidden" id="ni-photo-data"></div>'
+    +'<div class="form-row"><button class="btn btn-red" onclick="window.saveNewIncident()">Submit Report</button><button class="btn btn-ghost" onclick="window.closeM(\'m-inc-new\')">Cancel</button></div></div></div>';
+  loadIncidents();
+},
+
+templogs: el => {
+  el.innerHTML='<div class="page-header"><div><div class="page-h1">Temperature Logs</div></div><div class="page-acts"><select class="form-select" style="width:auto;font-size:13px;padding:7px 12px" id="temp-date-filter" onchange="window.filterTempLogs()"><option value="">All Dates</option></select></div></div>'
+    +'<div class="stats-grid" id="temp-stats"></div>'
+    +'<div class="card"><div class="table-wrap"><table class="table"><thead><tr><th>Staff</th><th>Date</th><th>Time</th><th>Fridge</th><th>Freezer</th><th>Hot Hold</th><th>Status</th></tr></thead><tbody id="temp-tbody"></tbody></table></div></div>';
+  loadTempLogs();
+},
+
+training: el => {
+  el.innerHTML='<div class="page-header"><div><div class="page-h1">Training Sessions</div></div><div class="page-acts"><button class="btn btn-purple btn-sm" onclick="window.openM(\'m-session\')">+ Log Session</button></div></div>'
+    +'<div class="stats-grid">'
+    +mkStat('var(--purple)','<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>',DATA.training.length,'Total')
+    +mkStat('var(--teal)','<path d="M9 11l3 3L22 4"/>',DATA.training.filter(s=>s.status==='completed').length,'Completed')
+    +mkStat('var(--brand-acc)','<rect x="3" y="4" width="18" height="18" rx="2"/>',DATA.training.filter(s=>s.status==='scheduled').length,'Scheduled')
+    +'</div>'
+    +'<div class="card"><div class="table-wrap"><table class="table"><thead><tr><th>Restaurant</th><th>Date</th><th>Topic</th><th>Staff</th><th>Trainer</th><th>Status</th><th></th></tr></thead><tbody id="train-tbody"></tbody></table></div></div>'
+    +'<div class="modal-bg" id="m-session"><div class="modal"><div class="modal-handle"></div><button class="modal-close" onclick="window.closeM(\'m-session\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="modal-title">Log Training Session</div>'
+    +'<div class="form-grid"><div class="form-group form-full"><label class="form-label">Restaurant *</label><input type="text" class="form-input" id="sess-rest" list="cl-list"></div><div class="form-group"><label class="form-label">Date *</label><input type="date" class="form-input" id="sess-date" value="'+new Date().toISOString().split('T')[0]+'"></div><div class="form-group"><label class="form-label">Topic</label><select class="form-select" id="sess-topic"><option>Service Standards</option><option>Upselling Techniques</option><option>Menu Knowledge</option><option>Guest Complaint Handling</option><option>Food Safety &amp; Hygiene</option><option>Brand Standards</option><option>Other</option></select></div><div class="form-group"><label class="form-label">Staff Count</label><input type="number" class="form-input" id="sess-staff" placeholder="e.g. 8" min="1"></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="sess-status"><option value="completed">Completed</option><option value="scheduled">Scheduled</option></select></div><div class="form-group form-full"><label class="form-label">Notes</label><textarea class="form-textarea" id="sess-notes" style="min-height:56px"></textarea></div></div>'
+    +'<input type="hidden" id="sess-id"><div class="form-row"><button class="btn btn-purple" onclick="window.saveSession()">Save</button><button class="btn btn-ghost" onclick="window.closeM(\'m-session\')">Cancel</button></div></div></div>';
+  const tb=document.getElementById('train-tbody');if(!tb)return;
+  tb.innerHTML=DATA.training.map(s=>'<tr><td><strong style="color:var(--brand)">'+( s.restaurantName||s.restaurant||'&mdash;')+'</strong></td><td style="font-size:12px">'+s.date+'</td><td style="font-size:12.5px">'+( s.topic||'&mdash;')+'</td><td>'+( s.staffCount||0)+'</td><td style="font-size:12.5px;color:var(--text3)">'+( s.trainerName||'&mdash;')+'</td><td><span class="chip '+(s.status==='completed'?'chip-teal':s.status==='scheduled'?'chip-brand':'chip-gold')+'">'+( s.status||'&mdash;')+'</span></td><td><button class="btn btn-red btn-sm" onclick="window.deleteTraining(\''+s.id+'\')" style="padding:5px 10px">&#xd7;</button></td></tr>').join('')||'<tr><td colspan="7" class="table-empty">No sessions yet.</td></tr>';
+},
+
+evaluations: el => {
+  el.innerHTML='<div class="page-header"><div><div class="page-h1">Evaluations</div></div><div class="page-acts"><button class="btn btn-red btn-sm" onclick="window.startEval()">+ Start Evaluation</button></div></div>'
+    +'<div class="stats-grid">'
+    +mkStat('var(--brand-acc)','<circle cx="11" cy="11" r="7"/>',DATA.reports.length,'Total')
+    +mkStat('var(--gold)','<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',DATA.reports.length?Math.round(DATA.reports.reduce((s,r)=>s+parseFloat(r.total||0),0)/DATA.reports.length):0,'Avg Score')
+    +mkStat('var(--teal)','<path d="M9 11l3 3L22 4"/>',DATA.reports.filter(r=>parseFloat(r.total||0)>=80).length,'A Grade (80%+)')
+    +'</div>'
+    +'<div class="card"><div class="table-wrap"><table class="table"><thead><tr><th>Restaurant</th><th>Date</th><th>Score</th><th>Grade</th><th>Shopper</th><th></th></tr></thead><tbody id="eval-tbody"></tbody></table></div></div>';
+  const tb=document.getElementById('eval-tbody');if(!tb)return;
+  tb.innerHTML=DATA.reports.map(r=>{const g=r.total>=90?'A+':r.total>=80?'A':r.total>=70?'B':r.total>=60?'C':'F';return'<tr><td><strong style="color:var(--brand)">'+( r.restaurant||'&mdash;')+'</strong></td><td style="font-size:12px">'+( r.date||'&mdash;')+'</td><td><strong>'+( r.total||0)+'%</strong></td><td><span class="chip '+(g==='A+'||g==='A'?'chip-teal':g==='B'?'chip-brand':g==='C'?'chip-gold':'chip-red')+'">'+g+'</span></td><td style="font-size:12px;color:var(--text3)">'+( r.shopperName||r.shopperId||'&mdash;')+'</td><td><button class="btn btn-red btn-sm" onclick="window.delReport(\''+r.id+'\')" style="padding:5px 10px">&#xd7;</button></td></tr>';}).join('')||'<tr><td colspan="6" class="table-empty">No evaluations yet.</td></tr>';
+},
+
+menudev: el => {
+  el.innerHTML='<div class="page-header"><div><div class="page-h1">Menu Development</div></div><div class="page-acts"><button class="btn btn-primary btn-sm" onclick="window.openMdForm()">+ Add Item</button></div></div>'
+    +'<div class="card"><div class="card-body" style="text-align:center;padding:48px;color:var(--text3)"><div style="font-size:32px;margin-bottom:12px">🍕</div><div style="font-size:15px;font-weight:500;color:var(--text2);margin-bottom:6px">Menu Development</div><div style="font-size:13px">Item database, recipe costing, engineering matrix and allergen tracker.<br>Click + Add Item to begin building your menu.</div></div></div>'
+    +'<div class="modal-bg" id="m-md"><div class="modal"><div class="modal-handle"></div><button class="modal-close" onclick="window.closeM(\'m-md\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="modal-title">Add Menu Item</div>'
+    +'<div class="form-grid"><div class="form-group form-full"><label class="form-label">Item Name *</label><input type="text" class="form-input" id="md-name" placeholder="e.g. Truffle Risotto"></div><div class="form-group"><label class="form-label">Category</label><select class="form-select" id="md-cat"><option>Starter</option><option>Main</option><option>Dessert</option><option>Beverage</option><option>Sides</option></select></div><div class="form-group"><label class="form-label">Selling Price ($)</label><input type="number" class="form-input" id="md-price" placeholder="0.00" step="0.01"></div><div class="form-group"><label class="form-label">Food Cost ($)</label><input type="number" class="form-input" id="md-cost" placeholder="0.00" step="0.01"></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="md-status"><option value="active">Active</option><option value="seasonal">Seasonal</option><option value="86">86\'d</option></select></div></div>'
+    +'<div class="form-row"><button class="btn btn-primary" onclick="window.saveMd()">Save</button><button class="btn btn-ghost" onclick="window.closeM(\'m-md\')">Cancel</button></div></div></div>';
+},
+
+pricing: el => {
+  el.innerHTML='<div class="page-header"><div><div class="page-h1">Pricing Manager</div></div></div>'
+    +'<div class="card"><div class="card-body">'
+    +'<div style="font-size:14px;font-weight:600;color:var(--brand);margin-bottom:16px">Mystery Shopper Plans</div>'
+    +'<div class="form-grid">'
+    +'<div class="form-group"><label class="form-label">Starter Label</label><input type="text" class="form-input" id="pm-ms1l" value="'+(PRICE.ms1l||'Starter')+'"></div>'
+    +'<div class="form-group"><label class="form-label">Starter Price ($/mo)</label><input type="number" class="form-input" id="pm-ms1" value="'+(PRICE.ms1||180)+'"></div>'
+    +'<div class="form-group"><label class="form-label">Professional Label</label><input type="text" class="form-input" id="pm-ms2l" value="'+(PRICE.ms2l||'Professional')+'"></div>'
+    +'<div class="form-group"><label class="form-label">Professional Price ($/mo)</label><input type="number" class="form-input" id="pm-ms2" value="'+(PRICE.ms2||320)+'"></div>'
+    +'</div>'
+    +'<div style="font-size:14px;font-weight:600;color:var(--brand);margin:20px 0 16px">Training Sessions</div>'
+    +'<div class="form-grid">'
+    +'<div class="form-group"><label class="form-label">1st Session ($)</label><input type="number" class="form-input" id="pm-tr1" value="'+(PRICE.tr1||150)+'"></div>'
+    +'<div class="form-group"><label class="form-label">2nd Session ($)</label><input type="number" class="form-input" id="pm-tr2" value="'+(PRICE.tr2||250)+'"></div>'
+    +'<div class="form-group"><label class="form-label">3rd Session ($)</label><input type="number" class="form-input" id="pm-tr3" value="'+(PRICE.tr3||400)+'"></div>'
+    +'<div class="form-group"><label class="form-label">4th Session ($)</label><input type="number" class="form-input" id="pm-tr4" value="'+(PRICE.tr4||520)+'"></div>'
+    +'</div>'
+    +'<div style="font-size:14px;font-weight:600;color:var(--brand);margin:20px 0 16px">Bundle Plans</div>'
+    +'<div class="form-grid">'
+    +'<div class="form-group"><label class="form-label">Essentials Bundle Label</label><input type="text" class="form-input" id="pm-bd1l" value="'+(PRICE.bd1l||'Essentials Bundle')+'"></div>'
+    +'<div class="form-group"><label class="form-label">Essentials Price ($/mo)</label><input type="number" class="form-input" id="pm-bd1" value="'+(PRICE.bd1||450)+'"></div>'
+    +'<div class="form-group"><label class="form-label">Growth Bundle Label</label><input type="text" class="form-input" id="pm-bd2l" value="'+(PRICE.bd2l||'Growth Bundle')+'"></div>'
+    +'<div class="form-group"><label class="form-label">Growth Price ($/mo)</label><input type="number" class="form-input" id="pm-bd2" value="'+(PRICE.bd2||750)+'"></div>'
+    +'</div>'
+    +'<div style="font-size:14px;font-weight:600;color:var(--brand);margin:20px 0 16px">Annual Discount</div>'
+    +'<div class="form-group" style="max-width:200px"><label class="form-label">Discount %</label><input type="number" class="form-input" id="pm-disc" value="'+(PRICE.disc||20)+'" min="0" max="50"></div>'
+    +'<div class="form-row"><button class="btn btn-primary" onclick="window.savePricing()">Save Pricing</button></div>'
+    +'</div></div>';
+},
+
+platform: el => {
+  el.innerHTML='<div class="page-header"><div><div class="page-h1">Platform Settings</div></div></div>'
+    +'<div class="card"><div class="card-body">'
+    +'<div style="font-size:14px;font-weight:600;color:var(--brand);margin-bottom:16px">Platform</div>'
+    +'<div class="form-group"><label class="form-label">Platform Name</label><input type="text" class="form-input" id="ps-name" value="Consultors LB"></div>'
+    +'<div class="form-group"><label class="form-label">Contact Email</label><input type="email" class="form-input" id="ps-email" value="info.consultors@gmail.com"></div>'
+    +'<div class="form-group"><label class="form-label">WhatsApp</label><input type="tel" class="form-input" id="ps-wa" value="+961 81 408 165"></div>'
+    +'<div class="form-row"><button class="btn btn-primary" onclick="toast(\'Settings saved \u2713\',\'success\')">Save Settings</button></div>'
+    +'</div></div>';
+}
+
+};
+// ── END RENDERS ───────────────────────────────
+
+
+// ══════════════════════════════════════════════
+// WAITER SINGLE PAGE
+// ══════════════════════════════════════════════
+
+let shiftDone={}, shiftSOPsDone={};
+
+async function buildWaiterPage(el, role) {
+  const hour=new Date().getHours();
+  const greet=hour<12?'morning':hour<17?'afternoon':'evening';
+  const shift=hour<12?'Morning':hour<17?'Afternoon':'Evening';
+  const today=new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'});
+
+  let briefing=null, mySection=null, mySops=[];
+  try {
+    const rid=CU.restaurantId||'consultors';
+    const todayDate=new Date().toISOString().split('T')[0];
+    const [bSnap,sSnap,sopSnap] = await Promise.all([
+      getDocs(query(collection(db,'briefings'),where('restaurantId','==',rid))),
+      getDocs(query(collection(db,'sectionAssignments'),where('restaurantId','==',rid))),
+      getDocs(collection(db,'sops')),
+    ]);
+    const todayB=bSnap.docs.map(d=>d.data()).filter(b=>b.date===todayDate);
+    if(todayB.length) briefing=todayB[todayB.length-1];
+    const todayS=sSnap.docs.map(d=>d.data()).filter(s=>s.date===todayDate);
+    if(todayS.length){const latest=todayS[todayS.length-1];if(latest.assignments&&latest.assignments[CU.id])mySection=latest.assignments[CU.id].section;}
+    mySops=sopSnap.docs.map(d=>({id:d.id,...d.data()})).filter(s=>(s.department==='Front of House'||s.department==='General')&&s.steps&&s.steps.length);
+  } catch(e){ console.warn('waiter page load:',e); }
+
+  renderWaiterPage(el,role,greet,shift,today,briefing,mySection,mySops);
+}
+
+function renderWaiterPage(el,role,greet,shift,today,briefing,mySection,sops) {
+
+  // ── ROLE CONFIG ──────────────────────────────
+  const roleName = {waiter:'Waiter',host:'Host / Hostess',cashier:'Cashier'}[role]||'Staff';
+  const hour     = new Date().getHours();
+
+  // ── GRID 1 — PRE-SERVICE CHECKLIST ───────────
+  const preItems = role==='host' ? [
+    {id:'pre1', t:'Uniform check',     d:'Clean, ironed, name tag on'},
+    {id:'pre2', t:'Reservation list',  d:'Read full list, flag VIPs & special requests'},
+    {id:'pre3', t:'Host stand ready',  d:'Clean, menus stocked, pen available'},
+    {id:'pre4', t:'Entrance inspected',d:'Floor clean, signage correct, doors clear'},
+    {id:'pre5', t:'Specials confirmed',d:'Know all specials and 86 items before service'},
+    {id:'pre6', t:'Team briefed',      d:'Communicated reservations to waiters'},
+  ] : role==='cashier' ? [
+    {id:'pre1', t:'Float counted',     d:'Opening float verified and recorded'},
+    {id:'pre2', t:'POS system',        d:'System on, test transaction done'},
+    {id:'pre3', t:'Payment terminal',  d:'Charged, connected, receipt paper loaded'},
+    {id:'pre4', t:'Daily target noted',d:'Revenue target confirmed with manager'},
+    {id:'pre5', t:'Uniform check',     d:'Clean, ironed, name tag on'},
+  ] : [
+    {id:'pre1', t:'Uniform check',     d:'Clean, ironed, name tag on, hair groomed'},
+    {id:'pre2', t:'Station set',       d:'Tables set, cutlery polished, glassware clean'},
+    {id:'pre3', t:'Condiments',        d:'Full, clean, labels facing out'},
+    {id:'pre4', t:'Specials known',    d:'Can describe all specials and 86 items'},
+    {id:'pre5', t:'Reservations read', d:'Know your section reservations and VIPs'},
+    {id:'pre6', t:'Briefing received', d:'Attended manager briefing before service'},
+  ];
+
+  // ── GRID 2 — SERVICE FLOW (SOPs) ─────────────
+  // Built from Firebase SOPs + default if none
+
+  // ── GRID 3 — GUEST & EMERGENCY ───────────────
+  const complaintTypes = ['Food quality issue','Wrong order delivered','Long wait time',
+    'Staff behaviour complaint','Billing dispute','Allergy concern','Cleanliness issue','Other'];
+  const emergencyTypes = ['Guest injury / accident','Fire / smoke','Medical emergency',
+    'Aggressive guest','Theft / security','Power failure','Flood / leak','Other'];
+
+  // ── GRID 4 — CLOSING CHECKLIST ───────────────
+  const closeItems = role==='cashier' ? [
+    {id:'cls1', t:'Float reconciled',   d:'End float counted and matches POS total'},
+    {id:'cls2', t:'Revenue report',     d:'Daily report printed and given to manager'},
+    {id:'cls3', t:'Discrepancies noted',d:'Any differences reported in writing'},
+    {id:'cls4', t:'POS closed',         d:'System properly closed and secured'},
+    {id:'cls5', t:'Terminal stored',    d:'Payment terminal charged and stored'},
+  ] : role==='host' ? [
+    {id:'cls1', t:'Menus returned',     d:'All menus clean and stored correctly'},
+    {id:'cls2', t:'Host stand cleared', d:'Stand wiped down and reset for tomorrow'},
+    {id:'cls3', t:'Notes passed on',    d:'Guest feedback given to closing manager'},
+    {id:'cls4', t:'Reservation log',    d:'Confirmed bookings logged for next shift'},
+  ] : [
+    {id:'cls1', t:'Tables cleared',     d:'All tables in section cleared and reset'},
+    {id:'cls2', t:'Condiments refilled',d:'All holders cleaned and refilled'},
+    {id:'cls3', t:'Chairs wiped',       d:'Chairs and bases wiped down'},
+    {id:'cls4', t:'Linen returned',     d:'Unused cutlery and linen to kitchen/laundry'},
+    {id:'cls5', t:'Section handover',   d:'Reported section status to manager'},
+    {id:'cls6', t:'Breakages reported', d:'Any breakages or losses documented'},
+  ];
+
+  const allTaskIds = [...preItems.map(i=>i.id), ...closeItems.map(i=>i.id)];
+  const sopStepCount = sops.reduce((s,sop)=>s+(sop.steps||[]).length, 0);
+  const totalItems = allTaskIds.length + sopStepCount;
+
+  // ── PHOTO AVATAR ──────────────────────────────
+  const avatar = CU.photo
+    ? '<img src="'+CU.photo+'" style="width:52px;height:52px;object-fit:cover;border-radius:50%;border:2.5px solid rgba(255,255,255,.3)">'
+    : '<div style="width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;color:#fff;border:2.5px solid rgba(255,255,255,.3)">'+CU.name.charAt(0)+'</div>';
+
+  // ── CHECK ITEM HTML ───────────────────────────
+  const checkItem = (item, prefix) =>
+    '<div class="w-task" id="wtc-'+prefix+item.id+'" onclick="window.wTask(\''+prefix+item.id+'\')">'
+    +'<div class="w-chk" id="wchk-'+prefix+item.id+'">'
+    +'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px"><polyline points="20 6 9 17 4 12"/></svg>'
+    +'</div>'
+    +'<div><div style="font-size:13.5px;font-weight:500;color:var(--text);line-height:1.3">'+item.t+'</div>'
+    +'<div style="font-size:11.5px;color:var(--text3);margin-top:2px">'+item.d+'</div></div>'
+    +'</div>';
+
+  // ── SOP CARDS ─────────────────────────────────
+  const sopCards = sops.length ? sops.map(sop => {
+    const steps = (sop.steps||[]).map((step,i) => {
+      const task = typeof step==='object' ? step.task : step;
+      const std  = typeof step==='object' && step.standard ? '<div style="font-size:11.5px;color:var(--text3);margin-left:28px;margin-top:2px;line-height:1.5">'+step.standard+'</div>' : '';
+      return '<div class="w-sop-step" id="wsop-'+sop.id+'-'+i+'" onclick="window.wSOPStep(\''+sop.id+'\','+i+','+sop.steps.length+')">'
+        +'<div class="w-chk" id="wchk-sop-'+sop.id+'-'+i+'">'
+        +'<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px"><polyline points="20 6 9 17 4 12"/></svg>'
+        +'</div>'
+        +'<div style="flex:1">'
+        +'<div style="display:flex;align-items:center;gap:8px">'
+        +'<span style="min-width:20px;height:20px;border-radius:50%;background:var(--purple-lt);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0">'+(i+1)+'</span>'
+        +'<div style="font-size:13.5px;font-weight:500;color:var(--text)">'+task+'</div>'
+        +'</div>'+std+'</div></div>';
+    }).join('');
+
+    return '<div class="w-sop-card" id="wsopcard-'+sop.id+'">'
+      +'<div onclick="window.wToggleSOP(\''+sop.id+'\')" style="display:flex;align-items:center;gap:12px;cursor:pointer;padding:14px 18px">'
+      +'<div style="width:36px;height:36px;border-radius:var(--r-md);background:var(--purple-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0">'
+      +'<svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>'
+      +'</div>'
+      +'<div style="flex:1">'
+      +'<div style="font-size:13.5px;font-weight:600;color:var(--brand)">'+sop.title+'</div>'
+      +'<div style="font-size:11.5px;color:var(--text3);margin-top:2px">'+sop.steps.length+' steps &middot; '+(sop.category||sop.department||'Service')+'</div>'
+      +'</div>'
+      +'<div style="display:flex;align-items:center;gap:10px">'
+      +'<div style="width:60px"><div class="progress-bar" style="height:5px"><div class="progress-fill" id="wsop-prog-'+sop.id+'" style="width:0%;background:var(--purple)"></div></div></div>'
+      +'<span id="wsop-chev-'+sop.id+'" style="font-size:11px;color:var(--text3)">&#9660;</span>'
+      +'</div></div>'
+      +'<div id="wsop-body-'+sop.id+'" style="display:none;border-top:1px solid var(--border);padding:12px 18px">'
+      +steps
+      +'<button class="btn btn-purple btn-sm" style="width:100%;margin-top:12px" onclick="window.wSignSOP(\''+sop.id+'\',\''+sop.title.replace(/'/g,'&#39;')+'\')">'
+      +'&#10003;&nbsp; I have read and understood this SOP</button>'
+      +'</div></div>';
+  }).join('')
+  : '<div style="padding:20px;text-align:center;color:var(--text3);font-size:13px">No SOPs assigned yet. Your manager will add them.</div>';
+
+  // ── BRIEFING CARD ─────────────────────────────
+  const briefCard = briefing
+    ? '<div style="background:linear-gradient(135deg,#1a2a1a,#1e3a2a);border-radius:var(--r-lg);padding:16px 20px;margin-bottom:4px">'
+      +'<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">'
+      +'<span style="font-size:16px">📢</span>'
+      +'<span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#4ade80">Manager Briefing</span>'
+      +'</div>'
+      +(briefing.specials?'<div style="margin-bottom:8px"><div style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px">Specials</div><div style="font-size:13px;color:rgba(255,255,255,.9);line-height:1.6">'+briefing.specials+'</div></div>':'')
+      +(briefing.items86?'<div style="margin-bottom:8px;background:rgba(192,57,43,.2);border-radius:var(--r-sm);padding:8px 12px"><div style="font-size:10px;color:rgba(255,100,100,.8);text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px">🚫 86 — Not Available</div><div style="font-size:13px;color:rgba(255,255,255,.85);line-height:1.5">'+briefing.items86+'</div></div>':'')
+      +(briefing.notes?'<div><div style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px">Notes</div><div style="font-size:13px;color:rgba(255,255,255,.75);line-height:1.6">'+briefing.notes+'</div></div>':'')
+      +'</div>'
+    : '<div style="background:rgba(255,255,255,.06);border:1px dashed rgba(255,255,255,.15);border-radius:var(--r-lg);padding:14px 18px;text-align:center;margin-bottom:4px"><div style="font-size:12.5px;color:rgba(255,255,255,.4)">No briefing posted yet — check with your manager</div></div>';
+
+  // ══════════════════════════════════════════════
+  // BUILD THE PAGE
+  // ══════════════════════════════════════════════
+  el.innerHTML =
+
+  // ── HEADER ────────────────────────────────────
+  '<div style="background:linear-gradient(135deg,#0f1f35 0%,#1e3a5f 60%,#2d5282 100%);border-radius:var(--r-xl);padding:22px;margin-bottom:16px;position:relative;overflow:hidden">'
+  +'<div style="position:absolute;top:-40px;right:-40px;width:180px;height:180px;background:rgba(255,255,255,.04);border-radius:50%"></div>'
+  +'<div style="position:absolute;bottom:-60px;left:30%;width:200px;height:200px;background:rgba(74,144,217,.06);border-radius:50%"></div>'
+  +'<div style="position:relative;z-index:1">'
+  +'<div style="display:flex;align-items:center;gap:14px;margin-bottom:18px">'+avatar
+  +'<div style="flex:1">'
+  +'<div style="font-size:11px;color:rgba(255,255,255,.45);margin-bottom:2px">Good '+(hour<12?'morning':hour<17?'afternoon':'evening')+' &mdash; '+shift+' Shift</div>'
+  +'<div style="font-family:var(--font-display);font-size:22px;color:#fff;line-height:1.2">'+CU.name+'</div>'
+  +'<div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:3px">'+roleName+(mySection?' &middot; <span style="color:#4ade80;font-weight:600">'+mySection+'</span>':'')+'</div>'
+  +'</div>'
+  +'<div style="text-align:right">'
+  +'<div style="font-family:var(--font-display);font-size:32px;color:#fff;line-height:1" id="shift-pct">0%</div>'
+  +'<div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:2px">Shift Score</div>'
+  +'</div></div>'
+  +'<div class="progress-bar" style="height:6px;margin-bottom:10px;background:rgba(255,255,255,.1)">'
+  +'<div class="progress-fill" id="shift-bar" style="width:0%;background:linear-gradient(90deg,#4ade80,#22d3ee)"></div>'
+  +'</div>'
+  +'<div style="display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,.4)">'
+  +'<span id="shift-done-lbl">0 of '+totalItems+' completed</span>'
+  +'<span>'+today+'</span>'
+  +'</div>'
+  +'</div></div>'
+
+  // ── BRIEFING ──────────────────────────────────
+  + briefCard
+
+  // ── 4 GRIDS LABEL ─────────────────────────────
+  +'<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:16px">'
+
+  // GRID 1 — PRE-SERVICE
+  +'<div style="background:linear-gradient(135deg,#0d7377,#0a5c60);border-radius:var(--r-lg);padding:4px;cursor:pointer" onclick="window.wToggleGrid(\'grid-pre\')">'
+  +'<div style="padding:14px 16px">'
+  +'<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">'
+  +'<div style="display:flex;align-items:center;gap:8px">'
+  +'<div style="width:32px;height:32px;background:rgba(255,255,255,.15);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:15px">🌅</div>'
+  +'<div><div style="font-size:13px;font-weight:700;color:#fff">Pre-Service</div><div style="font-size:10.5px;color:rgba(255,255,255,.5)">'+preItems.length+' tasks</div></div>'
+  +'</div>'
+  +'<div style="text-align:right"><div style="font-family:var(--font-display);font-size:22px;color:#fff;line-height:1" id="g1-pct">0%</div></div>'
+  +'</div>'
+  +'<div class="progress-bar" style="height:4px;background:rgba(255,255,255,.15)"><div class="progress-fill" id="g1-bar" style="width:0%;background:#4ade80"></div></div>'
+  +'</div></div>'
+
+  // GRID 2 — SERVICE SOPs
+  +'<div style="background:linear-gradient(135deg,#6c3fc5,#5a2fa8);border-radius:var(--r-lg);padding:4px;cursor:pointer" onclick="window.wToggleGrid(\'grid-sop\')">'
+  +'<div style="padding:14px 16px">'
+  +'<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">'
+  +'<div style="display:flex;align-items:center;gap:8px">'
+  +'<div style="width:32px;height:32px;background:rgba(255,255,255,.15);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:15px">📄</div>'
+  +'<div><div style="font-size:13px;font-weight:700;color:#fff">Service SOPs</div><div style="font-size:10.5px;color:rgba(255,255,255,.5)">'+sopStepCount+' steps</div></div>'
+  +'</div>'
+  +'<div style="text-align:right"><div style="font-family:var(--font-display);font-size:22px;color:#fff;line-height:1" id="g2-pct">0%</div></div>'
+  +'</div>'
+  +'<div class="progress-bar" style="height:4px;background:rgba(255,255,255,.15)"><div class="progress-fill" id="g2-bar" style="width:0%;background:#c4b5fd"></div></div>'
+  +'</div></div>'
+
+  // GRID 3 — INCIDENTS
+  +'<div style="background:linear-gradient(135deg,#c0392b,#962d22);border-radius:var(--r-lg);padding:4px;cursor:pointer" onclick="window.wToggleGrid(\'grid-inc\')">'
+  +'<div style="padding:14px 16px">'
+  +'<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">'
+  +'<div style="display:flex;align-items:center;gap:8px">'
+  +'<div style="width:32px;height:32px;background:rgba(255,255,255,.15);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:15px">🚨</div>'
+  +'<div><div style="font-size:13px;font-weight:700;color:#fff">Guest & Emergency</div><div style="font-size:10.5px;color:rgba(255,255,255,.5)" id="g3-count">0 reports</div></div>'
+  +'</div>'
+  +'<div style="width:28px;height:28px;background:rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px" id="g3-status">✓</div>'
+  +'</div>'
+  +'<div style="font-size:11px;color:rgba(255,255,255,.5)">Tap to log complaint or emergency</div>'
+  +'</div></div>'
+
+  // GRID 4 — CLOSING
+  +'<div style="background:linear-gradient(135deg,#1e3a5f,#152b4a);border-radius:var(--r-lg);padding:4px;cursor:pointer" onclick="window.wToggleGrid(\'grid-cls\')">'
+  +'<div style="padding:14px 16px">'
+  +'<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">'
+  +'<div style="display:flex;align-items:center;gap:8px">'
+  +'<div style="width:32px;height:32px;background:rgba(255,255,255,.15);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-size:15px">🌙</div>'
+  +'<div><div style="font-size:13px;font-weight:700;color:#fff">Closing</div><div style="font-size:10.5px;color:rgba(255,255,255,.5)">'+closeItems.length+' tasks</div></div>'
+  +'</div>'
+  +'<div style="text-align:right"><div style="font-family:var(--font-display);font-size:22px;color:#fff;line-height:1" id="g4-pct">0%</div></div>'
+  +'</div>'
+  +'<div class="progress-bar" style="height:4px;background:rgba(255,255,255,.15)"><div class="progress-fill" id="g4-bar" style="width:0%;background:#7dd3fc"></div></div>'
+  +'</div></div>'
+
+  +'</div>'// end 4-grid
+
+  // ── GRID 1 EXPAND — PRE-SERVICE ───────────────
+  +'<div id="grid-pre" style="display:none;margin-bottom:16px">'
+  +'<div style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--teal);padding:0 0 10px;display:flex;align-items:center;gap:8px">🌅 PRE-SERVICE CHECKLIST</div>'
+  +preItems.map(i=>checkItem(i,'pre')).join('')
+  +'</div>'
+
+  // ── GRID 2 EXPAND — SERVICE SOPs ──────────────
+  +'<div id="grid-sop" style="display:none;margin-bottom:16px">'
+  +'<div style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--purple);padding:0 0 10px">📄 SERVICE SOPs — READ &amp; SIGN OFF</div>'
+  +sopCards
+  +'</div>'
+
+  // ── GRID 3 EXPAND — GUEST & EMERGENCY ─────────
+  +'<div id="grid-inc" style="display:none;margin-bottom:16px">'
+  +'<div style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);padding:0 0 10px">🚨 GUEST COMPLAINTS &amp; EMERGENCIES</div>'
+  +'<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">'
+  +'<button class="btn btn-red" style="padding:14px;flex-direction:column;gap:6px;height:auto" onclick="window.wOpenReport(\'complaint\')">'
+  +'<span style="font-size:22px">😤</span><span style="font-size:13px;font-weight:700">Guest Complaint</span><span style="font-size:11px;opacity:.7">Log and escalate</span>'
+  +'</button>'
+  +'<button class="btn btn-red" style="padding:14px;flex-direction:column;gap:6px;height:auto;background:var(--red);color:#fff" onclick="window.wOpenReport(\'emergency\')">'
+  +'<span style="font-size:22px">🆘</span><span style="font-size:13px;font-weight:700">Emergency</span><span style="font-size:11px;opacity:.7">Immediate action</span>'
+  +'</button>'
+  +'</div>'
+  +'<div id="w-reports-log" style="display:none">'
+  +'<div style="font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px">Logged This Shift</div>'
+  +'<div id="w-reports-list"></div>'
+  +'</div>'
+  // Complaint form
+  +'<div id="w-complaint-form" style="display:none;background:var(--red-lt);border:1.5px solid rgba(192,57,43,.2);border-radius:var(--r-lg);padding:16px;margin-bottom:12px">'
+  +'<div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:12px">😤 Log Guest Complaint</div>'
+  +'<div class="form-group"><label class="form-label">Type of Complaint *</label>'
+  +'<select class="form-select" id="w-ctype">'
+  +complaintTypes.map(t=>'<option>'+t+'</option>').join('')
+  +'</select></div>'
+  +'<div class="form-group"><label class="form-label">Table / Guest</label><input type="text" class="form-input" id="w-ctable" placeholder="e.g. Table 4 or Guest name"></div>'
+  +'<div class="form-group"><label class="form-label">What happened? *</label><textarea class="form-textarea" id="w-cdesc" placeholder="Describe the situation clearly..." style="min-height:80px"></textarea></div>'
+  +'<div class="form-group"><label class="form-label">Action you took</label><textarea class="form-textarea" id="w-caction" placeholder="What did you do to resolve it?" style="min-height:60px"></textarea></div>'
+  +'<div class="form-group"><label class="form-label">Guest satisfied?</label>'
+  +'<div style="display:flex;gap:10px;margin-top:6px">'
+  +'<button id="w-csat-yes" class="yn-btn" onclick="window.wSetSat(true)">✓ Yes</button>'
+  +'<button id="w-csat-no" class="yn-btn" onclick="window.wSetSat(false)">✗ No — escalated to manager</button>'
+  +'</div></div>'
+  +'<div class="form-row"><button class="btn btn-red" onclick="window.wSubmitReport(\'complaint\')">Submit Complaint Report</button><button class="btn btn-ghost btn-sm" onclick="window.wCloseReport()">Cancel</button></div>'
+  +'</div>'
+  // Emergency form
+  +'<div id="w-emergency-form" style="display:none;background:#1a0a0a;border:2px solid var(--red);border-radius:var(--r-lg);padding:16px;margin-bottom:12px">'
+  +'<div style="font-size:14px;font-weight:700;color:#ff4444;margin-bottom:4px">🆘 EMERGENCY REPORT</div>'
+  +'<div style="font-size:11.5px;color:rgba(255,255,255,.5);margin-bottom:14px">This goes directly to your manager immediately</div>'
+  +'<div class="form-group"><label class="form-label" style="color:rgba(255,255,255,.5)">Emergency Type *</label>'
+  +'<select class="form-select" id="w-etype" style="background:#2a1010;color:#fff;border-color:rgba(255,68,68,.3)">'
+  +emergencyTypes.map(t=>'<option>'+t+'</option>').join('')
+  +'</select></div>'
+  +'<div class="form-group"><label class="form-label" style="color:rgba(255,255,255,.5)">Location</label><input type="text" class="form-input" id="w-eloc" placeholder="Where exactly?" style="background:#2a1010;color:#fff;border-color:rgba(255,68,68,.3)"></div>'
+  +'<div class="form-group"><label class="form-label" style="color:rgba(255,255,255,.5)">What is happening? *</label><textarea class="form-textarea" id="w-edesc" placeholder="Describe clearly and calmly..." style="background:#2a1010;color:#fff;border-color:rgba(255,68,68,.3);min-height:80px"></textarea></div>'
+  +'<div class="form-row"><button class="btn" style="background:#ff4444;color:#fff;flex:1;padding:13px;font-size:14px;font-weight:700" onclick="window.wSubmitReport(\'emergency\')">🆘 SEND EMERGENCY ALERT</button><button class="btn btn-ghost btn-sm" onclick="window.wCloseReport()" style="color:rgba(255,255,255,.5)">Cancel</button></div>'
+  +'</div>'
+  +'</div>'
+
+  // ── GRID 4 EXPAND — CLOSING ───────────────────
+  +'<div id="grid-cls" style="display:none;margin-bottom:16px">'
+  +'<div style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand-acc);padding:0 0 10px">🌙 CLOSING CHECKLIST</div>'
+  +closeItems.map(i=>checkItem(i,'cls')).join('')
+  +'</div>'
+
+  // ── END OF SHIFT REPORT ───────────────────────
+  +'<div style="background:linear-gradient(135deg,#0f1f35,#1e3a5f);border-radius:var(--r-xl);padding:22px;margin-top:8px;margin-bottom:32px">'
+  +'<div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">'
+  +'<span style="font-size:20px">📋</span>'
+  +'<div style="font-family:var(--font-display);font-size:18px;color:#fff">End of Shift Report</div>'
+  +'</div>'
+  +'<div style="font-size:12.5px;color:rgba(255,255,255,.45);margin-bottom:18px;line-height:1.6">Complete your checklist and SOPs, then submit your full shift report to the manager. This cannot be edited after submission.</div>'
+
+  // Summary cards
+  +'<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px">'
+  +'<div style="background:rgba(255,255,255,.07);border-radius:var(--r-md);padding:12px;text-align:center"><div style="font-family:var(--font-display);font-size:22px;color:#4ade80;line-height:1" id="eos-pre">0%</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px">Pre-Service</div></div>'
+  +'<div style="background:rgba(255,255,255,.07);border-radius:var(--r-md);padding:12px;text-align:center"><div style="font-family:var(--font-display);font-size:22px;color:#c4b5fd;line-height:1" id="eos-sop">0</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px">SOPs Signed</div></div>'
+  +'<div style="background:rgba(255,255,255,.07);border-radius:var(--r-md);padding:12px;text-align:center"><div style="font-family:var(--font-display);font-size:22px;color:#fca5a5;line-height:1" id="eos-inc">0</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px">Incidents</div></div>'
+  +'<div style="background:rgba(255,255,255,.07);border-radius:var(--r-md);padding:12px;text-align:center"><div style="font-family:var(--font-display);font-size:22px;color:#7dd3fc;line-height:1" id="eos-cls">0%</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px">Closing</div></div>'
+  +'</div>'
+
+  // Highlight of shift
+  +'<div class="form-group" style="margin-bottom:12px">'
+  +'<label class="form-label" style="color:rgba(255,255,255,.5)">Highlight of your shift</label>'
+  +'<textarea class="form-textarea" id="eos-highlight" placeholder="What went well today? Any great guest interaction?" style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.1);color:#fff;min-height:60px"></textarea>'
+  +'</div>'
+
+  // Challenges
+  +'<div class="form-group" style="margin-bottom:12px">'
+  +'<label class="form-label" style="color:rgba(255,255,255,.5)">Challenges faced</label>'
+  +'<textarea class="form-textarea" id="eos-challenges" placeholder="What was difficult? What needs improvement?" style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.1);color:#fff;min-height:60px"></textarea>'
+  +'</div>'
+
+  // Notes to manager
+  +'<div class="form-group" style="margin-bottom:18px">'
+  +'<label class="form-label" style="color:rgba(255,255,255,.5)">Notes to manager</label>'
+  +'<textarea class="form-textarea" id="eos-notes" placeholder="Handover information, guest requests for next visit, stock issues..." style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.1);color:#fff;min-height:60px"></textarea>'
+  +'</div>'
+
+  // Rate your shift
+  +'<div class="form-group" style="margin-bottom:18px">'
+  +'<label class="form-label" style="color:rgba(255,255,255,.5)">How was your shift?</label>'
+  +'<div style="display:flex;gap:8px;margin-top:8px">'
+  +[['😤','Tough'],['😐','OK'],['🙂','Good'],['😊','Great'],['🌟','Perfect']].map((r,i)=>'<button id="eos-rate-'+i+'" onclick="window.wSetRate('+i+')" style="flex:1;padding:10px 4px;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.1);border-radius:var(--r-md);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;transition:all .15s"><span style="font-size:20px">'+r[0]+'</span><span style="font-size:10px;color:rgba(255,255,255,.4)">'+r[1]+'</span></button>').join('')
+  +'</div></div>'
+
+  +'<div id="eos-submit-area">'
+  +'<button class="btn btn-primary" style="width:100%;padding:15px;font-size:15px;font-weight:700;background:linear-gradient(135deg,#4ade80,#22c55e);color:#000;border:none" id="eos-btn" onclick="window.wSubmitShift()">'
+  +'&#10003;&nbsp; Submit End of Shift Report'
+  +'</button>'
+  +'<div style="font-size:11px;color:rgba(255,255,255,.3);text-align:center;margin-top:8px">Submitted reports are locked and sent directly to your manager</div>'
+  +'</div>'
+  +'</div>'; // end EOS card
+
+  // Init state
+  window._wState = {
+    preTotal: preItems.length,
+    clsTotal: closeItems.length,
+    sopTotal: sopStepCount,
+    sopCount: sops.length,
+    preDone: {}, clsDone: {},
+    sopStepDone: {}, sopSigned: {},
+    incidents: [],
+    guestSatisfied: null,
+    shiftRate: null,
+  };
+  updateWaiterProgress();
+}
+
+
+// ── WAITER INTERACTION FUNCTIONS ─────────────
+
+window.wToggleGrid = id => {
+  const el = document.getElementById(id);
+  if(!el) return;
+  const open = el.style.display !== 'none';
+  el.style.display = open ? 'none' : 'block';
+};
+
+window.wTask = id => {
+  const card  = document.getElementById('wtc-'+id);
+  const check = document.getElementById('wchk-'+id);
+  if(!card||!check) return;
+  const done = check.classList.contains('w-done');
+  check.classList.toggle('w-done', !done);
+  card.classList.toggle('w-task-done', !done);
+  const prefix = id.startsWith('pre') ? 'pre' : 'cls';
+  if(prefix==='pre') window._wState.preDone[id] = !done;
+  else               window._wState.clsDone[id]  = !done;
+  updateWaiterProgress();
+};
+
+window.wToggleSOP = id => {
+  const body = document.getElementById('wsop-body-'+id);
+  const chev = document.getElementById('wsop-chev-'+id);
+  if(!body) return;
+  const open = body.style.display !== 'none';
+  body.style.display = open ? 'none' : 'block';
+  if(chev) chev.innerHTML = open ? '&#9660;' : '&#9650;';
+};
+
+window.wSOPStep = (sopId, idx, total) => {
+  const step  = document.getElementById('wsop-'+sopId+'-'+idx);
+  const check = document.getElementById('wchk-sop-'+sopId+'-'+idx);
+  if(!step||!check) return;
+  const done = check.classList.contains('w-done');
+  check.classList.toggle('w-done', !done);
+  step.classList.toggle('w-sop-done', !done);
+  const key = sopId+'-'+idx;
+  window._wState.sopStepDone[key] = !done;
+  // Update SOP progress bar
+  let sopDone = 0;
+  for(let i=0;i<total;i++) if(document.getElementById('wchk-sop-'+sopId+'-'+i)?.classList.contains('w-done')) sopDone++;
+  const prog = document.getElementById('wsop-prog-'+sopId);
+  if(prog) prog.style.width = Math.round(sopDone/total*100)+'%';
+  updateWaiterProgress();
+};
+
+window.wSignSOP = (sopId, title) => {
+  window._wState.sopSigned[sopId] = true;
+  const card = document.getElementById('wsopcard-'+sopId);
+  if(card){
+    card.style.borderColor = 'var(--teal)';
+    card.style.background  = 'var(--teal-lt)';
+    const body = document.getElementById('wsop-body-'+sopId);
+    if(body) body.style.display='none';
+    const chev = document.getElementById('wsop-chev-'+sopId);
+    if(chev) chev.innerHTML='<span style="color:var(--teal);font-size:13px">&#10003;</span>';
+  }
+  toast('SOP signed off: '+title,'success');
+  updateWaiterProgress();
+};
+
+window.wOpenReport = type => {
+  document.getElementById('w-complaint-form').style.display = type==='complaint' ? 'block' : 'none';
+  document.getElementById('w-emergency-form').style.display = type==='emergency' ? 'block' : 'none';
+};
+
+window.wCloseReport = () => {
+  document.getElementById('w-complaint-form').style.display='none';
+  document.getElementById('w-emergency-form').style.display='none';
+};
+
+window.wSetSat = val => {
+  window._wState.guestSatisfied = val;
+  document.getElementById('w-csat-yes').className = 'yn-btn'+(val?' yes':'');
+  document.getElementById('w-csat-no').className  = 'yn-btn'+(!val?' no':'');
+};
+
+window.wSetRate = idx => {
+  window._wState.shiftRate = idx;
+  [0,1,2,3,4].forEach(i=>{
+    const btn = document.getElementById('eos-rate-'+i);
+    if(btn){
+      btn.style.background = i===idx ? 'rgba(74,222,128,.2)' : 'rgba(255,255,255,.07)';
+      btn.style.borderColor = i===idx ? '#4ade80' : 'rgba(255,255,255,.1)';
+      btn.style.transform = i===idx ? 'scale(1.08)' : 'scale(1)';
+    }
+  });
+};
+
+window.wSubmitReport = async type => {
+  if(type==='complaint'){
+    const desc = document.getElementById('w-cdesc')?.value.trim();
+    if(!desc){ toast('Please describe what happened','error'); return; }
+    const report = {
+      type:'complaint',
+      complaintType: document.getElementById('w-ctype')?.value,
+      table: document.getElementById('w-ctable')?.value.trim(),
+      description: desc,
+      action: document.getElementById('w-caction')?.value.trim(),
+      guestSatisfied: window._wState.guestSatisfied,
+      staffId: CU.id, staffName: CU.name,
+      restaurantId: CU.restaurantId||'consultors',
+      date: new Date().toISOString().split('T')[0],
+      time: new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}),
+      status: 'open', createdAt: new Date().toISOString(),
+    };
+    try{
+      await addDoc(collection(db,'incidents'), report);
+      window._wState.incidents.push(report);
+      updateIncidentLog();
+      toast('Complaint reported to manager ✓','success');
+      window.wCloseReport();
+      ['w-cdesc','w-caction','w-ctable'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
+      window._wState.guestSatisfied=null;
+    }catch(e){ toast('Error submitting','error'); }
+  } else {
+    const desc = document.getElementById('w-edesc')?.value.trim();
+    if(!desc){ toast('Please describe the emergency','error'); return; }
+    const report = {
+      type:'emergency',
+      emergencyType: document.getElementById('w-etype')?.value,
+      location: document.getElementById('w-eloc')?.value.trim(),
+      description: desc,
+      staffId: CU.id, staffName: CU.name,
+      restaurantId: CU.restaurantId||'consultors',
+      date: new Date().toISOString().split('T')[0],
+      time: new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}),
+      status:'open', priority:'HIGH', createdAt: new Date().toISOString(),
+    };
+    try{
+      await addDoc(collection(db,'incidents'), report);
+      window._wState.incidents.push(report);
+      updateIncidentLog();
+      toast('🆘 Emergency alert sent to manager','error');
+      window.wCloseReport();
+      ['w-edesc','w-eloc'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
+    }catch(e){ toast('Error sending alert','error'); }
+  }
+};
+
+function updateIncidentLog(){
+  const list = document.getElementById('w-reports-list');
+  const log  = document.getElementById('w-reports-log');
+  const cnt  = document.getElementById('g3-count');
+  const st   = document.getElementById('g3-status');
+  const n    = window._wState.incidents.length;
+  if(cnt) cnt.textContent = n+' report'+(n!==1?'s':'');
+  if(st)  st.textContent  = n>0?'⚠':'✓';
+  if(!list||!log) return;
+  if(n>0){
+    log.style.display='block';
+    list.innerHTML = window._wState.incidents.map(r=>'<div style="background:var(--red-lt);border:1px solid rgba(192,57,43,.15);border-radius:var(--r-md);padding:10px 14px;margin-bottom:8px">'
+      +'<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">'
+      +'<span class="chip chip-red" style="font-size:10px">'+( r.complaintType||r.emergencyType||r.type)+'</span>'
+      +'<span style="font-size:11px;color:var(--text3)">'+r.time+'</span>'
+      +'</div>'
+      +'<div style="font-size:12.5px;color:var(--text2)">'+r.description.substring(0,80)+(r.description.length>80?'…':'')+'</div>'
+      +'</div>').join('');
+  }
+  // Update EOS incident count
+  const eosInc = document.getElementById('eos-inc');
+  if(eosInc) eosInc.textContent = n;
+}
+
+function updateWaiterProgress(){
+  const s = window._wState;
+  if(!s) return;
+
+  const preDone  = Object.values(s.preDone).filter(Boolean).length;
+  const clsDone  = Object.values(s.clsDone).filter(Boolean).length;
+  const sopDone  = Object.values(s.sopStepDone).filter(Boolean).length;
+  const sopSig   = Object.keys(s.sopSigned).length;
+
+  const prePct = s.preTotal>0 ? Math.round(preDone/s.preTotal*100) : 100;
+  const clsPct = s.clsTotal>0 ? Math.round(clsDone/s.clsTotal*100) : 100;
+  const sopPct = s.sopTotal>0 ? Math.round(sopDone/s.sopTotal*100) : 100;
+
+  const totalDone  = preDone + clsDone + sopDone;
+  const totalCount = s.preTotal + s.clsTotal + s.sopTotal;
+  const overall    = totalCount>0 ? Math.round(totalDone/totalCount*100) : 0;
+
+  // Update grid scores
+  const set = (id,v) => { const e=document.getElementById(id); if(e) e.textContent=v; };
+  const bar = (id,v) => { const e=document.getElementById(id); if(e) e.style.width=v+'%'; };
+
+  set('g1-pct', prePct+'%');  bar('g1-bar', prePct);
+  set('g2-pct', sopPct+'%');  bar('g2-bar', sopPct);
+  set('g4-pct', clsPct+'%');  bar('g4-bar', clsPct);
+
+  // Overall
+  set('shift-pct', overall+'%');
+  bar('shift-bar', overall);
+  set('shift-done-lbl', totalDone+' of '+totalCount+' completed');
+
+  // EOS summary
+  set('eos-pre',  prePct+'%');
+  set('eos-sop',  sopSig);
+  set('eos-cls',  clsPct+'%');
+}
+
+window.wSubmitShift = async () => {
+  const s = window._wState;
+  const preDone  = Object.values(s.preDone).filter(Boolean).length;
+  const clsDone  = Object.values(s.clsDone).filter(Boolean).length;
+  const sopDone  = Object.keys(s.sopSigned).length;
+  const totalDone= preDone+clsDone+sopDone;
+  const totalAct = s.preTotal+s.clsTotal+s.sopCount;
+  const pct      = totalAct>0 ? Math.round(totalDone/totalAct*100) : 0;
+
+  const highlight  = document.getElementById('eos-highlight')?.value.trim()||'';
+  const challenges = document.getElementById('eos-challenges')?.value.trim()||'';
+  const notes      = document.getElementById('eos-notes')?.value.trim()||'';
+  const rateLabels = ['Tough','OK','Good','Great','Perfect'];
+  const rating     = s.shiftRate!==null ? rateLabels[s.shiftRate] : 'Not rated';
+
+  const btn = document.getElementById('eos-btn');
+  if(btn){ btn.disabled=true; btn.textContent='Submitting...'; }
+
+  try{
+    await addDoc(collection(db,'shiftReports'),{
+      staffId:        CU.id,
+      staffName:      CU.name,
+      staffRole:      CU.role,
+      restaurantId:   CU.restaurantId||'consultors',
+      restaurantName: CU.restaurantName||'',
+      managerId:      CU.managerId||null,
+      date:           new Date().toISOString().split('T')[0],
+      shift:          new Date().getHours()<12?'Morning':new Date().getHours()<17?'Afternoon':'Evening',
+      preServicePct:  Math.round(Object.values(s.preDone).filter(Boolean).length/s.preTotal*100)||0,
+      closingPct:     Math.round(Object.values(s.clsDone).filter(Boolean).length/s.clsTotal*100)||0,
+      sopsSigned:     sopDone,
+      sopTotal:       s.sopCount,
+      incidentsLogged:s.incidents.length,
+      completionPct:  pct,
+      highlight,
+      challenges,
+      notes,
+      shiftRating:    rating,
+      submittedAt:    new Date().toISOString(),
+    });
+
+    const area = document.getElementById('eos-submit-area');
+    if(area) area.innerHTML =
+      '<div style="text-align:center;padding:24px 0">'
+      +'<div style="font-size:52px;margin-bottom:12px">✅</div>'
+      +'<div style="font-family:var(--font-display);font-size:20px;color:#4ade80;margin-bottom:8px">Shift Report Submitted</div>'
+      +'<div style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.8">'
+      +'<strong style="color:#fff">'+pct+'%</strong> overall score &middot; '
+      +'<strong style="color:#fff">'+sopDone+'</strong> SOPs signed &middot; '
+      +'<strong style="color:#fff">'+s.incidents.length+'</strong> incident'+(s.incidents.length!==1?'s':'')+' logged'
+      +'<br>Your manager has been notified.'
+      +'</div>'
+      +(notes?'<div style="margin-top:12px;background:rgba(255,255,255,.07);border-radius:var(--r-md);padding:10px 14px;font-size:12.5px;color:rgba(255,255,255,.6);text-align:left"><strong style="color:rgba(255,255,255,.8)">Notes to manager:</strong> '+notes+'</div>':'')
+      +'</div>';
+    toast('Shift report submitted ✓','success');
+  }catch(e){
+    toast('Error submitting report','error');
+    if(btn){ btn.disabled=false; btn.textContent='✓ Submit End of Shift Report'; }
+  }
+};
+
+// ── KITCHEN PAGE ──────────────────────────────
+async function buildKitchenPage(el) {
+  const hour=new Date().getHours();
+  const greet=hour<12?'morning':hour<17?'afternoon':'evening';
+  const shift=hour<12?'Morning':hour<17?'Afternoon':'Evening';
+  const today=new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'});
+  el.innerHTML='<div class="greeting-card"><div class="greeting-hi">Good '+greet+' 👨‍🍳</div><div class="greeting-name">'+CU.name+'</div><div class="greeting-info">'+shift+' Shift &middot; '+today+'</div></div>'
+    +'<div id="shift-content">'+buildKitchenShift()+'</div>';
+  initShiftProgress();
+}
+
+async function buildCleanerPage(el) {
+  const hour=new Date().getHours();
+  const greet=hour<12?'morning':hour<17?'afternoon':'evening';
+  const shift=hour<12?'Morning':hour<17?'Afternoon':'Evening';
+  const today=new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'});
+  el.innerHTML='<div class="greeting-card"><div class="greeting-hi">Good '+greet+' 🧹</div><div class="greeting-name">'+CU.name+'</div><div class="greeting-info">'+shift+' Shift &middot; '+today+'</div></div>'
+    +'<div id="shift-content">'+buildCleanerShift()+'</div>';
+  initShiftProgress();
+}
+
+function buildKitchenShift() {
+  const tCard=(id,l)=>'<div class="task-card" id="tc-'+id+'" onclick="window.toggleTask(\''+id+'\')">'
+    +'<div class="task-check" id="chk-'+id+'"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>'
+    +'<div class="task-title">'+l+'</div></div>';
+  const tempC=(id,label,min,max)=>'<div class="temp-card"><div class="temp-label">'+label+'</div>'
+    +'<div class="temp-input-row"><input class="temp-input" type="number" id="'+id+'" placeholder="\u2014" oninput="window.checkTemp(\''+id+'\','+min+','+max+')"><span class="temp-unit">&deg;C</span></div>'
+    +'<div class="temp-status" id="'+id+'-status">Safe range: '+min+'&deg;C to '+max+'&deg;C</div></div>';
+  return '<div style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--text3);padding:4px 0 10px">\uD83C\uDF05 Opening</div>'
+    +tCard('k1','Wash hands and check uniform')+tCard('k2','Check fridge temperature — record it')+tCard('k3','Check freezer temperature — record it')
+    +tCard('k4','Inspect all food for spoilage — FIFO')+tCard('k5','Set up station with mise en place')+tCard('k6','Review prep list with head chef')
+    +'<div style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--text3);padding:18px 0 10px">\uD83C\uDF21\uFE0F Temperature Log</div>'
+    +tempC('temp-fridge','\uD83C\uDF21\uFE0F Walk-in Fridge',1,5)+tempC('temp-freezer','\u2744\uFE0F Freezer',-25,-18)+tempC('temp-hot','\uD83D\uDD25 Hot Holding',63,100)
+    +'<button class="btn btn-primary" style="width:100%;margin-bottom:18px" onclick="window.saveTempLog()">Save Temperature Log</button>'
+    +'<div style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--text3);padding:4px 0 10px">\uD83C\uDF59 Prep</div>'
+    +tCard('p1','Portion proteins for service')+tCard('p2','Prep garnishes and sauces')+tCard('p3','Check stock levels — flag low items')
+    +'<div style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--text3);padding:18px 0 10px">\uD83C\uDF19 Closing</div>'
+    +tCard('kc1','Record end-of-shift temperatures')+tCard('kc2','Label and store all remaining food')+tCard('kc3','Clean and sanitize all surfaces')+tCard('kc4','Sweep and mop kitchen floor');
+}
+
+function buildCleanerShift() {
+  const zones=[
+    {id:'zone1',icon:'\uD83C\uDF7D\uFE0F',title:'Dining Room',tasks:['Sweep and mop floor','Wipe all tables and chairs','Clean light fixtures','Clean windows and mirrors']},
+    {id:'zone2',icon:'\uD83D\uDEBB',title:'Restrooms',tasks:['Clean and disinfect toilets','Clean sinks and taps','Mop floor with disinfectant','Restock soap, paper, air freshener','Empty bins']},
+    {id:'zone3',icon:'\uD83D\uDC68\u200D\uD83C\uDF73',title:'Kitchen',tasks:['Clean all cooking surfaces','Degrease stovetops','Sanitize all prep areas']},
+    {id:'zone4',icon:'\uD83D\uDCE6',title:'Storage',tasks:['Sweep storage room floor','Wipe down shelves','Organise stock — FIFO']},
+  ];
+  return zones.map(z=>'<div class="card" style="margin-bottom:12px" id="zone-card-'+z.id+'">'
+    +'<div style="padding:14px 18px;display:flex;align-items:center;justify-content:space-between;cursor:pointer" onclick="window.toggleZone(\''+z.id+'\')">'
+    +'<div style="display:flex;align-items:center;gap:10px"><span style="font-size:22px">'+z.icon+'</span>'
+    +'<div><div style="font-size:14px;font-weight:500;color:var(--text)">'+z.title+'</div>'
+    +'<div class="progress-bar" style="width:100px;margin-top:5px"><div class="progress-fill" id="zone-prog-'+z.id+'" style="width:0%;background:var(--teal)"></div></div></div></div>'
+    +'<div style="display:flex;align-items:center;gap:8px"><span class="chip chip-gray" id="zone-cnt-'+z.id+'">0/'+z.tasks.length+'</span><span id="zone-chev-'+z.id+'" style="color:var(--text3);font-size:12px">&#9660;</span></div>'
+    +'</div>'
+    +'<div id="zone-body-'+z.id+'" style="display:none;border-top:1px solid var(--border);padding:12px 16px">'
+    +z.tasks.map((t,i)=>'<div class="task-card" id="tc-'+z.id+'-'+i+'" onclick="window.toggleTask(\''+z.id+'-'+i+'\')">'
+      +'<div class="task-check" id="chk-'+z.id+'-'+i+'"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>'
+      +'<div class="task-title">'+t+'</div></div>').join('')
+    +'<label for="ph-'+z.id+'" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1.5px dashed var(--border);border-radius:var(--r-md);cursor:pointer;font-size:12.5px;color:var(--brand-acc);background:var(--brand-pale);margin-top:8px">'
+    +'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Take photo</label>'
+    +'<input type="file" id="ph-'+z.id+'" accept="image/*" capture="environment" style="display:none" onchange="window.zonePhoto(\''+z.id+'\',this)">'
+    +'<div id="ph-prev-'+z.id+'" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px"></div>'
+    +'</div></div>').join('');
+}
+
+function initShiftProgress(){updateShiftProgress();}
+function updateShiftProgress(){
+  const all=document.querySelectorAll('#view-myshift .task-card');
+  const done=document.querySelectorAll('#view-myshift .task-card.done');
+  const total=all.length,pct=total>0?Math.round(done.length/total*100):0;
+  const bar=$('shift-bar');    if(bar)  bar.style.width=pct+'%';
+  const pctEl=$('shift-pct'); if(pctEl) pctEl.textContent=pct+'%';
+  const dEl=$('shift-done');  if(dEl)  dEl.textContent=done.length+' done';
+  const tEl=$('shift-total'); if(tEl)  tEl.textContent=total+' tasks';
+}
+
+window.toggleTask=id=>{
+  const card=$('tc-'+id),check=$('chk-'+id);
+  if(!card||!check) return;
+  const done=check.classList.contains('done');
+  check.classList.toggle('done',!done); card.classList.toggle('done',!done);
+  updateShiftProgress();
+};
+
+window.toggleZone=id=>{
+  const body=$('zone-body-'+id),chev=$('zone-chev-'+id); if(!body) return;
+  const open=body.style.display!=='none';
+  body.style.display=open?'none':'block';
+  if(chev) chev.textContent=open?'\u25BC':'\u25B2';
+};
+
+window.zonePhoto=(zoneId,input)=>{
+  const prev=$('ph-prev-'+zoneId); if(!prev||!input.files.length) return;
+  Array.from(input.files).forEach(file=>{
+    const reader=new FileReader();
+    reader.onload=e=>{const img=document.createElement('img');img.src=e.target.result;img.style.cssText='width:68px;height:68px;border-radius:var(--r-sm);object-fit:cover;border:2px solid var(--teal)';prev.appendChild(img);};
+    reader.readAsDataURL(file);
+  });
+};
+
+window.checkTemp=(id,min,max)=>{
+  const input=$(id),status=$(id+'-status'); if(!input||!status) return;
+  const val=parseFloat(input.value);
+  if(isNaN(val)){input.className='temp-input';status.style.color='';return;}
+  if(val>=min&&val<=max){input.className='temp-input ok';status.textContent='\u2705 Within safe range';status.style.color='var(--green)';}
+  else{input.className='temp-input bad';status.textContent='\u26A0\uFE0F OUT OF RANGE! Required: '+min+'\u00B0C to '+max+'\u00B0C \u2014 Notify manager';status.style.color='var(--red)';}
+};
+
+window.saveTempLog=async()=>{
+  const temps={fridge:parseFloat($('temp-fridge')?.value)||null,freezer:parseFloat($('temp-freezer')?.value)||null,hot:parseFloat($('temp-hot')?.value)||null};
+  if(!Object.values(temps).some(v=>v!==null)){toast('Enter at least one temperature','error');return;}
+  try{
+    await addDoc(collection(db,'temperatureLogs'),{...temps,staffId:CU.id,staffName:CU.name,restaurantId:CU.restaurantId||'consultors',date:new Date().toISOString().split('T')[0],time:new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}),createdAt:new Date().toISOString()});
+    toast('Temperature log saved \u2713','success');
+  }catch(e){toast('Error saving','error');}
+};
+
+
+// ── MY WORK FUNCTIONS ─────────────────────────
+async function loadMyWork(role) {
+  try{
+    if(role==='manager'||role==='restaurant_admin') await buildManagerWork();
+    else if(role==='head_chef') await buildChefWork();
+    else if(role==='trainer') buildTrainerWork();
+    else if(role==='shopper') buildShopperWork();
+  }catch(e){console.warn('MyWork:',e);}
+}
+
+async function buildManagerWork() {
+  const rid = CU.restaurantId || null;
+  const today = new Date().toISOString().split('T')[0];
+  const rq = u => rid ? query(collection(db,u), where('restaurantId','==',rid)) : collection(db,u);
+
+  const [staffSnap, tempSnap, incSnap, shiftSnap, briefSnap, secSnap] = await Promise.all([
+    getDocs(rq('users')),
+    getDocs(rq('temperatureLogs')),
+    getDocs(rq('incidents')),
+    getDocs(rq('shiftReports')),
+    getDocs(rq('briefings')),
+    getDocs(rq('sectionAssignments')),
+  ]);
+
+  const staff       = staffSnap.docs.map(d=>({id:d.id,...d.data()})).filter(u=>!['super_admin','restaurant_admin','trainer','shopper'].includes(u.role));
+  const todayTemps  = tempSnap.docs.map(d=>({id:d.id,...d.data()})).filter(l=>l.date===today);
+  const openInc     = incSnap.docs.map(d=>({id:d.id,...d.data()})).filter(i=>i.status==='open');
+  const todayShifts = shiftSnap.docs.map(d=>({id:d.id,...d.data()})).filter(r=>r.date===today);
+  const todayBrief  = briefSnap.docs.map(d=>d.data()).filter(b=>b.date===today).pop() || null;
+  const todaySecs   = secSnap.docs.map(d=>d.data()).filter(s=>s.date===today).pop() || null;
+  const assignments = todaySecs?.assignments || {};
+
+  // ── TOP STATS ──────────────────────────────
+  const fohStaff  = staff.filter(u=>['waiter','host','cashier'].includes(u.role));
+  const bohStaff  = staff.filter(u=>['kitchen','cleaner'].includes(u.role));
+  const submitted = todayShifts.length;
+  const tempDone  = [...new Set(todayTemps.map(l=>l.staffId))].length;
+  const avgKpi    = todayShifts.length
+    ? Math.round(todayShifts.reduce((s,r)=>s+parseFloat(r.completionPct||0),0) / todayShifts.length)
+    : null;
+
+  const ws = $('work-stats');
+  if(ws) ws.innerHTML =
+    mkStat('var(--brand-acc)','<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',staff.length,'Team Members')
+   +mkStat('var(--teal)','<path d="M9 11l3 3L22 4"/>',submitted+'/'+fohStaff.length,'Shift Reports')
+   +mkStat('var(--amber)','<path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>',tempDone+'/'+bohStaff.length,'Temp Logs')
+   +mkStat(openInc.length?'var(--red)':'var(--green)','<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>',openInc.length,'Open Incidents')
+   +(avgKpi!==null?mkStat('var(--purple)','<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',avgKpi+'%','Avg Shift Score'):'');
+
+  const wc = $('work-content'); if(!wc) return;
+
+  // ── KPI CARD BUILDER ───────────────────────
+  const kpiCard = u => {
+    const shift   = todayShifts.find(r=>r.staffId===u.id);
+    const temps   = todayTemps.filter(l=>l.staffId===u.id);
+    const section = assignments[u.id]?.section || null;
+    const isFOH   = ['waiter','host','cashier'].includes(u.role);
+    const isBOH   = ['kitchen','cleaner'].includes(u.role);
+    const isChef  = u.role==='head_chef';
+
+    // Score calculation
+    let score = null, scoreColor = 'var(--text3)';
+    if(shift) {
+      score = shift.completionPct;
+      scoreColor = score>=80?'var(--green)':score>=50?'var(--gold)':'var(--red)';
+    }
+
+    const avatar = u.photo
+      ? '<img src="'+u.photo+'" style="width:42px;height:42px;border-radius:50%;object-fit:cover;border:2.5px solid var(--border);flex-shrink:0">'
+      : '<div style="width:42px;height:42px;border-radius:50%;background:'+(roleColor[u.role]||'#888')+';display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff;flex-shrink:0">'+(u.name||'?').charAt(0)+'</div>';
+
+    // Status badge
+    const badge = shift
+      ? '<span class="chip chip-teal">&#10003; Submitted</span>'
+      : (temps.length ? '<span class="chip chip-brand">Temp Logged</span>'
+        : '<span class="chip chip-red">Pending</span>');
+
+    // KPI items
+    let kpiItems = '';
+
+    if(isFOH && shift) {
+      kpiItems += kpiRow('Tasks completed', shift.tasksCompleted+' tasks', shift.tasksCompleted>0?'ok':'miss');
+      kpiItems += kpiRow('SOPs signed off', shift.sopsSigned+' SOPs', shift.sopsSigned>0?'ok':'warn');
+      kpiItems += kpiRow('Completion', shift.completionPct+'%', shift.completionPct>=80?'ok':shift.completionPct>=50?'warn':'miss');
+      if(shift.notes) kpiItems += kpiRow('Notes to manager', shift.notes, 'note');
+    } else if(isFOH && !shift) {
+      kpiItems += kpiRow('Shift report', 'Not submitted yet', 'miss');
+      if(section) kpiItems += kpiRow('Assigned section', section, 'info');
+    }
+
+    if((isBOH || isChef) && temps.length) {
+      const last = temps[temps.length-1];
+      const fridgeOk = last.fridge!=null && last.fridge>=1 && last.fridge<=5;
+      const freezOk  = last.freezer!=null && last.freezer>=-25 && last.freezer<=-18;
+      const hotOk    = last.hot!=null && last.hot>=63;
+      if(last.fridge!=null)  kpiItems += kpiRow('Fridge', last.fridge+'°C', fridgeOk?'ok':'miss');
+      if(last.freezer!=null) kpiItems += kpiRow('Freezer', last.freezer+'°C', freezOk?'ok':'miss');
+      if(last.hot!=null)     kpiItems += kpiRow('Hot hold', last.hot+'°C', hotOk?'ok':'miss');
+    } else if((isBOH || isChef) && !temps.length) {
+      kpiItems += kpiRow('Temperature log', 'Not submitted yet', 'miss');
+    }
+
+    return '<div style="background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:16px;margin-bottom:10px">'
+      +'<div style="display:flex;align-items:center;gap:12px;margin-bottom:'+(kpiItems?'12':'0')+'px">'
+      +avatar
+      +'<div style="flex:1">'
+      +'<div style="font-size:14px;font-weight:600;color:var(--brand)">'+u.name+'</div>'
+      +'<div style="font-size:11.5px;color:var(--text3);margin-top:2px">'+rl(u.role)+(section?' &middot; '+section:'')+'</div>'
+      +'</div>'
+      +(score!==null?'<div style="text-align:right"><div style="font-family:var(--font-display);font-size:26px;color:'+scoreColor+';line-height:1">'+score+'%</div><div style="font-size:10px;color:var(--text3)">KPI Score</div></div>':badge)
+      +'</div>'
+      +(kpiItems?'<div style="background:var(--surface2);border-radius:var(--r-md);overflow:hidden">'+kpiItems+'</div>':'')
+      +'</div>';
+  };
+
+  const kpiRow = (label, value, type) => {
+    const colors = {ok:'var(--green)',warn:'var(--gold)',miss:'var(--red)',info:'var(--brand-acc)',note:'var(--purple)'};
+    const icons  = {ok:'✓',warn:'⚠',miss:'✗',info:'→',note:'✎'};
+    return '<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:8px 12px;border-bottom:1px solid var(--border)">'
+      +'<span style="font-size:12px;color:var(--text3)">'+label+'</span>'
+      +'<span style="font-size:12px;font-weight:600;color:'+(colors[type]||'var(--text2)')+';display:flex;align-items:center;gap:4px;text-align:right;max-width:60%">'
+      +'<span style="font-size:11px">'+(icons[type]||'')+'</span>'
+      +value+'</span></div>';
+  };
+
+  const groupSection = (title, icon, list) => {
+    if(!list.length) return '';
+    return '<div style="margin-bottom:20px">'
+      +'<div style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--text3);padding:4px 0 12px;display:flex;align-items:center;gap:8px">'+icon+' '+title+'</div>'
+      +list.map(kpiCard).join('')
+      +'</div>';
+  };
+
+  // ── BRIEFING BANNER ────────────────────────
+  const briefBanner = todayBrief
+    ? '<div style="background:var(--gold-lt);border:1px solid rgba(201,162,39,.3);border-radius:var(--r-lg);padding:14px 18px;margin-bottom:16px;display:flex;align-items:flex-start;gap:12px"><span style="font-size:20px">📢</span><div><div style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px">Briefing posted today</div><div style="font-size:13px;color:var(--text2)">'+(todayBrief.specials?'<strong>Specials:</strong> '+todayBrief.specials:'')+(todayBrief.items86?' &middot; <strong style=\"color:var(--red)\">86:</strong> '+todayBrief.items86:'')+(todayBrief.notes?'<br>'+todayBrief.notes:'')+'</div></div></div>'
+    : '<div style="background:var(--surface2);border:1.5px dashed var(--border);border-radius:var(--r-lg);padding:14px 18px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between"><span style="font-size:13px;color:var(--text3)">📢 No briefing posted yet today</span><button class="btn btn-gold btn-sm" onclick="window.openM(\'m-briefing\')">Post Briefing</button></div>';
+
+  // ── INCIDENTS STRIP ────────────────────────
+  const incStrip = openInc.length
+    ? '<div style="background:var(--red-lt);border:1px solid rgba(192,57,43,.2);border-radius:var(--r-lg);padding:14px 18px;margin-bottom:16px">'
+      +'<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px"><span style="font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.07em">🚨 Open Incidents ('+openInc.length+')</span><button class="btn btn-red btn-sm" onclick="window.navTo(\'incidents\')">View All</button></div>'
+      +openInc.slice(0,3).map(i=>'<div style="font-size:12.5px;color:var(--text2);padding:6px 0;border-bottom:1px solid rgba(192,57,43,.1)">'
+        +'<strong>'+i.type+'</strong> — '+i.description.substring(0,80)+(i.description.length>80?'…':'')
+        +' <span style="color:var(--text3);font-size:11px">('+i.reportedBy+', '+i.date+')</span></div>').join('')
+      +'</div>' : '';
+
+  wc.innerHTML = briefBanner + incStrip
+    + groupSection('Front of House', '🍽️', fohStaff)
+    + groupSection('Back of House', '👨‍🍳', bohStaff)
+    + groupSection('Management', '👔', staff.filter(u=>u.role==='head_chef'))
+    // action buttons row
+    + '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">'
+    + '<button class="btn btn-primary" onclick="window.openM(\'m-briefing\')">📢 Post Briefing</button>'
+    + '<button class="btn btn-ghost" onclick="window.openM(\'m-sections\')">📍 Assign Sections</button>'
+    + '<button class="btn btn-red" onclick="window.openM(\'m-inc-form\')">🚨 Report Incident</button>'
+    + '</div>'
+    // modals (briefing, sections, incident)
+    + mgr_modals(staff, secAssignForm(staff));
+
+  // refresh every 60s
+  clearTimeout(window._mgrRefresh);
+  window._mgrRefresh = setTimeout(()=>buildManagerWork(), 60000);
+}
+
+function secAssignForm(staff) {
+  return staff.filter(u=>['waiter','host'].includes(u.role)).map(u=>'<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)"><div style="font-size:13.5px;font-weight:500;color:var(--brand)">'+u.name+'<div style="font-size:11px;color:var(--text3)">'+rl(u.role)+'</div></div><input type="text" class="form-input" id="sec-'+u.id+'" placeholder="e.g. Section A" style="font-size:13px;padding:7px 11px"></div>').join('');
+}
+
+function mgr_modals(staff, secForm) {
+  return '<div class="modal-bg" id="m-briefing"><div class="modal"><div class="modal-handle"></div><button class="modal-close" onclick="window.closeM(\'m-briefing\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="modal-title">📢 Shift Briefing</div><div class="form-group"><label class="form-label">Today\'s Specials</label><textarea class="form-textarea" id="brief-specials" placeholder="What\'s on special today?"></textarea></div><div class="form-group"><label class="form-label">86 Board — Not Available</label><textarea class="form-textarea" id="brief-86" placeholder="Items that are off..." style="min-height:60px"></textarea></div><div class="form-group"><label class="form-label">Notes for the team</label><textarea class="form-textarea" id="brief-notes" placeholder="VIP guests, events, reminders..."></textarea></div><div class="form-row"><button class="btn btn-primary" onclick="window.saveBriefing()">Post to Team</button><button class="btn btn-ghost" onclick="window.closeM(\'m-briefing\')">Cancel</button></div></div></div>'
+    +'<div class="modal-bg" id="m-sections"><div class="modal"><div class="modal-handle"></div><button class="modal-close" onclick="window.closeM(\'m-sections\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="modal-title">📍 Assign Sections Today</div><div id="section-form">'+(secForm||'<div style="padding:24px;text-align:center;color:var(--text3)">No waiters or hosts in team yet.</div>')+'</div><div class="form-row"><button class="btn btn-primary" onclick="window.saveSections('+JSON.stringify(staff.filter(u=>['waiter','host'].includes(u.role)).map(u=>({id:u.id,name:u.name})))+')">Save Sections</button><button class="btn btn-ghost" onclick="window.closeM(\'m-sections\')">Cancel</button></div></div></div>'
+    +'<div class="modal-bg" id="m-inc-form"><div class="modal"><div class="modal-handle"></div><button class="modal-close" onclick="window.closeM(\'m-inc-form\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="modal-title">🚨 Report Incident</div><div class="form-group"><label class="form-label">Type</label><select class="form-select" id="inc-type"><option>Guest Complaint</option><option>Food Safety Issue</option><option>Staff Issue</option><option>Equipment Failure</option><option>Accident / Injury</option><option>Theft</option><option>Other</option></select></div><div class="form-group"><label class="form-label">Description *</label><textarea class="form-textarea" id="inc-desc" placeholder="What happened..."></textarea></div><div class="form-group"><label class="form-label">Action Taken</label><textarea class="form-textarea" id="inc-action" style="min-height:60px"></textarea></div><div class="form-group"><label class="form-label">Photo Evidence <span style="color:var(--red);font-weight:700">* Required</span></label><div id="inc-photo-prev" style="display:none;margin-bottom:8px"><img id="inc-photo-img" style="width:100%;max-height:200px;border-radius:var(--r-md);object-fit:cover"></div><label for="inc-photo-inp" id="inc-photo-lbl" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border:2px dashed var(--red);border-radius:var(--r-md);cursor:pointer;background:var(--red-lt);color:var(--red);font-size:13px;font-weight:600"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Take Photo (Required)</label><input type="file" id="inc-photo-inp" accept="image/*" capture="environment" style="display:none" onchange="window.incidentPhotoPreview2(this)"><input type="hidden" id="inc-photo-data"></div><div class="form-row"><button class="btn btn-red" onclick="window.saveIncident()">Submit Report</button><button class="btn btn-ghost" onclick="window.closeM(\'m-inc-form\')">Cancel</button></div></div></div>';
+}
+
+
+async function buildChefWork() {
+  const rid=CU.restaurantId||null;
+  const snap=await getDocs(rid?query(collection(db,'temperatureLogs'),where('restaurantId','==',rid)):collection(db,'temperatureLogs'));
+  const today=new Date().toISOString().split('T')[0];
+  const logs=snap.docs.map(d=>({id:d.id,...d.data()})).filter(l=>l.date===today);
+  const alerts=logs.filter(l=>(l.fridge!=null&&(l.fridge<1||l.fridge>5))||(l.freezer!=null&&l.freezer>-18)||(l.hot!=null&&l.hot<63));
+  const ws=$('work-stats');
+  if(ws) ws.innerHTML=mkStat('var(--amber)','<path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>',logs.length,'Temp Logs Today')+mkStat('var(--red)','<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>',alerts.length,'Out of Range')+mkStat('var(--green)','<path d="M9 11l3 3L22 4"/>',logs.length-alerts.length,'Within Range');
+  const wc=$('work-content'); if(!wc) return;
+  const logList=logs.length?logs.map(l=>{const bad=(l.fridge!=null&&(l.fridge<1||l.fridge>5))||(l.freezer!=null&&l.freezer>-18)||(l.hot!=null&&l.hot<63);return'<tr style="'+(bad?'background:var(--red-lt)':'')+'"><td><strong style="color:var(--brand)">'+l.staffName+'</strong></td><td style="font-size:12px;color:var(--text3)">'+l.time+'</td><td style="color:'+(l.fridge!=null&&(l.fridge<1||l.fridge>5)?'var(--red)':'var(--green)')+'">'+( l.fridge!=null?l.fridge+'\u00B0C':'\u2014')+'</td><td style="color:'+(l.freezer!=null&&l.freezer>-18?'var(--red)':'var(--green)')+'">'+( l.freezer!=null?l.freezer+'\u00B0C':'\u2014')+'</td><td style="color:'+(l.hot!=null&&l.hot<63?'var(--red)':'var(--green)')+'">'+( l.hot!=null?l.hot+'\u00B0C':'\u2014')+'</td><td><span class="chip '+(bad?'chip-red':'chip-teal')+'">'+( bad?'\u26A0 Alert':'\u2713 OK')+'</span></td></tr>';}).join(''):'<tr><td colspan="6" class="table-empty">No logs today yet.</td></tr>';
+  let board86Items=[];
+  wc.innerHTML='<div class="card" style="margin-bottom:16px"><div class="card-head"><span class="card-title">\uD83C\uDF21\uFE0F Temperature Logs Today</span>'+(alerts.length?'<span class="chip chip-red">\u26A0\uFE0F '+alerts.length+' alert'+(alerts.length>1?'s':'')+'</span>':'<span class="chip chip-teal">All OK \u2713</span>')+'</div>'
+    +'<div class="table-wrap"><table class="table"><thead><tr><th>Staff</th><th>Time</th><th>Fridge</th><th>Freezer</th><th>Hot Hold</th><th>Status</th></tr></thead><tbody>'+logList+'</tbody></table></div></div>'
+    +'<div class="card"><div class="card-head"><span class="card-title">\uD83D\uDEAB 86 Board</span><button class="btn btn-red btn-sm" onclick="window.openM(\'m-86\')">+ Add Item</button></div>'
+    +'<div id="board-86"><div style="padding:24px;text-align:center;color:var(--text3);font-size:13px">All items available. \uD83D\uDC4D</div></div></div>'
+    +'<div class="modal-bg" id="m-86"><div class="modal"><div class="modal-handle"></div><button class="modal-close" onclick="window.closeM(\'m-86\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="modal-title">86 Item</div>'
+    +'<div class="form-group"><label class="form-label">Item Name *</label><input type="text" class="form-input" id="item-86" placeholder="e.g. Truffle Risotto"></div>'
+    +'<div class="form-group"><label class="form-label">Reason</label><select class="form-select" id="reason-86"><option>Out of stock</option><option>Ingredient not available</option><option>Quality issue</option><option>Other</option></select></div>'
+    +'<div class="form-row"><button class="btn btn-red" onclick="window.save86()">Add to 86 Board</button><button class="btn btn-ghost" onclick="window.closeM(\'m-86\')">Cancel</button></div></div></div>';
+}
+
+let board86=[];
+window.save86=async()=>{
+  const item=$('item-86')?.value.trim(); if(!item){toast('Item name required','error');return;}
+  try{
+    await addDoc(collection(db,'board86'),{item,reason:$('reason-86')?.value,chefId:CU.id,chefName:CU.name,restaurantId:CU.restaurantId||'consultors',date:new Date().toISOString().split('T')[0],createdAt:new Date().toISOString()});
+    board86.push({item});
+    const el=$('board-86');
+    if(el) el.innerHTML=board86.map(i=>'<div style="padding:12px 18px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center"><span style="font-size:14px;font-weight:500">'+i.item+'</span><span class="chip chip-red">86\'d</span></div>').join('');
+    toast(item+' added to 86 board','success');
+    window.closeM('m-86');
+    $('item-86').value='';
+  }catch(e){toast('Error saving','error');}
+};
+
+// TRAINER
+function buildTrainerWork() {
+  const my=DATA.training.filter(s=>s.trainerId===CU.id||CU.role==='super_admin');
+  const ws=$('work-stats');
+  if(ws) ws.innerHTML=mkStat('var(--purple)','<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>',my.length,'Sessions')+mkStat('var(--teal)','<path d="M9 11l3 3L22 4"/>',my.filter(s=>s.status==='completed').length,'Completed')+mkStat('var(--gold)','<rect x="3" y="4" width="18" height="18" rx="2"/>',my.filter(s=>s.status==='scheduled').length,'Upcoming');
+  const wc=$('work-content'); if(!wc) return;
+  const rows=my.length?my.slice(0,15).map(s=>'<tr><td><strong style="color:var(--brand)">'+( s.restaurantName||s.restaurant||'\u2014')+'</strong></td><td style="font-size:12.5px">'+s.date+'</td><td style="font-size:12.5px">'+s.topic+'</td><td>'+s.staffCount+'</td><td><span class="chip '+(s.status==='completed'?'chip-teal':s.status==='scheduled'?'chip-brand':'chip-gold')+'">'+s.status+'</span></td></tr>').join(''):'<tr><td colspan="5" class="table-empty">No sessions yet.</td></tr>';
+  wc.innerHTML='<div class="card"><div class="card-head"><span class="card-title">\uD83D\uDCC5 My Sessions</span><button class="btn btn-purple btn-sm" onclick="window.openM(\'m-session\')">+ Log Session</button></div><div class="table-wrap"><table class="table"><thead><tr><th>Restaurant</th><th>Date</th><th>Topic</th><th>Staff</th><th>Status</th></tr></thead><tbody>'+rows+'</tbody></table></div></div>'
+    +'<div class="modal-bg" id="m-session"><div class="modal"><div class="modal-handle"></div><button class="modal-close" onclick="window.closeM(\'m-session\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="modal-title">Log Training Session</div>'
+    +'<div class="form-grid"><div class="form-group form-full"><label class="form-label">Restaurant *</label><input type="text" class="form-input" id="sess-rest" placeholder="Restaurant name" list="cl-list"></div><div class="form-group"><label class="form-label">Date *</label><input type="date" class="form-input" id="sess-date" value="'+new Date().toISOString().split('T')[0]+'"></div><div class="form-group"><label class="form-label">Topic</label><select class="form-select" id="sess-topic"><option>Service Standards</option><option>Upselling Techniques</option><option>Menu Knowledge</option><option>Guest Complaint Handling</option><option>Food Safety &amp; Hygiene</option><option>Brand Standards</option><option>Other</option></select></div><div class="form-group"><label class="form-label">Staff Count</label><input type="number" class="form-input" id="sess-staff" placeholder="e.g. 8" min="1"></div><div class="form-group"><label class="form-label">Status</label><select class="form-select" id="sess-status"><option value="completed">Completed</option><option value="scheduled">Scheduled</option></select></div><div class="form-group form-full"><label class="form-label">Notes</label><textarea class="form-textarea" id="sess-notes" placeholder="Key outcomes..." style="min-height:60px"></textarea></div></div>'
+    +'<div class="form-row"><button class="btn btn-purple" onclick="window.saveSession()">Save Session</button><button class="btn btn-ghost" onclick="window.closeM(\'m-session\')">Cancel</button></div></div></div>';
+}
+
+window.saveSession=async()=>{
+  const rest=$('sess-rest')?.value.trim(),date=$('sess-date')?.value;
+  if(!rest||!date){toast('Restaurant and date required','error');return;}
+  try{
+    const data={restaurant:rest,restaurantName:rest,date,topic:$('sess-topic')?.value,staffCount:parseInt($('sess-staff')?.value)||0,status:$('sess-status')?.value,notes:$('sess-notes')?.value.trim(),trainerId:CU.id,trainerName:CU.name,restaurantId:CU.restaurantId||'consultors',createdAt:new Date().toISOString()};
+    const ref=await addDoc(collection(db,'training'),data);
+    DATA.training.unshift({id:ref.id,...data});
+    toast('Session saved \u2713','success');
+    window.closeM('m-session');
+    buildTrainerWork();
+  }catch(e){toast('Error saving','error');}
+};
+
+// SHOPPER
+function buildShopperWork() {
+  const my=DATA.reports.filter(r=>r.shopperId===CU.id||CU.role==='super_admin');
+  const avg=my.length?Math.round(my.reduce((s,r)=>s+parseFloat(r.total||0),0)/my.length):0;
+  const ws=$('work-stats');
+  if(ws) ws.innerHTML=mkStat('var(--red)','<circle cx="11" cy="11" r="7"/>',my.length,'Reports')+mkStat('var(--gold)','<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',avg+'%','Avg Score');
+  const wc=$('work-content'); if(!wc) return;
+  const rows=my.length?my.map(r=>{const g=r.total>=90?'A+':r.total>=80?'A':r.total>=70?'B':r.total>=60?'C':'F';return'<tr><td><strong style="color:var(--brand)">'+( r.restaurant||'\u2014')+'</strong></td><td style="font-size:12.5px">'+r.date+'</td><td><strong>'+r.total+'%</strong></td><td><span class="chip '+(g==='A+'||g==='A'?'chip-teal':g==='B'?'chip-brand':g==='C'?'chip-gold':'chip-red')+'">'+g+'</span></td></tr>';}).join(''):'<tr><td colspan="4" class="table-empty">No reports yet.</td></tr>';
+  wc.innerHTML='<div class="card"><div class="card-head"><span class="card-title">\uD83D\uDD0D My Reports</span><span style="font-size:11.5px;color:var(--text3)">\uD83D\uDD12 Locked after submit</span></div><div class="table-wrap"><table class="table"><thead><tr><th>Restaurant</th><th>Date</th><th>Score</th><th>Grade</th></tr></thead><tbody>'+rows+'</tbody></table></div></div>';
+}
+
+
+// ── TEAM ──────────────────────────────────────
+function getAllUsers() {
+  if(CU.role==='super_admin') return DATA.users;
+  if(CU.role==='restaurant_admin') return DATA.users.filter(u=>u.restaurantId===CU.restaurantId);
+  if(CU.role==='manager') return DATA.users.filter(u=>u.restaurantId===CU.restaurantId&&!['super_admin','restaurant_admin','trainer','shopper'].includes(u.role));
+  return [];
+}
+
+const roleColor={super_admin:'#1e3a5f',restaurant_admin:'#4a90d9',manager:'#0d7377',head_chef:'#c9a227',trainer:'#6c3fc5',shopper:'#c0392b',waiter:'#4a90d9',kitchen:'#c45c1a',cleaner:'#0d7377',host:'#6c3fc5',cashier:'#1a7a4e'};
+
+
+
+function renderTeam(users) {
+  const cnt = document.getElementById('team-count');
+  if(cnt) cnt.textContent = users.length+' members';
+  const tb = document.getElementById('team-tbody'); if(!tb) return;
+  const isSuper = CU.role==='super_admin';
+  tb.innerHTML = users.map(u => {
+    const isSystem = u.id==='super-admin';
+    const avatar = u.photo
+      ? '<img src="'+u.photo+'" style="width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--border)">'
+      : '<div style="width:36px;height:36px;border-radius:50%;background:'+(roleColor[u.role]||'var(--text3)')+';display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0">'+(u.name||'?').charAt(0).toUpperCase()+'</div>';
+    return '<tr>'
+      +'<td><div style="display:flex;align-items:center;gap:10px">'+avatar
+      +'<div><div style="font-weight:500;color:var(--brand)">'+( u.name||'&mdash;')+'</div>'+(isSystem?'<div style="font-size:11px;color:var(--text3)">System Account</div>':'')+'</div></div></td>'
+      +'<td style="font-family:monospace;font-size:12.5px;color:var(--text3)">'+(u.username||'&mdash;')+'</td>'
+      +'<td><span class="chip '+rc(u.role)+'">'+rl(u.role)+'</span></td>'
+      +(isSuper?'<td style="font-size:12.5px;color:var(--text3)">'+(u.restaurantName||'&mdash;')+'</td>':'')
+      +'<td style="font-size:12.5px;color:var(--text3)">'+(u.phone||'&mdash;')+'</td>'
+      +'<td><div style="display:flex;gap:6px">'
+      +(isSystem?'':'<button class="btn btn-ghost btn-sm" onclick="window.editUser(\''+u.id+'\')">Edit</button>'
+        +'<button class="btn btn-red btn-sm" onclick="window.delUser(\''+u.id+'\',\''+( u.name||'').replace(/'/g,'')+'\')" style="padding:5px 10px">&#xd7;</button>')
+      +'</div></td></tr>';
+  }).join('') || '<tr><td colspan="'+(isSuper?6:5)+'" class="table-empty">No staff members yet.</td></tr>';
+}
+
+window.filterRole = () => {
+  const role = document.getElementById('team-role-filter')?.value;
+  renderTeam(role ? getAllUsers().filter(u=>u.role===role) : getAllUsers());
+};
+window.searchTeam = () => {
+  const q = document.getElementById('team-search')?.value.toLowerCase();
+  renderTeam(q ? getAllUsers().filter(u=>(u.name||'').toLowerCase().includes(q)||(u.username||'').toLowerCase().includes(q)) : getAllUsers());
+};
+
+function teamModal() {
+  const roles = CU.role==='super_admin'
+    ? ['restaurant_admin','manager','head_chef','waiter','host','cashier','kitchen','cleaner','trainer','shopper']
+    : CU.role==='restaurant_admin'
+    ? ['manager','head_chef','waiter','host','cashier','kitchen','cleaner']
+    : ['waiter','host','cashier','kitchen','cleaner'];
+  return '<div class="modal-bg" id="m-user"><div class="modal"><div class="modal-handle"></div>'
+    +'<button class="modal-close" onclick="window.closeM(\'m-user\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>'
+    +'<div class="modal-title" id="m-user-title">Add Staff Member</div>'
+    +'<div class="form-grid">'
+    +'<div class="form-group"><label class="form-label">Full Name *</label><input type="text" class="form-input" id="uf-name" placeholder="Full name"></div>'
+    +'<div class="form-group"><label class="form-label">Username *</label><input type="text" class="form-input" id="uf-username" placeholder="Login username" autocomplete="off"></div>'
+    +'<div class="form-group"><label class="form-label">Password</label><input type="password" class="form-input" id="uf-pw" placeholder="Leave blank to keep current" autocomplete="new-password"></div>'
+    +'<div class="form-group"><label class="form-label">Role *</label><select class="form-select" id="uf-role" onchange="window.toggleRestField()">'
+    +roles.map(r=>'<option value="'+r+'">'+rl(r)+'</option>').join('')
+    +'</select></div>'
+    +'<div class="form-group"><label class="form-label">Phone</label><input type="tel" class="form-input" id="uf-phone" placeholder="+961 xx xxx xxx"></div>'
+    +'<div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" id="uf-email" placeholder="email@example.com"></div>'
+    +'<div class="form-group form-full" id="uf-rest-row" style="display:none"><label class="form-label">Restaurant</label><input type="text" class="form-input" id="uf-restaurant" placeholder="Restaurant name" list="cl-list" onchange="window.toggleRestField()"></div>'
+    +'<div class="form-group form-full" id="uf-mgr-row" style="display:none"><label class="form-label">Reports To — Manager</label><select class="form-select" id="uf-manager"><option value="">— Select Manager —</option></select></div>'
+    +'<div class="form-group form-full" id="uf-chef-row" style="display:none"><label class="form-label">Reports To — Head Chef</label><select class="form-select" id="uf-headchef"><option value="">— Select Head Chef —</option></select></div>'
+    +'</div>'
+    +'<div style="margin-bottom:14px"><label class="form-label">Staff Photo</label>'
+    +'<div style="display:flex;align-items:center;gap:14px">'
+    +'<div id="uf-photo-prev" style="width:72px;height:72px;border-radius:50%;background:var(--brand-pale);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:28px;overflow:hidden;flex-shrink:0">&#128100;</div>'
+    +'<label for="uf-photo-inp" style="display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border:1.5px dashed var(--brand-acc);border-radius:var(--r-md);cursor:pointer;font-size:13px;color:var(--brand);background:var(--brand-pale)">'
+    +'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Take / Upload Photo</label>'
+    +'<input type="file" id="uf-photo-inp" accept="image/*" capture="environment" style="display:none" onchange="window.previewStaffPhoto(this)">'
+    +'</div><input type="hidden" id="uf-photo-data"></div>'
+    +'<input type="hidden" id="uf-id">'
+    +'<div class="form-row"><button class="btn btn-primary" onclick="window.saveUser()">Save</button><button class="btn btn-ghost" onclick="window.closeM(\'m-user\')">Cancel</button></div>'
+    +'</div></div>';
+}
+
+window.toggleRestField = () => {
+  const role    = document.getElementById('uf-role')?.value;
+  const restRow = document.getElementById('uf-rest-row');
+  const mgrRow  = document.getElementById('uf-mgr-row');
+  const chefRow = document.getElementById('uf-chef-row');
+  const needRest= ['restaurant_admin','manager','head_chef','waiter','host','cashier','kitchen','cleaner'].includes(role);
+  const needMgr = ['waiter','host','cashier','cleaner'].includes(role);
+  const needChef= ['kitchen'].includes(role);
+  if(restRow) restRow.style.display = needRest && CU.role==='super_admin' ? '' : 'none';
+  if(mgrRow)  mgrRow.style.display  = needMgr  ? '' : 'none';
+  if(chefRow) chefRow.style.display = needChef  ? '' : 'none';
+  // Populate manager dropdown
+  if(needMgr || needChef) {
+    const rid = document.getElementById('uf-restaurant')?.value || CU.restaurantName || '';
+    const managers  = DATA.users.filter(u=>u.role==='manager'&&(u.restaurantName===rid||u.restaurantId===CU.restaurantId));
+    const chefs     = DATA.users.filter(u=>u.role==='head_chef'&&(u.restaurantName===rid||u.restaurantId===CU.restaurantId));
+    const mgrSel    = document.getElementById('uf-manager');
+    const chefSel   = document.getElementById('uf-headchef');
+    if(mgrSel)  mgrSel.innerHTML  = '<option value="">— Select Manager —</option>'  +managers.map(u=>'<option value="'+u.id+'">'+u.name+'</option>').join('');
+    if(chefSel) chefSel.innerHTML = '<option value="">— Select Head Chef —</option>'+chefs.map(u=>'<option value="'+u.id+'">'+u.name+'</option>').join('');
+  }
+};
+
+window.openUserForm = () => {
+  document.getElementById('m-user-title').textContent = 'Add Staff Member';
+  ['uf-id','uf-name','uf-username','uf-pw','uf-phone','uf-email','uf-photo-data'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
+  const prev=document.getElementById('uf-photo-prev'); if(prev) prev.innerHTML='&#128100;';
+  const r=document.getElementById('uf-role'); if(r) r.value=r.options[0]?.value||'waiter';
+  window.toggleRestField();
+  window.openM('m-user');
+};
+
+window.previewStaffPhoto = input => {
+  if(!input.files.length) return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    const prev=document.getElementById('uf-photo-prev'),pd=document.getElementById('uf-photo-data');
+    if(prev) prev.innerHTML='<img src="'+e.target.result+'" style="width:72px;height:72px;border-radius:50%;object-fit:cover">';
+    if(pd)   pd.value=e.target.result;
+  };
+  reader.readAsDataURL(input.files[0]);
+};
+
+window.editUser = id => {
+  const u=DATA.users.find(x=>x.id===id); if(!u) return;
+  document.getElementById('m-user-title').textContent='Edit Member';
+  document.getElementById('uf-id').value        = id;
+  document.getElementById('uf-name').value      = u.name||'';
+  document.getElementById('uf-username').value  = u.username||'';
+  document.getElementById('uf-pw').value        = '';
+  document.getElementById('uf-role').value      = u.role||'waiter';
+  document.getElementById('uf-phone').value     = u.phone||'';
+  document.getElementById('uf-email').value     = u.email||'';
+  const rr=document.getElementById('uf-restaurant'); if(rr) rr.value=u.restaurantName||'';
+  window.toggleRestField();
+  const mgrSel=document.getElementById('uf-manager'); if(mgrSel&&u.managerId){setTimeout(()=>{mgrSel.value=u.managerId||'';},50);}
+  const chefSel=document.getElementById('uf-headchef'); if(chefSel&&u.headChefId){setTimeout(()=>{chefSel.value=u.headChefId||'';},50);}
+  const prev=document.getElementById('uf-photo-prev'),pd=document.getElementById('uf-photo-data');
+  if(prev) prev.innerHTML=u.photo?'<img src="'+u.photo+'" style="width:72px;height:72px;border-radius:50%;object-fit:cover">':'&#128100;';
+  if(pd)   pd.value=u.photo||'';
+  window.toggleRestField();
+  window.openM('m-user');
+};
+
+window.saveUser = async () => {
+  const id       = document.getElementById('uf-id').value;
+  const name     = document.getElementById('uf-name').value.trim();
+  const username = document.getElementById('uf-username').value.trim();
+  const pw       = document.getElementById('uf-pw').value.trim();
+  const role     = document.getElementById('uf-role').value;
+  if(!name)     { toast('Name required','error'); return; }
+  if(!username) { toast('Username required','error'); return; }
+  if(!id && !pw)        { toast('Password required for new member','error'); return; }
+  if(!id && pw.length<6){ toast('Password must be at least 6 characters','error'); return; }
+  const photoData = document.getElementById('uf-photo-data')?.value||null;
+  const restName  = CU.role==='manager'?(CU.restaurantName||''):document.getElementById('uf-restaurant').value.trim();
+  const restId    = CU.role==='manager'?(CU.restaurantId||''):document.getElementById('uf-restaurant').value.trim();
+  const mgrId     = document.getElementById('uf-manager')?.value   || null;
+  const chefId    = document.getElementById('uf-headchef')?.value  || null;
+  const mgrUser   = mgrId  ? DATA.users.find(u=>u.id===mgrId)  : null;
+  const chefUser  = chefId ? DATA.users.find(u=>u.id===chefId) : null;
+  const data = {
+    name, username, role,
+    phone: document.getElementById('uf-phone').value.trim(),
+    email: document.getElementById('uf-email').value.trim(),
+    restaurantName: restName,
+    restaurantId:   restId,
+    type: ['super_admin','trainer','shopper'].includes(role)?'consultors':'restaurant',
+    ...(mgrId  ? {managerId:mgrId,   managerName:mgrUser?.name||''}  : {}),
+    ...(chefId ? {headChefId:chefId, headChefName:chefUser?.name||''}: {}),
+    ...(photoData?{photo:photoData}:{}),
+  };
+  try {
+    if(id) {
+      await updateDoc(doc(db,'users',id),{...data,...(pw?{password:pw}:{})});
+      const idx=DATA.users.findIndex(u=>u.id===id);
+      if(idx>=0) DATA.users[idx]={...DATA.users[idx],...data,...(pw?{password:pw}:{})};
+      toast('Member updated \u2713','success');
+    } else {
+      const ex=await getDocs(query(collection(db,'users'),where('username','==',username)));
+      if(!ex.empty){toast('Username already taken','error');return;}
+      const ref=await addDoc(collection(db,'users'),{...data,password:pw,createdAt:new Date().toISOString()});
+      DATA.users.push({id:ref.id,...data,password:pw});
+      toast('Member added \u2713','success');
+    }
+    window.closeM('m-user');
+    renderTeam(getAllUsers());
+  } catch(e){toast('Error saving member','error');}
+};
+
+window.delUser = async(id,name)=>{
+  if(!confirm('Delete '+name+'? This cannot be undone.')) return;
+  try{
+    await deleteDoc(doc(db,'users',id));
+    DATA.users=DATA.users.filter(u=>u.id!==id);
+    toast(name+' removed','info');
+    renderTeam(getAllUsers());
+  }catch(e){toast('Error deleting','error');}
+};
+
+window.resetPw = async id=>{
+  const pw=prompt('New password (min 6 chars):'); if(!pw||pw.length<6){toast('Password too short','error');return;}
+  try{await updateDoc(doc(db,'users',id),{password:pw});toast('Password updated','success');}
+  catch(e){toast('Error','error');}
+};
+
+// ── FINANCE ───────────────────────────────────
+
+
+let ALL_FIN=[];
+function renderFinTable(items) {
+  ALL_FIN=items;
+  const tb=document.getElementById('fin-tbody'); if(!tb) return;
+  tb.innerHTML=items.map(f=>'<tr>'
+    +'<td style="font-size:12.5px">'+f.date+'</td>'
+    +'<td><strong style="color:var(--brand)">'+( f.client||'&mdash;')+'</strong></td>'
+    +'<td><span class="chip '+(f.type==='revenue'?'chip-teal':f.type==='expense'?'chip-red':'chip-gold')+'">'+f.type+'</span></td>'
+    +'<td style="font-weight:600">$'+parseFloat(f.amount||0).toFixed(2)+'</td>'
+    +'<td><button class="pay-btn '+f.paymentStatus+'" onclick="window.togglePay(\''+f.id+'\',\''+f.paymentStatus+'\')">'+( f.paymentStatus||'unpaid')+'</button></td>'
+    +'<td style="font-family:monospace;font-size:12px;color:var(--text3)">'+(f.invoiceNo||'&mdash;')+'</td>'
+    +'<td><div style="display:flex;gap:6px">'
+    +'<button class="btn btn-ghost btn-sm" onclick="window.editFin(\''+f.id+'\')">Edit</button>'
+    +'<button class="btn btn-red btn-sm" onclick="window.delFin(\''+f.id+'\')" style="padding:5px 10px">&#xd7;</button>'
+    +'</div></td></tr>').join('')||'<tr><td colspan="7" class="table-empty">No finance records yet.</td></tr>';
+}
+
+window.finFilter=()=>{const v=document.getElementById('fin-type-filter')?.value;renderFinTable(v?ALL_FIN.filter(f=>f.type===v):ALL_FIN);};
+window.openFinForm=()=>{
+  ['fin-id','fin-client','fin-amount','fin-invoice','fin-notes'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
+  const fd=document.getElementById('fin-date');if(fd)fd.value=new Date().toISOString().split('T')[0];
+  const mt=document.getElementById('m-fin-title');if(mt)mt.textContent='Add Finance Entry';
+  window.openM('m-fin');
+};
+window.editFin=id=>{
+  const f=DATA.finance.find(x=>x.id===id);if(!f)return;
+  document.getElementById('fin-id').value     =id;
+  document.getElementById('fin-client').value =f.client||'';
+  document.getElementById('fin-date').value   =f.date||'';
+  document.getElementById('fin-type').value   =f.type||'revenue';
+  document.getElementById('fin-amount').value =f.amount||'';
+  document.getElementById('fin-pay').value    =f.paymentStatus||'unpaid';
+  document.getElementById('fin-invoice').value=f.invoiceNo||'';
+  document.getElementById('fin-notes').value  =f.notes||'';
+  document.getElementById('m-fin-title').textContent='Edit Finance Entry';
+  window.openM('m-fin');
+};
+window.saveFinance=async()=>{
+  const id=document.getElementById('fin-id').value;
+  const client=document.getElementById('fin-client').value.trim(),amount=document.getElementById('fin-amount').value;
+  if(!client||!amount){toast('Client and amount required','error');return;}
+  const data={client,date:document.getElementById('fin-date').value,type:document.getElementById('fin-type').value,amount:parseFloat(amount),paymentStatus:document.getElementById('fin-pay').value,invoiceNo:document.getElementById('fin-invoice').value.trim(),notes:document.getElementById('fin-notes').value.trim(),restaurantId:CU.restaurantId||'consultors'};
+  try{
+    if(id){await updateDoc(doc(db,'finance',id),data);const i=DATA.finance.findIndex(f=>f.id===id);if(i>=0)DATA.finance[i]={...DATA.finance[i],...data};toast('Updated \u2713','success');}
+    else{const ref=await addDoc(collection(db,'finance'),{...data,createdAt:new Date().toISOString()});DATA.finance.unshift({id:ref.id,...data});toast('Added \u2713','success');}
+    window.closeM('m-fin');
+    const items=CU.role==='restaurant_admin'?DATA.finance.filter(f=>f.restaurantId===CU.restaurantId):DATA.finance;
+    renderFinTable(items);
+  }catch(e){toast('Error saving','error');}
+};
+window.togglePay=async(id,cur)=>{
+  const next=cur==='unpaid'?'paid':cur==='paid'?'partial':'unpaid';
+  try{await updateDoc(doc(db,'finance',id),{paymentStatus:next});const f=DATA.finance.find(x=>x.id===id);if(f)f.paymentStatus=next;const items=CU.role==='restaurant_admin'?DATA.finance.filter(f=>f.restaurantId===CU.restaurantId):DATA.finance;renderFinTable(items);}
+  catch(e){toast('Error','error');}
+};
+window.delFin=async id=>{
+  if(!confirm('Delete this entry?'))return;
+  try{await deleteDoc(doc(db,'finance',id));DATA.finance=DATA.finance.filter(f=>f.id!==id);const items=CU.role==='restaurant_admin'?DATA.finance.filter(f=>f.restaurantId===CU.restaurantId):DATA.finance;renderFinTable(items);toast('Deleted','info');}
+  catch(e){toast('Error','error');}
+};
+function finModal(){
+  return '<div class="modal-bg" id="m-fin"><div class="modal"><div class="modal-handle"></div><button class="modal-close" onclick="window.closeM(\'m-fin\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="modal-title" id="m-fin-title">Add Finance Entry</div>'
+    +'<div class="form-grid"><div class="form-group"><label class="form-label">Client / Desc *</label><input type="text" class="form-input" id="fin-client" list="cl-list"></div><div class="form-group"><label class="form-label">Date</label><input type="date" class="form-input" id="fin-date"></div><div class="form-group"><label class="form-label">Type</label><select class="form-select" id="fin-type"><option value="revenue">Revenue</option><option value="expense">Expense</option><option value="invoice">Invoice</option></select></div><div class="form-group"><label class="form-label">Amount ($)</label><input type="number" class="form-input" id="fin-amount" placeholder="0.00" step="0.01"></div><div class="form-group"><label class="form-label">Payment Status</label><select class="form-select" id="fin-pay"><option value="unpaid">Unpaid</option><option value="paid">Paid</option><option value="partial">Partial</option><option value="invoiced">Invoiced</option></select></div><div class="form-group"><label class="form-label">Invoice No.</label><input type="text" class="form-input" id="fin-invoice" placeholder="e.g. INV-0042"></div><div class="form-group form-full"><label class="form-label">Notes</label><textarea class="form-textarea" id="fin-notes" style="min-height:56px"></textarea></div></div><input type="hidden" id="fin-id"><div class="form-row"><button class="btn btn-primary" onclick="window.saveFinance()">Save</button><button class="btn btn-ghost" onclick="window.closeM(\'m-fin\')">Cancel</button></div></div></div>';
+}
+
+// ── CLIENTS ───────────────────────────────────
+
+
+function renderClients(clients) {
+  const tb=document.getElementById('cl-tbody'); if(!tb) return;
+  tb.innerHTML=clients.map(c=>'<tr><td><strong style="color:var(--brand)">'+c.name+'</strong></td><td style="font-size:12.5px;color:var(--text3)">'+( c.cuisine||'&mdash;')+'</td><td style="font-size:12.5px;color:var(--text3)">'+( c.location||'&mdash;')+'</td><td><span class="chip chip-brand">'+( c.plan||'trial')+'</span></td><td><span class="chip '+(c.status==='active'?'chip-teal':'chip-gray')+'">'+( c.status||'active')+'</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-ghost btn-sm" onclick="window.editClient(\''+c.id+'\')">Edit</button><button class="btn btn-red btn-sm" onclick="window.delClient(\''+c.id+'\')" style="padding:5px 10px">&#xd7;</button></div></td></tr>').join('')||'<tr><td colspan="6" class="table-empty">No clients yet.</td></tr>';
+}
+
+window.openClientForm=()=>{['cl-id','cl-name','cl-loc','cl-phone'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});document.getElementById('m-cl-title').textContent='Add Client';window.openM('m-client');};
+window.editClient=id=>{const c=DATA.clients.find(x=>x.id===id);if(!c)return;document.getElementById('cl-id').value=id;document.getElementById('cl-name').value=c.name||'';document.getElementById('cl-loc').value=c.location||'';document.getElementById('cl-phone').value=c.phone||'';document.getElementById('cl-cuisine').value=c.cuisine||'Fine Dining';document.getElementById('cl-plan').value=c.plan||'trial';document.getElementById('cl-status').value=c.status||'active';document.getElementById('m-cl-title').textContent='Edit Client';window.openM('m-client');};
+window.saveClient=async()=>{
+  const id=document.getElementById('cl-id').value,name=document.getElementById('cl-name').value.trim();
+  if(!name){toast('Name required','error');return;}
+  const data={name,location:document.getElementById('cl-loc').value.trim(),phone:document.getElementById('cl-phone').value.trim(),cuisine:document.getElementById('cl-cuisine').value,plan:document.getElementById('cl-plan').value,status:document.getElementById('cl-status').value};
+  try{
+    if(id){await updateDoc(doc(db,'clients',id),data);const i=DATA.clients.findIndex(c=>c.id===id);if(i>=0)DATA.clients[i]={...DATA.clients[i],...data};toast('Client updated \u2713','success');}
+    else{const ref=await addDoc(collection(db,'clients'),{...data,createdAt:new Date().toISOString()});DATA.clients.push({id:ref.id,...data});toast('Client added \u2713','success');}
+    window.closeM('m-client');renderClients(DATA.clients);syncClientList();
+  }catch(e){toast('Error saving','error');}
+};
+window.delClient=async id=>{if(!confirm('Delete client?'))return;try{await deleteDoc(doc(db,'clients',id));DATA.clients=DATA.clients.filter(c=>c.id!==id);renderClients(DATA.clients);syncClientList();toast('Deleted','info');}catch(e){toast('Error','error');}};
+
+// ── RESTAURANTS ───────────────────────────────
+
+
+async function loadRestaurants() {
+  try{
+    const snap=await getDocs(collection(db,'restaurants'));
+    const rests=snap.docs.map(d=>({id:d.id,...d.data()}));
+    const el=document.getElementById('rest-grid'); if(!el) return;
+    el.innerHTML=rests.length?rests.map(r=>'<div class="card" style="padding:20px"><div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:6px">'+( r.cuisine||'Restaurant')+'</div><div style="font-family:var(--font-display);font-size:18px;color:var(--brand);margin-bottom:4px">'+r.name+'</div><div style="font-size:12.5px;color:var(--text3);margin-bottom:12px">'+( r.location||'&mdash;')+'</div><div style="display:flex;gap:8px;flex-wrap:wrap"><span class="chip '+(r.status==='active'?'chip-teal':'chip-gray')+'">'+( r.status||'active')+'</span><span class="chip chip-brand">'+( r.plan||'trial')+'</span></div></div>').join(''):'<div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--text3)">No restaurants yet.</div>';
+  }catch(e){console.warn(e);}
+}
+
+// ── MERGE ALL RENDERS ─────────────────────────
+
+// ── CHECKLISTS ────────────────────────────────
+
+function renderCLCards(cls){
+  const el=document.getElementById('cl-cards');if(!el)return;
+  el.innerHTML=cls.length?cls.map(cl=>'<div class="card" style="margin-bottom:12px"><div style="padding:14px 18px;display:flex;align-items:center;justify-content:space-between"><div><div style="font-size:14px;font-weight:500;color:var(--brand)">'+cl.title+'</div><div style="font-size:11.5px;color:var(--text3);margin-top:2px">'+( cl.items?.length||0)+' items &middot; <span class="chip chip-brand" style="font-size:10px;padding:2px 7px">'+( cl.role||'all')+'</span> &middot; '+( cl.type||'')+'</div></div>'
+    +'<div style="display:flex;gap:6px"><button class="btn btn-ghost btn-sm" onclick="window.editCL(\''+cl.id+'\')">Edit</button><button class="btn btn-red btn-sm" onclick="window.delCL(\''+cl.id+'\')" style="padding:5px 10px">&#xd7;</button></div></div>'
+    +'<div style="border-top:1px solid var(--border);padding:10px 18px">'+(cl.items||[]).map((it,i)=>'<div style="display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--bg)"><div class="task-check" style="cursor:default"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div style="font-size:13px;color:var(--text2)">'+it+'</div></div>').join('')+'</div></div>').join(''):'<div class="card"><div class="card-body" style="text-align:center;padding:48px;color:var(--text3)">No checklists yet. Click + New to create one.</div></div>';
+}
+window.openClForm=()=>{document.getElementById('clf-id').value='';document.getElementById('clf-title').value='';document.getElementById('clf-items').innerHTML='';document.getElementById('cl-form-title').textContent='New Checklist';window.addClItem();window.openM('m-cl');};
+window.addClItem=()=>{const el=document.getElementById('clf-items');if(!el)return;const i=el.children.length;el.innerHTML+='<div style="display:flex;gap:8px;margin-bottom:8px"><input type="text" class="form-input" id="cli-'+i+'" placeholder="Checklist item..."><button class="btn btn-red btn-sm" onclick="this.parentNode.remove()" style="padding:6px 10px;flex-shrink:0">&#xd7;</button></div>';};
+window.editCL=id=>{const cl=DATA.checklists.find(x=>x.id===id);if(!cl)return;document.getElementById('clf-id').value=id;document.getElementById('clf-title').value=cl.title||'';document.getElementById('clf-role').value=cl.role||'all';document.getElementById('clf-type').value=cl.type||'opening';const el=document.getElementById('clf-items');el.innerHTML=(cl.items||[]).map((it,i)=>'<div style="display:flex;gap:8px;margin-bottom:8px"><input type="text" class="form-input" id="cli-'+i+'" value="'+it.replace(/"/g,'&quot;')+'"><button class="btn btn-red btn-sm" onclick="this.parentNode.remove()" style="padding:6px 10px;flex-shrink:0">&#xd7;</button></div>').join('');document.getElementById('cl-form-title').textContent='Edit Checklist';window.openM('m-cl');};
+window.saveCL=async()=>{const title=document.getElementById('clf-title').value.trim();if(!title){toast('Title required','error');return;}const items=[...document.getElementById('clf-items').querySelectorAll('input[type=text]')].map(i=>i.value.trim()).filter(Boolean);const id=document.getElementById('clf-id').value;const data={title,role:document.getElementById('clf-role').value,type:document.getElementById('clf-type').value,items,restaurantId:CU.restaurantId||'consultors'};try{if(id){await updateDoc(doc(db,'checklists',id),data);const i=DATA.checklists.findIndex(c=>c.id===id);if(i>=0)DATA.checklists[i]={...DATA.checklists[i],...data};toast('Updated \u2713','success');}else{const ref=await addDoc(collection(db,'checklists'),{...data,createdAt:new Date().toISOString()});DATA.checklists.push({id:ref.id,...data});toast('Saved \u2713','success');}window.closeM('m-cl');renderCLCards(DATA.checklists);}catch(e){toast('Error','error');}};
+window.delCL=async id=>{if(!confirm('Delete?'))return;try{await deleteDoc(doc(db,'checklists',id));DATA.checklists=DATA.checklists.filter(c=>c.id!==id);renderCLCards(DATA.checklists);toast('Deleted','info');}catch(e){toast('Error','error');}};
+
+// ── SOPs ──────────────────────────────────────
+
+function renderSOPCards(sops){
+  const el=document.getElementById('sop-cards');if(!el)return;
+  el.innerHTML=sops.length?sops.map(s=>'<div class="card" style="margin-bottom:12px"><div style="padding:14px 18px;display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:14px;font-weight:500;color:var(--brand)">'+s.title+'</div><div style="font-size:11.5px;color:var(--text3);margin-top:2px">'+( s.steps?.length||0)+' steps &middot; '+( s.department||'')+(s.category?' &middot; '+s.category:'')+'</div></div><div style="display:flex;gap:6px"><button class="btn btn-ghost btn-sm" onclick="window.editSOP(\''+s.id+'\')">Edit</button><button class="btn btn-red btn-sm" onclick="window.delSOP(\''+s.id+'\')" style="padding:5px 10px">&#xd7;</button></div></div>'
+    +'<div style="border-top:1px solid var(--border);padding:10px 18px">'+(s.steps||[]).map((step,i)=>{const task=typeof step==='object'?step.task:step;return'<div class="sop-step" style="cursor:default"><div class="sop-check" style="cursor:default"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div style="flex:1"><div style="display:flex;align-items:center;gap:8px"><span style="width:20px;height:20px;border-radius:50%;background:var(--purple-lt);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0">'+(i+1)+'</span><div class="sop-task">'+task+'</div></div></div></div>';}).join('')+'</div></div>').join(''):'<div class="card"><div class="card-body" style="text-align:center;padding:48px;color:var(--text3)">No SOPs yet.</div></div>';
+}
+window.openSOPForm=()=>{document.getElementById('sopf-id').value='';document.getElementById('sopf-title').value='';document.getElementById('sopf-cat').value='';document.getElementById('sopf-steps').innerHTML='';document.getElementById('sop-form-title').textContent='New SOP';window.addSOPStep();window.openM('m-sop');};
+window.addSOPStep=()=>{const el=document.getElementById('sopf-steps');if(!el)return;const i=el.children.length;el.innerHTML+='<div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="width:24px;height:24px;border-radius:50%;background:var(--purple-lt);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;margin-top:10px">'+(i+1)+'</span><div style="flex:1"><input type="text" class="form-input" id="sopstep-'+i+'" placeholder="Step '+(i+1)+'..." style="margin-bottom:4px"><input type="text" class="form-input" id="sopstd-'+i+'" placeholder="Standard / KPI (optional)" style="font-size:12px;padding:6px 10px"></div><button class="btn btn-red btn-sm" onclick="this.parentNode.remove()" style="padding:6px 10px;flex-shrink:0;margin-top:8px">&#xd7;</button></div>';};
+window.editSOP=id=>{const s=DATA.sops.find(x=>x.id===id);if(!s)return;document.getElementById('sopf-id').value=id;document.getElementById('sopf-title').value=s.title||'';document.getElementById('sopf-dept').value=s.department||'Front of House';document.getElementById('sopf-cat').value=s.category||'';const el=document.getElementById('sopf-steps');el.innerHTML=(s.steps||[]).map((step,i)=>{const task=typeof step==='object'?step.task:step;const std=typeof step==='object'?step.standard||'':'';return'<div style="display:flex;gap:8px;margin-bottom:8px;align-items:flex-start"><span style="width:24px;height:24px;border-radius:50%;background:var(--purple-lt);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;margin-top:10px">'+(i+1)+'</span><div style="flex:1"><input type="text" class="form-input" id="sopstep-'+i+'" value="'+task.replace(/"/g,'&quot;')+'" style="margin-bottom:4px"><input type="text" class="form-input" id="sopstd-'+i+'" value="'+std.replace(/"/g,'&quot;')+'" style="font-size:12px;padding:6px 10px"></div><button class="btn btn-red btn-sm" onclick="this.parentNode.remove()" style="padding:6px 10px;flex-shrink:0;margin-top:8px">&#xd7;</button></div>';}).join('');document.getElementById('sop-form-title').textContent='Edit SOP';window.openM('m-sop');};
+window.saveSOP=async()=>{const title=document.getElementById('sopf-title').value.trim();if(!title){toast('Title required','error');return;}const steps=[...document.getElementById('sopf-steps').querySelectorAll('[id^="sopstep-"]')].map((inp,i)=>{const task=inp.value.trim();const std=document.getElementById('sopstd-'+i)?.value.trim()||'';return task?{task,standard:std}:null;}).filter(Boolean);const id=document.getElementById('sopf-id').value;const data={title,department:document.getElementById('sopf-dept').value,category:document.getElementById('sopf-cat').value.trim(),steps,restaurantId:CU.restaurantId||'consultors'};try{if(id){await updateDoc(doc(db,'sops',id),data);const i=DATA.sops.findIndex(s=>s.id===id);if(i>=0)DATA.sops[i]={...DATA.sops[i],...data};toast('SOP updated \u2713','success');}else{const ref=await addDoc(collection(db,'sops'),{...data,createdAt:new Date().toISOString()});DATA.sops.push({id:ref.id,...data});toast('SOP saved \u2713','success');}window.closeM('m-sop');renderSOPCards(DATA.sops);}catch(e){toast('Error','error');}};
+window.delSOP=async id=>{if(!confirm('Delete SOP?'))return;try{await deleteDoc(doc(db,'sops',id));DATA.sops=DATA.sops.filter(s=>s.id!==id);renderSOPCards(DATA.sops);toast('Deleted','info');}catch(e){toast('Error','error');}};
+
+// ── INCIDENTS ─────────────────────────────────
+let ALL_INCIDENTS=[];
+
+
+async function loadIncidents(){
+  try{
+    const rid=CU.role==='super_admin'?null:CU.restaurantId;
+    const q=rid?query(collection(db,'incidents'),where('restaurantId','==',rid)):collection(db,'incidents');
+    const snap=await getDocs(q);
+    ALL_INCIDENTS=snap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+    const el=document.getElementById('inc-stats');
+    if(el) el.innerHTML=mkStat('var(--red)','<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>',ALL_INCIDENTS.length,'Total')
+      +mkStat('var(--amber)','<circle cx="12" cy="12" r="10"/>',ALL_INCIDENTS.filter(i=>i.status==='open').length,'Open')
+      +mkStat('var(--teal)','<path d="M9 11l3 3L22 4"/>',ALL_INCIDENTS.filter(i=>i.status==='resolved').length,'Resolved');
+    renderIncidentTable(ALL_INCIDENTS);
+  }catch(e){console.warn(e);}
+}
+
+function renderIncidentTable(incidents){
+  const tb=document.getElementById('inc-tbody');if(!tb)return;
+  tb.innerHTML=incidents.map(i=>'<tr>'
+    +'<td style="font-size:12.5px">'+( i.date||'&mdash;')+'</td>'
+    +'<td><span class="chip chip-red">'+( i.type||'&mdash;')+'</span></td>'
+    +'<td style="font-size:13px;max-width:180px">'+(i.photo?'<img src="'+i.photo+'" style="width:48px;height:36px;object-fit:cover;border-radius:var(--r-sm);border:1px solid var(--border);margin-bottom:4px;display:block;cursor:pointer" onclick="window.open(this.src,\'_blank\')">':'')+'<span>'+(i.description||'&mdash;')+'</span></td>'
+    +'<td style="font-size:12.5px">'+( i.reportedBy||'&mdash;')+'</td>'
+    +'<td><span class="chip '+(i.status==='resolved'?'chip-teal':'chip-red')+'">'+( i.status||'open')+'</span></td>'
+    +'<td><div style="display:flex;gap:6px">'+(i.status!=='resolved'?'<button class="btn btn-teal btn-sm" onclick="window.resolveIncident(\''+i.id+'\')">Resolve</button>':'')+'<button class="btn btn-red btn-sm" onclick="window.deleteIncident(\''+i.id+'\')" style="padding:5px 10px">&#xd7;</button></div></td>'
+    +'</tr>').join('')||'<tr><td colspan="6" class="table-empty">No incidents yet.</td></tr>';
+}
+window.filterIncidents=()=>{const v=document.getElementById('inc-status-filter')?.value;renderIncidentTable(v?ALL_INCIDENTS.filter(i=>i.status===v):ALL_INCIDENTS);};
+window.resolveIncident=async id=>{try{await updateDoc(doc(db,'incidents',id),{status:'resolved',resolvedAt:new Date().toISOString(),resolvedBy:CU.name});const i=ALL_INCIDENTS.find(x=>x.id===id);if(i)i.status='resolved';renderIncidentTable(ALL_INCIDENTS);toast('Incident resolved \u2713','success');}catch(e){toast('Error','error');}};
+window.deleteIncident=async id=>{if(!confirm('Delete?'))return;try{await deleteDoc(doc(db,'incidents',id));ALL_INCIDENTS=ALL_INCIDENTS.filter(i=>i.id!==id);renderIncidentTable(ALL_INCIDENTS);toast('Deleted','info');}catch(e){toast('Error','error');}};
+window.incidentPhotoPreview=input=>{if(!input.files.length)return;const reader=new FileReader();reader.onload=e=>{const img=document.getElementById('ni-photo-img'),prev=document.getElementById('ni-photo-prev'),lbl=document.getElementById('ni-photo-lbl'),pd=document.getElementById('ni-photo-data');if(img)img.src=e.target.result;if(prev)prev.style.display='block';if(lbl){lbl.style.borderColor='var(--teal)';lbl.style.background='var(--teal-lt)';lbl.style.color='var(--teal)';}if(pd)pd.value=e.target.result;};reader.readAsDataURL(input.files[0]);};
+window.saveNewIncident=async()=>{const desc=document.getElementById('ni-desc')?.value.trim(),photo=document.getElementById('ni-photo-data')?.value;if(!desc){toast('Description required','error');return;}if(!photo){toast('A photo is required','error');return;}try{const data={type:document.getElementById('ni-type')?.value,description:desc,action:document.getElementById('ni-action')?.value.trim(),photo,reportedBy:CU.name,reporterId:CU.id,restaurantId:CU.restaurantId||'consultors',date:new Date().toISOString().split('T')[0],status:'open',createdAt:new Date().toISOString()};const ref=await addDoc(collection(db,'incidents'),data);ALL_INCIDENTS.unshift({id:ref.id,...data});renderIncidentTable(ALL_INCIDENTS);toast('Incident reported \u2713','success');window.closeM('m-inc-new');['ni-desc','ni-action','ni-photo-data'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});const prev=document.getElementById('ni-photo-prev');if(prev)prev.style.display='none';}catch(e){toast('Error saving','error');}};
+
+// ── TEMPERATURE LOGS ──────────────────────────
+
+let ALL_TEMPS=[];
+async function loadTempLogs(){
+  try{
+    const rid=CU.role==='super_admin'?null:CU.restaurantId;
+    const q=rid?query(collection(db,'temperatureLogs'),where('restaurantId','==',rid)):collection(db,'temperatureLogs');
+    const snap=await getDocs(q);
+    ALL_TEMPS=snap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+    // Populate date filter
+    const dates=[...new Set(ALL_TEMPS.map(l=>l.date))].slice(0,14);
+    const sel=document.getElementById('temp-date-filter');
+    if(sel) dates.forEach(d=>{const o=document.createElement('option');o.value=d;o.textContent=d;sel.appendChild(o);});
+    const el=document.getElementById('temp-stats');
+    const alerts=ALL_TEMPS.filter(l=>(l.fridge!=null&&(l.fridge<1||l.fridge>5))||(l.freezer!=null&&l.freezer>-18)||(l.hot!=null&&l.hot<63));
+    if(el) el.innerHTML=mkStat('var(--brand-acc)','<path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>',ALL_TEMPS.length,'Total Logs')
+      +mkStat('var(--red)','<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>',alerts.length,'Out of Range')
+      +mkStat('var(--teal)','<path d="M9 11l3 3L22 4"/>',ALL_TEMPS.length-alerts.length,'Within Range');
+    renderTempTable(ALL_TEMPS);
+  }catch(e){console.warn(e);}
+}
+function renderTempTable(logs){
+  const tb=document.getElementById('temp-tbody');if(!tb)return;
+  tb.innerHTML=logs.map(l=>{const bad=(l.fridge!=null&&(l.fridge<1||l.fridge>5))||(l.freezer!=null&&l.freezer>-18)||(l.hot!=null&&l.hot<63);return'<tr style="'+(bad?'background:var(--red-lt)':'')+'"><td><strong style="color:var(--brand)">'+( l.staffName||'&mdash;')+'</strong></td><td style="font-size:12px">'+( l.date||'&mdash;')+'</td><td style="font-size:12px;color:var(--text3)">'+( l.time||'&mdash;')+'</td><td style="color:'+(l.fridge!=null&&(l.fridge<1||l.fridge>5)?'var(--red)':'var(--green)')+'">'+( l.fridge!=null?l.fridge+'\u00B0C':'&mdash;')+'</td><td style="color:'+(l.freezer!=null&&l.freezer>-18?'var(--red)':'var(--green)')+'">'+( l.freezer!=null?l.freezer+'\u00B0C':'&mdash;')+'</td><td style="color:'+(l.hot!=null&&l.hot<63?'var(--red)':'var(--green)')+'">'+( l.hot!=null?l.hot+'\u00B0C':'&mdash;')+'</td><td><span class="chip '+(bad?'chip-red':'chip-teal')+'">'+(bad?'\u26A0 Alert':'\u2713 OK')+'</span></td></tr>';}).join('')||'<tr><td colspan="7" class="table-empty">No temperature logs yet.</td></tr>';
+}
+window.filterTempLogs=()=>{const v=document.getElementById('temp-date-filter')?.value;renderTempTable(v?ALL_TEMPS.filter(l=>l.date===v):ALL_TEMPS);};
+
+// ── TRAINING ──────────────────────────────────
+
+window.deleteTraining=async id=>{if(!confirm('Delete?'))return;try{await deleteDoc(doc(db,'training',id));DATA.training=DATA.training.filter(s=>s.id!==id);window.navTo('training');}catch(e){toast('Error','error');}};
+
+// ── EVALUATIONS ───────────────────────────────
+
+window.delReport=async id=>{if(!confirm('Delete?'))return;try{await deleteDoc(doc(db,'reports',id));DATA.reports=DATA.reports.filter(r=>r.id!==id);window.navTo('evaluations');}catch(e){toast('Error','error');}};
+window.startEval=()=>toast('Full 108-point evaluation form coming soon','info');
+
+// ── MERGE ─────────────────────────────────────
+
+// ── MENU DEVELOPMENT ──────────────────────────
+
+window.openMdForm=()=>window.openM('m-md');
+window.saveMd=async()=>{const name=document.getElementById('md-name')?.value.trim();if(!name){toast('Name required','error');return;}try{await addDoc(collection(db,'mdItems'),{name,category:document.getElementById('md-cat')?.value,price:parseFloat(document.getElementById('md-price')?.value)||0,cost:parseFloat(document.getElementById('md-cost')?.value)||0,status:document.getElementById('md-status')?.value,restaurantId:CU.restaurantId||'consultors',createdAt:new Date().toISOString()});toast('Item saved \u2713','success');window.closeM('m-md');}catch(e){toast('Error','error');}};
+
+// ── PRICING MANAGER ───────────────────────────
+
+window.savePricing=async()=>{
+  const data={ms1:parseFloat(document.getElementById('pm-ms1')?.value)||180,ms1l:document.getElementById('pm-ms1l')?.value||'Starter',ms2:parseFloat(document.getElementById('pm-ms2')?.value)||320,ms2l:document.getElementById('pm-ms2l')?.value||'Professional',tr1:parseFloat(document.getElementById('pm-tr1')?.value)||150,tr2:parseFloat(document.getElementById('pm-tr2')?.value)||250,tr3:parseFloat(document.getElementById('pm-tr3')?.value)||400,tr4:parseFloat(document.getElementById('pm-tr4')?.value)||520,bd1:parseFloat(document.getElementById('pm-bd1')?.value)||450,bd1l:document.getElementById('pm-bd1l')?.value||'Essentials Bundle',bd2:parseFloat(document.getElementById('pm-bd2')?.value)||750,bd2l:document.getElementById('pm-bd2l')?.value||'Growth Bundle',disc:parseFloat(document.getElementById('pm-disc')?.value)||20};
+  try{
+    if(PRICE._id){await updateDoc(doc(db,'pricing',PRICE._id),data);}
+    else{const ref=await addDoc(collection(db,'pricing'),data);PRICE._id=ref.id;}
+    Object.assign(PRICE,data);
+    toast('Pricing saved \u2713','success');
+  }catch(e){toast('Error saving','error');}
+};
+
+// ── PLATFORM SETTINGS ─────────────────────────
+
+
+// ── MERGE ALL ─────────────────────────────────
+
+// ── BOOT ─────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  // Must be served over HTTP/HTTPS - not file://
+  if(location.protocol === 'file:') {
+    document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;flex-direction:column;gap:16px;font-family:sans-serif;background:#f5f4f0"><div style="font-size:48px">⚠️</div><div style="font-size:18px;font-weight:600;color:#1e3a5f">Cannot run from local file</div><div style="font-size:14px;color:#666;max-width:400px;text-align:center;line-height:1.6">This app requires a web server. Please deploy to Vercel or use a local server.<br><br><strong>Vercel (free):</strong> Go to vercel.com/new, drag the file in<br><strong>Local:</strong> Run <code>python -m http.server 8080</code> then open localhost:8080</div></div>';
+    return;
+  }
+  const s = localStorage.getItem('clb');
+  if(s){
+    try{ const user=JSON.parse(s); launchApp(user); }
+    catch(e){ window.showPub(); }
+  } else {
+    window.showPub();
+  }
+  loadPubPrices();
+});
+</script>
+</body>
+</html>
